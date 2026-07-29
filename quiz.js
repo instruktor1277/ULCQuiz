@@ -1,5 +1,4 @@
-// Tutaj znajduje się Twoja baza 177 pytań. 
-// Możesz dopisywać kolejne pytania dokładnie według tego samego schematu.
+// W polu "correct" podajemy teraz tablicę poprawnych odpowiedzi, np. ['a', 'c']
 const quizData = [
     {
         id: 1,
@@ -11,7 +10,7 @@ const quizData = [
             d: "D) przewoźnik lotniczy został poinformowany o pasażerze i przewożonym przez niego przedmiocie przed wejściem pasażerów na pokład statku powietrznego",
             e: "E) spełnione są mające zastosowanie zasady ochrony lotnictwa"
         },
-        correct: "e" // czerwona odpowiedź z PDF
+        correct: ["e"] // Jedna poprawna odpowiedź
     },
     {
         id: 2,
@@ -24,7 +23,7 @@ const quizData = [
             e: "E) nie zastępuje wymogów kontroli manualnej",
             f: "F) stosowany jest wyłącznie do kontroli bezpieczeństwa osób z ograniczoną możliwością poruszania się"
         },
-        correct: "e"
+        correct: ["e"] // Jedna poprawna odpowiedź
     },
     {
         id: 3,
@@ -35,7 +34,7 @@ const quizData = [
             c: "C) personel misji dyplomatycznych",
             d: "D) wicemarszałkowie Senatu"
         },
-        correct: "a"
+        correct: ["a"] // Jeśli to pytanie też ma tylko jedną odpowiedź
     },
     {
         id: 4,
@@ -46,7 +45,7 @@ const quizData = [
             c: "C) ręcznego wykrywacza metali",
             d: "D) urządzenia rentgenowskiego"
         },
-        correct: "a"
+        correct: ["a"]
     },
     {
         id: 5,
@@ -57,11 +56,11 @@ const quizData = [
             c: "C) zwolniony jest z kontroli bezpieczeństwa za zgodą przewoźnika lotniczego",
             d: "D) zwolniony jest z kontroli bezpieczeństwa"
         },
-        correct: "b"
+        correct: ["b"]
     }
 ];
 
-// Funkcja, która automatycznie buduje quiz na stronie HTML
+// Generowanie quizu z kwadracikami (checkbox)
 function renderQuiz() {
     const quizContainer = document.getElementById('quiz-container');
     quizContainer.innerHTML = '';
@@ -71,7 +70,7 @@ function renderQuiz() {
         for (let key in q.answers) {
             answersHtml += `
                 <label style="display: block; margin-bottom: 5px; cursor: pointer;">
-                    <input type="radio" name="question-${q.id}" value="${key}">
+                    <input type="checkbox" name="question-${q.id}" value="${key}">
                     ${q.answers[key]}
                 </label>
             `;
@@ -91,23 +90,31 @@ function renderQuiz() {
     });
 }
 
-// Funkcja sprawdzająca wszystkie odpowiedzi na raz
+// Sprawdzanie wielu odpowiedzi
 function checkAllAnswers() {
     let score = 0;
 
     quizData.forEach((q) => {
-        const selectedInput = document.querySelector(`input[name="question-${q.id}"]:checked`);
+        // Pobierz wszystkie zaznaczone kwadraciki dla danego pytania
+        const checkedBoxes = document.querySelectorAll(`input[name="question-${q.id}"]:checked`);
+        const userAnswers = Array.from(checkedBoxes).map(box => box.value);
         const feedbackDiv = document.getElementById(`feedback-${q.id}`);
 
-        if (selectedInput) {
-            if (selectedInput.value === q.correct) {
-                feedbackDiv.innerHTML = "<span style='color: green;'>✓ Poprawna odpowiedź!</span>";
-                score++;
-            } else {
-                feedbackDiv.innerHTML = `<span style='color: red;'>✗ Błędna odpowiedź. Poprawna to: ${q.correct.toUpperCase()}</span>`;
-            }
-        } else {
+        if (userAnswers.length === 0) {
             feedbackDiv.innerHTML = "<span style='color: orange;'>⚠️ Brak odpowiedzi!</span>";
+            return;
+        }
+
+        // Sprawdź czy tablice poprawnych odpowiedzi i odpowiedzi użytkownika są identyczne
+        const isCorrect = q.correct.length === userAnswers.length && 
+                          q.correct.every(val => userAnswers.includes(val));
+
+        if (isCorrect) {
+            feedbackDiv.innerHTML = "<span style='color: green;'>✓ Poprawna odpowiedź!</span>";
+            score++;
+        } else {
+            const correctUpper = q.correct.map(letter => letter.toUpperCase()).join(", ");
+            feedbackDiv.innerHTML = `<span style='color: red;'>✗ Błędna odpowiedź. Poprawne to: ${correctUpper}</span>`;
         }
     });
 
@@ -115,5 +122,4 @@ function checkAllAnswers() {
     resultDiv.innerHTML = `<h3>Twój wynik to: ${score} z ${quizData.length} punktów!</h3>`;
 }
 
-// Uruchomienie generowania quizu po załadowaniu strony
 window.onload = renderQuiz;
