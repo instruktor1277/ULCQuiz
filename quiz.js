@@ -10,7 +10,7 @@ const quizData = [
             d: "D) przewoźnik lotniczy został poinformowany o pasażerze i przewożonym przez niego przedmiocie przed wejściem pasażerów na pokład statku powietrznego",
             e: "E) spełnione są mające zastosowanie zasady ochrony lotnictwa"
         },
-        correct: ["e"] // Jedna poprawna odpowiedź
+        correct: ["a","d","e"] // Jedna poprawna odpowiedź
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const quizData = [
             e: "E) nie zastępuje wymogów kontroli manualnej",
             f: "F) stosowany jest wyłącznie do kontroli bezpieczeństwa osób z ograniczoną możliwością poruszania się"
         },
-        correct: ["e"] // Jedna poprawna odpowiedź
+        correct: ["c","e"] // Jedna poprawna odpowiedź
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ const quizData = [
             c: "C) personel misji dyplomatycznych",
             d: "D) wicemarszałkowie Senatu"
         },
-        correct: ["a"] // Jeśli to pytanie też ma tylko jedną odpowiedź
+        correct: ["a","d"] // Jeśli to pytanie też ma tylko jedną odpowiedź
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const quizData = [
             c: "C) ręcznego wykrywacza metali",
             d: "D) urządzenia rentgenowskiego"
         },
-        correct: ["a"]
+        correct: ["a","b"]
     },
     {
         id: 5,
