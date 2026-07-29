@@ -1,4 +1,4 @@
-// W polu "correct" podajemy teraz tablicę poprawnych odpowiedzi, np. ['a', 'c']
+// Baza pierwszych 6 pytań z poprawnie ustawionymi wielokrotnymi odpowiedziami
 const quizData = [
     {
         id: 1,
@@ -10,7 +10,7 @@ const quizData = [
             d: "D) przewoźnik lotniczy został poinformowany o pasażerze i przewożonym przez niego przedmiocie przed wejściem pasażerów na pokład statku powietrznego",
             e: "E) spełnione są mające zastosowanie zasady ochrony lotnictwa"
         },
-        correct: ["a","d","e"] // Jedna poprawna odpowiedź
+        correct: ["a", "d", "e"]
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const quizData = [
             e: "E) nie zastępuje wymogów kontroli manualnej",
             f: "F) stosowany jest wyłącznie do kontroli bezpieczeństwa osób z ograniczoną możliwością poruszania się"
         },
-        correct: ["c","e"] // Jedna poprawna odpowiedź
+        correct: ["c", "e"]
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ const quizData = [
             c: "C) personel misji dyplomatycznych",
             d: "D) wicemarszałkowie Senatu"
         },
-        correct: ["a","d"] // Jeśli to pytanie też ma tylko jedną odpowiedź
+        correct: ["a", "d"]
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const quizData = [
             c: "C) ręcznego wykrywacza metali",
             d: "D) urządzenia rentgenowskiego"
         },
-        correct: ["a","b"]
+        correct: ["a", "b"]
     },
     {
         id: 5,
@@ -57,10 +57,22 @@ const quizData = [
             d: "D) zwolniony jest z kontroli bezpieczeństwa"
         },
         correct: ["b"]
+    },
+    {
+        id: 6,
+        question: "6. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
+        answers: {
+            a: "A) funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej",
+            b: "B) funkcjonariusze Służby Kontrwywiadu Wojskowego po okazaniu ważnej legitymacji służbowej",
+            c: "C) funkcjonariusze właściwych służb państwowych wykonujących zadania związane z pełnieniem wart ochronnych na pokładach statków powietrznych obcych przewoźników lotniczych na podstawie zawartych porozumień i umów międzynarodowych w tym zakresie posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku",
+            d: "D) osoba posiadająca legitymację służbową wydaną przez Urząd Lotnictwa Cywilnego podczas wykonywania zadań i obowiązków służbowych na lotnisku",
+            e: "E) pracownicy i funkcjonariusze Agencji Bezpieczeństwa Wewnętrznego i żołnierze wyznaczeni na stanowisko służbowe w Służbie Wywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku"
+        },
+        correct: ["c", "e"]
     }
 ];
 
-// Generowanie quizu z kwadracikami (checkbox)
+// Generowanie quizu
 function renderQuiz() {
     const quizContainer = document.getElementById('quiz-container');
     quizContainer.innerHTML = '';
@@ -69,8 +81,8 @@ function renderQuiz() {
         let answersHtml = '';
         for (let key in q.answers) {
             answersHtml += `
-                <label style="display: block; margin-bottom: 5px; cursor: pointer;">
-                    <input type="checkbox" name="question-${q.id}" value="${key}">
+                <label style="display: block; margin-bottom: 8px; cursor: pointer; padding: 5px; border-radius: 4px;">
+                    <input type="checkbox" name="question-${q.id}" value="${key}" style="margin-right: 10px;">
                     ${q.answers[key]}
                 </label>
             `;
@@ -80,41 +92,40 @@ function renderQuiz() {
         questionElement.className = 'question';
         questionElement.style.marginBottom = '30px';
         questionElement.innerHTML = `
-            <p style="font-weight: bold;">${q.question}</p>
-            <div class="answers-group" id="answers-${q.id}">
+            <p style="font-weight: bold; font-size: 16px; color: #2c3e50;">${q.question}</p>
+            <div class="answers-group" id="answers-${q.id}" style="margin-left: 10px;">
                 ${answersHtml}
             </div>
-            <div id="feedback-${q.id}" style="margin-top: 5px; font-weight: bold;"></div>
+            <div id="feedback-${q.id}" style="margin-top: 10px; font-size: 14px; font-weight: bold;"></div>
         `;
         quizContainer.appendChild(questionElement);
     });
 }
 
-// Sprawdzanie wielu odpowiedzi
+// Sprawdzanie wyników
 function checkAllAnswers() {
     let score = 0;
 
     quizData.forEach((q) => {
-        // Pobierz wszystkie zaznaczone kwadraciki dla danego pytania
         const checkedBoxes = document.querySelectorAll(`input[name="question-${q.id}"]:checked`);
         const userAnswers = Array.from(checkedBoxes).map(box => box.value);
         const feedbackDiv = document.getElementById(`feedback-${q.id}`);
 
         if (userAnswers.length === 0) {
-            feedbackDiv.innerHTML = "<span style='color: orange;'>⚠️ Brak odpowiedzi!</span>";
+            feedbackDiv.innerHTML = "<span style='color: #e67e22;'>⚠️ Brak odpowiedzi!</span>";
             return;
         }
 
-        // Sprawdź czy tablice poprawnych odpowiedzi i odpowiedzi użytkownika są identyczne
+        // Sprawdzenie czy zaznaczono dokładnie te same odpowiedzi, które są poprawne
         const isCorrect = q.correct.length === userAnswers.length && 
                           q.correct.every(val => userAnswers.includes(val));
 
         if (isCorrect) {
-            feedbackDiv.innerHTML = "<span style='color: green;'>✓ Poprawna odpowiedź!</span>";
+            feedbackDiv.innerHTML = "<span style='color: #27ae60;'>✓ Poprawna odpowiedź!</span>";
             score++;
         } else {
             const correctUpper = q.correct.map(letter => letter.toUpperCase()).join(", ");
-            feedbackDiv.innerHTML = `<span style='color: red;'>✗ Błędna odpowiedź. Poprawne to: ${correctUpper}</span>`;
+            feedbackDiv.innerHTML = `<span style='color: #c0392b;'>✗ Błędna odpowiedź. Poprawne to: ${correctUpper}</span>`;
         }
     });
 
