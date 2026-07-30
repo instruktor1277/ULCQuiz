@@ -59,28 +59,28 @@
             currentQuizData.forEach((q) => {
                 let answersHtml = '';
                 for (let key in q.answers) {
-                    answersHtml += `<label><input type="checkbox" name="question-${q.id}" value="${key}"> ${q.answers[key]}</label>`;
+                    answersHtml += '<label><input type="checkbox" name="question-' + q.id + '" value="' + key + '"> ' + q.answers[key] + '</label>';
                 }
                 const div = document.createElement('div');
                 div.className = 'question';
-                div.innerHTML = `<p style="font-weight:bold;">\${q.question}</p><div class="answers-group">\${answersHtml}</div><div id="feedback-\${q.id}" style="margin-top:10px;font-weight:bold;"></div>`;
+                div.innerHTML = '<p style="font-weight:bold;">' + q.question + '</p><div class="answers-group">' + answersHtml + '</div><div id="feedback-' + q.id + '" style="margin-top:10px;font-weight:bold;"></div>';
                 quizContainer.appendChild(div);
             });
         }
         function checkAllAnswers() {
             let score = 0;
             currentQuizData.forEach((q) => {
-                const checked = document.querySelectorAll(`input[name="question-\${q.id}"]:checked`);
+                const checked = document.querySelectorAll('input[name="question-' + q.id + '"]:checked');
                 const userAnswers = Array.from(checked).map(box => box.value);
-                const feedback = document.getElementById(`feedback-\${q.id}`);
+                const feedback = document.getElementById('feedback-' + q.id);
                 if (userAnswers.length === 0) { feedback.innerHTML = "<span style='color:orange;'>⚠️ Brak odpowiedzi!</span>"; return; }
                 const isCorrect = q.correct.length === userAnswers.length && q.correct.every(val => userAnswers.includes(val));
                 if (isCorrect) { feedback.innerHTML = "<span style='color:green;'>✓ Poprawna!</span>"; score++; }
-                else { feedback.innerHTML = "<span>✗ Błędna. Poprawna: " + q.correct.join(", ").toUpperCase() + "</span>"; }
+                else { feedback.innerHTML = "<span style='color:red;'>✗ Błędna. Poprawna: " + q.correct.join(", ").toUpperCase() + "</span>"; }
             });
             const resultDiv = document.getElementById('result');
             resultDiv.style.display = 'block';
-            resultDiv.innerHTML = `<h3>Wynik: \${score} z \${currentQuizData.length}</h3>`;
+            resultDiv.innerHTML = '<h3>Wynik: ' + score + ' z ' + currentQuizData.length + '</h3>';
         }
         renderQuiz();
     </script>
