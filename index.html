@@ -193,7 +193,7 @@
             document.getElementById('m3').classList.toggle('active', nr === 3);
             if (nr === 1) baza = p1;
             else if (nr === 2) baza = p2;
-            else if (nr === 3) baza = p4;
+            else if (nr === 3) baza = p3.concat(p4); // Tutaj połączyłem obie paczki pytań!
             rysuj();
         }
         function rysuj() {
