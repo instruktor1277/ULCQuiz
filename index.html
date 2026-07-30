@@ -26,11 +26,8 @@
 
     <!-- Menu wyboru zestawów pytań -->
     <div class="menu-container">
-        <button class="btn-menu" id="btn-p1" onclick="loadQuizScript('pytania1.js'v=2', 'btn-p1')">Pytania 1 - 10</button>
-        <button class="btn-menu" id="btn-p2" onclick="loadQuizScript('pytania2.js'v=2', 'btn-p2')">Pytania 11 - 20</button>
-        <!-- Tutaj w przyszłości dopiszemy kolejne przyciski, np.:
-        <button class="btn-menu" id="btn-p3" onclick="loadQuizScript('pytania3.js', 'btn-p3')">Pytania 21 - 30</button> 
-        -->
+        <button class="btn-menu active" id="btn-p1" onclick="switchQuiz(1, 'btn-p1')">Pytania 1 - 10</button>
+        <button class="btn-menu" id="btn-p2" onclick="switchQuiz(2, 'btn-p2')">Pytania 11 - 20</button>
     </div>
 
     <!-- Miejsce generowania pytań -->
@@ -40,46 +37,38 @@
 
     <div id="result"></div>
 
+    <!-- Tutaj poprawiłem nazwę pliku z pytanya2 na pytania2 -->
+    <script src="pytania1.js"></script>
+    <script src="pytania2.js"></script>
+
     <script>
-        // Funkcja dynamicznie ładująca wybrany plik z pytaniami
-        function loadQuizScript(scriptName, buttonId) {
-            // Ukryj poprzedni wynik i wyczyść kontener
+        let currentQuizData = [];
+
+        function switchQuiz(partNumber, buttonId) {
             document.getElementById('result').style.display = 'none';
-            document.getElementById('quiz-container').innerHTML = '<p style="text-align:center;">Ładowanie pytań...</p>';
             
-            // Podświetlenie aktywnego przycisku w menu
             document.querySelectorAll('.btn-menu').forEach(btn => btn.classList.remove('active'));
             document.getElementById(buttonId).classList.add('active');
 
-            // Usunięcie poprzednio załadowanego skryptu pytań (jeśli istnieje)
-            const oldScript = document.getElementById('dynamic-quiz-data');
-            if (oldScript) oldScript.remove();
+            if (partNumber === 1 && typeof quizData1 !== 'undefined') {
+                currentQuizData = quizData1;
+            } else if (partNumber === 2 && typeof quizData2 !== 'undefined') {
+                currentQuizData = quizData2;
+            }
 
-            // Tworzenie nowego elementu skryptu z unikalnym parametrem (zapobiega cache w przeglądarce)
-            const script = document.createElement('script');
-            script.id = 'dynamic-quiz-data';
-            script.src = scriptName + '?v=' + new Date().getTime();
-            
-            // Kiedy plik JS się załaduje, uruchom generowanie pytań
-            script.onload = function() {
-                renderQuiz();
-            };
-            
-            document.body.appendChild(script);
+            renderQuiz();
         }
 
-        // Funkcja budująca formularz na ekranie
         function renderQuiz() {
             const quizContainer = document.getElementById('quiz-container');
             quizContainer.innerHTML = '';
 
-            // Zmienna quizData pochodzi z dynamicznie załadowanego pliku .js
-            if (typeof quizData === 'undefined') {
-                quizContainer.innerHTML = '<p style="color:red; text-align:center;">Błąd ładowania pytań.</p>';
+            if (!currentQuizData || currentQuizData.length === 0) {
+                quizContainer.innerHTML = '<p style="color:red; text-align:center;">Błąd ładowania lub brak pytań w tym zestawie.</p>';
                 return;
             }
 
-            quizData.forEach((q) => {
+            currentQuizData.forEach((q) => {
                 let answersHtml = '';
                 for (let key in q.answers) {
                     answersHtml += `
@@ -103,11 +92,10 @@
             });
         }
 
-        // Funkcja sprawdzająca zaznaczone odpowiedzi
         function checkAllAnswers() {
             let score = 0;
 
-            quizData.forEach((q) => {
+            currentQuizData.forEach((q) => {
                 const checkedBoxes = document.querySelectorAll(`input[name="question-${q.id}"]:checked`);
                 const userAnswers = Array.from(checkedBoxes).map(box => box.value);
                 const feedbackDiv = document.getElementById(`feedback-${q.id}`);
@@ -131,12 +119,13 @@
 
             const resultDiv = document.getElementById('result');
             resultDiv.style.display = 'block';
-            resultDiv.innerHTML = `<h3>Twój wynik to: ${score} z ${quizData.length} punktów!</h3>`;
+            resultDiv.innerHTML = `<h3>Twój wynik to: ${score} z ${currentQuizData.length} punktów!</h3>`;
         }
 
-        // Domyślne załadowanie pierwszego zestawu po wejściu na stronę
         window.onload = function() {
-            loadQuizScript('pytania1.js', 'btn-p1');
+            setTimeout(() => {
+                switchQuiz(1, 'btn-p1');
+            }, 200);
         };
     </script>
 </body>
