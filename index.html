@@ -28,6 +28,7 @@
     <div class="menu-container">
         <button class="btn-menu active" id="btn-p1" onclick="switchQuiz(1, 'btn-p1')">Pytania 1 - 10</button>
         <button class="btn-menu" id="btn-p2" onclick="switchQuiz(2, 'btn-p2')">Pytania 11 - 20</button>
+        <!-- Tutaj w przyszłości dopiszemy tylko przycisk dla nowej partii pytań -->
     </div>
 
     <!-- Miejsce generowania pytań -->
@@ -37,96 +38,129 @@
 
     <div id="result"></div>
 
-    <!-- Tutaj poprawiłem nazwę pliku z pytanya2 na pytania2 -->
-    <script src="pytania1.js"></script>
-    <script src="pytania2.js"></script>
-
     <script>
-        let currentQuizData = [];
-
-        function switchQuiz(partNumber, buttonId) {
-            document.getElementById('result').style.display = 'none';
-            
-            document.querySelectorAll('.btn-menu').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(buttonId).classList.add('active');
-
-            if (partNumber === 1 && typeof quizData1 !== 'undefined') {
-                currentQuizData = quizData1;
-            } else if (partNumber === 2 && typeof quizData2 !== 'undefined') {
-                currentQuizData = quizData2;
+        // CAŁA BAZA PYTAŃ WPISANA BEZPOŚREDNIO TUTAJ (Zero problemów z ładowaniem!)
+        const quizData1 = [
+            {
+                id: 1,
+                question: "1. Pasażer może wnieść do stref zastrzelonych lotniska lub na pokład statku powietrznego przedmioty zabronione, wymienione w dodatku 4-C załącznika do rozporządzenia wykonawczego Komisji nr 2015/1998 pod warunkiem, że:",
+                answers: {
+                    a: "A) odpowiedni organ wyrazi zgodę na przewóz danego przedmiotu",
+                    b: "B) pasażer wnoszący przedmioty zabronione przeszedł sprawdzenie przeszłości, zgodnie z pkt 11.1.3 załącznika do rozporządzenia wykonawczego Komisji nr 2015/1998",
+                    c: "C) pasażerowi wnoszącemu przedmioty zabronione towarzyszy uzbrojona eskorta",
+                    d: "D) przewoźnik lotniczy został poinformowany o pasażerze i przewożonym przez niego przedmiocie przed wejściem pasażerów na pokład statku powietrznego",
+                    e: "E) spełnione są mające zastosowanie zasady ochrony lotnictwa"
+                },
+                correct: ["a", "d", "e"]
+            },
+            {
+                id: 2,
+                question: "2. Podczas kontroli bezpieczeństwa osób, ręczny wykrywacz metali:",
+                answers: {
+                    a: "A) jest podstawowym środkiem kontroli bezpieczeństwa",
+                    b: "B) jest pomocny przy ustalaniu miejsca ukrycia materiałów wybuchowych",
+                    c: "C) można stosować tylko jako dodatkowy środek kontroli bezpieczeństwa",
+                    d: "D) można stosować zamiast kontroli manualnej",
+                    e: "E) nie zastępuje wymogów kontroli manualnej",
+                    f: "F) stosowany jest wyłącznie do kontroli bezpieczeństwa osób z ograniczoną możliwością poruszania się"
+                },
+                correct: ["c", "e"]
+            },
+            {
+                id: 3,
+                question: "3. Wskaż kategorie pasażerów zwolnionych z kontroli bezpieczeństwa:",
+                answers: {
+                    a: "A) funkcjonariusze Służby Ochrony Państwa wykonujący czynności związane z zapewnieniem ochrony ministrowi spraw wewnętrznych",
+                    b: "B) osoby konwojowane pod uzbrojoną eskortą",
+                    c: "C) personel misji dyplomatycznych",
+                    d: "D) wicemarszałkowie Senatu"
+                },
+                correct: ["a", "d"]
+            },
+            {
+                id: 4,
+                question: "4. Kontrolę bezpieczeństwa pasażera potencjalnie uciążliwego przeprowadza się, za pomocą:",
+                answers: {
+                    a: "A) kontroli manualnej",
+                    b: "B) psów do wykrywania materiałów wybuchowych",
+                    c: "C) ręcznego wykrywacza metali",
+                    d: "D) urządzenia rentgenowskiego"
+                },
+                correct: ["a", "b"]
+            },
+            {
+                id: 5,
+                question: "5. Sprzęt ułatwiający podróżowanie osobom z ograniczoną możliwością poruszania się:",
+                answers: {
+                    a: "A) poddaje się kontroli wzrokowej",
+                    b: "B) poddaje się w miarę możliwości kontroli bezpieczeństwa jako bagaż kabinowy",
+                    c: "C) zwolniony jest z kontroli bezpieczeństwa za zgodą przewoźnika lotniczego",
+                    d: "D) zwolniony jest z kontroli bezpieczeństwa"
+                },
+                correct: ["b"]
+            },
+            {
+                id: 6,
+                question: "6. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
+                answers: {
+                    a: "A) funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej",
+                    b: "B) funkcjonariusze Służby Kontrwywiadu Wojskowego po okazaniu ważnej legitymacji służbowej",
+                    c: "C) funkcjonariusze właściwych służb państwowych wykonujących zadania związane z pełnieniem wart ochronnych na pokładach statków powietrznych obcych przewoźników lotniczych na podstawie zawartych porozumień i umów międzynarodowych w tym zakresie posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku",
+                    d: "D) osoba posiadająca legitymację służbową wydaną przez Urząd Lotnictwa Cywilnego podczas wykonywania zadań i obowiązków służbowych na lotnisku",
+                    e: "E) pracownicy i funkcjonariusze Agencji Bezpieczeństwa Wewnętrznego i żołnierze wyznaczeni na stanowisko służbowe w Służbie Wywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku"
+                },
+                correct: ["c", "e"]
+            },
+            {
+                id: 7,
+                question: "7. Funkcjonariusze Straży Granicznej, Służby Celno-Skarbowej i Służby Ochrony Państwa mogą wejść do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej, jeżeli są eskortowani przez osoby posiadające:",
+                answers: {
+                    a: "A) certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa Urzędu Lotnictwa Cywilnego",
+                    b: "B) czasową kartę identyfikacyjną danego portu lotniczego",
+                    c: "C) odpowiednik karty pokładowej",
+                    d: "D) ważną kartę identyfikacyjną członka załogi"
+                },
+                correct: ["a", "b"]
+            },
+            {
+                id: 8,
+                question: "8. Czasowa karta identyfikacyjna portu lotniczego dla funkcjonariuszy Straży Granicznej, Policji, Służby Celno-Skarbowej oraz innych służb państwowych zawiera:",
+                answers: {
+                    a: "A) datę wydania",
+                    b: "B) nazwisko funkcjonariusza",
+                    c: "C) nr PESEL",
+                    d: "D) numer służbowy funkcjonariusza",
+                    e: "E) oznaczenia stref, do których funkcjonariusz ma dostęp"
+                },
+                correct: ["d", "e"]
+            },
+            {
+                id: 9,
+                question: "9. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
+                answers: {
+                    a: "A) w momencie opuszczania terytorium kraju na okres dłuższy niż 2 tygodnie",
+                    b: "B) w momencie unieważnienia karty",
+                    c: "C) w momencie zmiany pracodawcy",
+                    d: "D) w przypadku gdy pracownik udaje się na zwolnienie lekarskie trwające powyżej 14 dni",
+                    e: "E) w razie zmiany potrzeby dostępu do stref, w odniesieniu do których udzielono upoważnienia"
+                },
+                correct: ["b", "c", "e"]
+            },
+            {
+                id: 10,
+                question: "10. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą:",
+                answers: {
+                    a: "A) kontroli wzrokowej",
+                    b: "B) ręcznego wykrywacza metali",
+                    c: "C) urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wyktywaczami metali",
+                    d: "D) urządzeń do wykrywania śladowych ilości materiałów wybuchowych"
+                },
+                correct: ["c"]
             }
+        ];
 
-            renderQuiz();
-        }
-
-        function renderQuiz() {
-            const quizContainer = document.getElementById('quiz-container');
-            quizContainer.innerHTML = '';
-
-            if (!currentQuizData || currentQuizData.length === 0) {
-                quizContainer.innerHTML = '<p style="color:red; text-align:center;">Błąd ładowania lub brak pytań w tym zestawie.</p>';
-                return;
-            }
-
-            currentQuizData.forEach((q) => {
-                let answersHtml = '';
-                for (let key in q.answers) {
-                    answersHtml += `
-                        <label>
-                            <input type="checkbox" name="question-${q.id}" value="${key}" style="margin-right: 10px;">
-                            ${q.answers[key]}
-                        </label>
-                    `;
-                }
-
-                const questionElement = document.createElement('div');
-                questionElement.className = 'question';
-                questionElement.innerHTML = `
-                    <p style="font-weight: bold; font-size: 16px; color: #2c3e50; margin-top: 0;">${q.question}</p>
-                    <div class="answers-group" id="answers-${q.id}">
-                        ${answersHtml}
-                    </div>
-                    <div id="feedback-${q.id}" style="margin-top: 10px; font-size: 14px; font-weight: bold;"></div>
-                `;
-                quizContainer.appendChild(questionElement);
-            });
-        }
-
-        function checkAllAnswers() {
-            let score = 0;
-
-            currentQuizData.forEach((q) => {
-                const checkedBoxes = document.querySelectorAll(`input[name="question-${q.id}"]:checked`);
-                const userAnswers = Array.from(checkedBoxes).map(box => box.value);
-                const feedbackDiv = document.getElementById(`feedback-${q.id}`);
-
-                if (userAnswers.length === 0) {
-                    feedbackDiv.innerHTML = "<span style='color: #e67e22;'>⚠️ Brak odpowiedzi!</span>";
-                    return;
-                }
-
-                const isCorrect = q.correct.length === userAnswers.length && 
-                                  q.correct.every(val => userAnswers.includes(val));
-
-                if (isCorrect) {
-                    feedbackDiv.innerHTML = "<span style='color: #27ae60;'>✓ Poprawna odpowiedź!</span>";
-                    score++;
-                } else {
-                    const correctUpper = q.correct.map(letter => letter.toUpperCase()).join(", ");
-                    feedbackDiv.innerHTML = `<span style='color: #c0392b;'>✗ Błędna odpowiedź. Poprawne to: ${correctUpper}</span>`;
-                }
-            });
-
-            const resultDiv = document.getElementById('result');
-            resultDiv.style.display = 'block';
-            resultDiv.innerHTML = `<h3>Twój wynik to: ${score} z ${currentQuizData.length} punktów!</h3>`;
-        }
-
-        window.onload = function() {
-            setTimeout(() => {
-                switchQuiz(1, 'btn-p1');
-            }, 200);
-        };
-    </script>
-</body>
-</html>
+        const quizData2 = [
+            {
+                id: 11,
+                question: "11. Kartę identyfikacyjną portu lotniczego nosi się w widocznym miejscu przynajmniej wówczas:",
+                answers: {
