@@ -22,6 +22,7 @@
         <button class="btn-m active" id="m1" onclick="zmien(1)">Pytania 1 - 10</button>
         <button class="btn-m" id="m2" onclick="zmien(2)">Pytania 11 - 20</button>
         <button class="btn-m" id="m3" onclick="zmien(3)">Pytania 21 - 28</button>
+        <button class="btn-m" id="m4" onclick="zmien(4)">Pytania 29 - 40</button>
     </div>
     <div id="box"></div>
     <button class="btn-check" onclick="sprawdz()">Sprawdź wynik</button>
@@ -128,7 +129,7 @@
             },
             {
                 id: 17,
-                q: "17. Przedmioty zabronione do przewozu w bagażu kabinowym, o ile nie są zabronione do przewozu w bagażu rejestrowanym, mogą być:",
+                q: "17. Przedmioty zabronione do przewozu w bagaju kabinowym, o ile nie są zabronione do przewozu w bagażu rejestrowanym, mogą być:",
                 a: { a: "A) oznakowane przez przewoźnika lotniczego jako bagaż kabinowy i skierowane do luku bagażowego w trakcie kontroli bezpieczeństwa pasażerów i bagażu kabinowego", b: "B) po usunięciu z bagażu kabinowego umieszczone w specjalnie do tego celu przeznaczonym pojemniku i zniszczone na koszt przewoźnika lotniczego lub zarządzającego lotniskiem", c: "C) przechowane na lotnisku za opłatą, w przeznaczonym do tego celu pomieszczeniu, do czasu zgłoszenia się po ich odbiór pasażera", d: "D) umieszczone przez pasażera w bagażu rejestrowanym podczas trwania odprawy biletowo – bagażowej" },
                 c: ["b", "c", "d"]
             },
@@ -167,7 +168,7 @@
             {
                 id: 23,
                 q: "23. Kontrolą manualną jest zespół czynności kontroli bezpieczeństwa:",
-                a: { a: "A) wykonywanych ręcznie bez ingerencji w wewnętrzne powłoki ciała oraz w sposób powodujący w jak najmniejszym stopniu naruszenie intymności, w celu wykrycia w odzieży lub na ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji", b: "B) wykonywanych ręcznie z ingerencją w wewnętrzne powłoki ciała, w celu wykrycia w odzieży lub ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji", c: "C) wykonywanych za pomocą bramki do wykrywania metali i ręcznego wykrywacza metali, w celu wykrycia w odzieży lub na ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji" },
+                a: { a: "A) wykonywanych ręcznie bez ingerencji v wewnętrzne powłoki ciała oraz w sposób powodujący w jak najmniejszym stopniu naruszenie intymności, w celu wykrycia w odzieży lub na ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji", b: "B) wykonywanych ręcznie z ingerencją w wewnętrzne powłoki ciała, w celu wykrycia w odzieży lub ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji", c: "C) wykonywanych za pomocą bramki do wykrywania metali i ręcznego wykrywacza metali, w celu wykrycia w odzieży lub na ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji" },
                 c: ["a"]
             },
             {
@@ -196,9 +197,83 @@
             },
             {
                 id: 28,
-                q: "28. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
-                a: { a: "A) aerozole odstraszające zwierzęta", b: "B) farby drogowe w pojemnikach o pojemności powyżej 10 litrów", c: "C) granaty dymne", d: "D) masy bitumiczne uszczelniające w pojemnikach o pojemności powyżej 20 litrów", e: "E) pistolety sygnałowe", f: "F) spirytus salicylowy" },
+                q: "28. Następujące przedmioty uznaje się za przedmioty zabronione v zaopatrzeniu portu lotniczego:",
+                a: { a: "A) aerozole odstraszające zwierzęta", b: "B) farby drogowe w pojemnikach o pojemności powyżej 10 litrów", c: "C) granaty dymne", d: "D) masy bitumiczne uszczelniające v pojemnikach o pojemności powyżej 20 litrów", e: "E) pistolety sygnałowe", f: "F) spirytus salicylowy" },
                 c: ["a", "c", "e"]
+            }
+        ];
+        const p4 = [
+            {
+                id: 29,
+                q: "29. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego, stosuje się:",
+                a: { a: "A) kontrolę wzrokową", b: "B) psy do wykrywania materiałów wybuchowych", c: "C) systemy wykrywania urządzeń wybuchowych", d: "D) urządzenia do wykrywania metali" },
+                c: ["b"]
+            },
+            {
+                id: 30,
+                q: "30. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+                a: { a: "A) bramkowe detektory metali", b: "B) detektory promieniowania jonizującego", c: "C) kontrolę manualną", d: "D) systemy do wykrywania urządzeń wybuchowych", e: "E) urządzenia do wykrywania śladowych ilości materiałów wybuchowych v połączeniu z kontrolą wzrokową" },
+                c: ["c", "e"]
+            },
+            {
+                id: 31,
+                q: "31. Następujące przedmioty uznaje się za przedmioty zabronione v zaopatrzeniu pokładowym:",
+                a: { a: "A) latarki akumulatorowe", b: "B) metalowe pojemniki na lód", c: "C) pistolety sygnałowe", d: "D) rozpylacze kwasu", e: "E) tasery" },
+                c: ["c", "d", "e"]
+            },
+            {
+                id: 32,
+                q: "32. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego, stosuje się:",
+                a: { a: "A) kontrolę wzrokową", b: "B) systemy wykrywania urządzeń wybuchowych", c: "C) urządzenia do wykrywania niemetali", d: "D) urządzenia do wykrywania śladowych ilości materiałów wybuchowych" },
+                c: ["d"]
+            },
+            {
+                id: 33,
+                q: "33. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub v kombinacji następujące środki lub metody kontroli:",
+                a: { a: "A) urządzenia do wykrywania metali", b: "B) detektory promieniowania jonizującego", c: "C) systemy do wykrywania urządzeń wybuchowych", d: "D) urządzenia do wykrywania śladowych ilości materiałów wybuchowych v połączeniu z kontrolą wzrokową", e: "E) urządzenia rentgenowskie" },
+                c: ["d", "e"]
+            },
+            {
+                id: 34,
+                q: "34. Następujące przedmioty uznaje się za przedmioty zabronione v zaopatrzeniu pokładowym:",
+                a: { a: "A) gazy obronne", b: "B) latarki akumulatorowe", c: "C) metalowe pojemniki na lód", d: "D) pistolety na CO2", e: "E) rozpylacze kwasu" },
+                c: ["a", "d", "e"]
+            },
+            {
+                id: 35,
+                q: "35. Status ochrony nadany przesyłkom oznacza:",
+                a: { a: "A) „SCO” – bezpieczne tylko dla pasażerskiego i towarowego statku powietrznego", b: "B) „SHR” – bezpieczny dla pasażerskiego, towarowego i pocztowego statku powietrznego, zgodnie z wymogami wysokiego ryzyka", c: "C) „SPO” – bezpieczne tylko dla pasażerskiego i pocztowego statku powietrznego", d: "D) „SPX” – bezpieczne tylko dla pasażerskiego i pocztowego statku powietrznego" },
+                c: ["b"]
+            },
+            {
+                id: 36,
+                q: "36. Dokumentacja dołączona do każdej przesyłki zawierającej ładunek i pocztę, v stosunku do których zastosowano środki kontroli, zawiera między innymi następujące informacje:",
+                a: { a: "A) nazwisko osoby wystawiającej list przewozowy", b: "B) nazwisko osoby, która nadała status ochrony lub równoważną identyfikację oraz datę i godzinę nadania", c: "C) niepowtarzalny alfanumeryczny identyfikator uznanego nadawcy, nadany przez Prezesa Urzędu Lotnictwa Cywilnego", d: "D) niepowtarzalny identyfikator każdego zarejestrowanego agenta...", e: "E) opis zawartości przesyłki, status ochrony przesyłki i powód wydania statusu ochrony" },
+                c: ["b", "e"]
+            },
+            {
+                id: 37,
+                q: "37. Następujące przedmioty uznaje się za przedmioty zabronione v przesyłkach zawierających ładunek i pocztę:",
+                a: { a: "A) broń palna przewożona zgodnie z mającymi zastosowanie zasadami bezpieczeństwa", b: "B) wiertarki i wiertła, v tym bezprzewodowe przenośne wiertarki elektryczne", c: "C) zabawki v kształcie broni, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", d: "D) zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z mającymi zastosowanie zasadami" },
+                c: ["d"]
+            },
+            {
+                id: 38,
+                q: "38. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się v innej części pomieszczeń zarejestrowanego agenta, do których dostęp nie jest kontrolowany, uznaje się za zabezpieczone przed nieupoważnioną ingerencją, jeżeli:",
+                a: { a: "A) nie są fizycznie zabezpieczone v sposób zapobiegający wprowadzeniu do nich przedmiotu zabronionego", b: "B) nie są pozostawione bez nadzoru, a dostęp do nich mają wyłącznie osoby zaangażowane v zabezpieczanie i ładowanie ładunku oraz poczty na pokład statku powietrznego", c: "C) pozostają tam nie dłużej niż dwie godziny", d: "D) tak przewiduje program ochrony przewoźnika lotniczego" },
+                c: ["b"]
+            },
+            {
+                id: 39,
+                q: "39. Przed załadunkiem do luku bagażowego statku powietrznego, poczta przewoźnika lotniczego i materiały przewoźnika lotniczego poddawane są środkom kontroli v zakresie ochrony i zabezpieczane zgodnie z zasadami stosowanymi v odniesieniu do:",
+                a: { a: "A) bagażu kabinowego", b: "B) ładunków i poczty", c: "C) przedmiotów przenoszonych przez osoby niebędące pasażerami" },
+                c: ["b"]
+            },
+            {
+                id: 40,
+                q: "40. Następujące przedmioty uznaje się za przedmioty zabronione v poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy:",
+                a: { a: "A) broń pneumatyczna", b: "B) gazy pieprzowe", c: "C) kastety", d: "D) noże o długości ostrza poniżej 6 cm", e: "E) nożyczki o długości 6 cm", f: "F) piłki tenisowe" },
+                c: ["a", "b", "c"]
             }
         ];
         let baza = p1;
@@ -207,9 +282,11 @@
             document.getElementById('m1').classList.toggle('active', nr === 1);
             document.getElementById('m2').classList.toggle('active', nr === 2);
             document.getElementById('m3').classList.toggle('active', nr === 3);
+            document.getElementById('m4').classList.toggle('active', nr === 4);
             if (nr === 1) baza = p1;
             else if (nr === 2) baza = p2;
             else if (nr === 3) baza = p3;
+            else if (nr === 4) baza = p4;
             rysuj();
         }
         function rysuj() {
