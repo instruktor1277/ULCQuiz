@@ -22,6 +22,8 @@
         <button class="btn-m active" id="m1" onclick="zmien(1)">Pytania 1 - 10</button>
         <button class="btn-m" id="m2" onclick="zmien(2)">Pytania 11 - 15</button>
         <button class="btn-m" id="m3" onclick="zmien(3)">Pytania 16 - 25</button>
+        <button class="btn-m" id="m4" onclick="zmien(4)">Pytania 26 - 35</button>
+        <button class="btn-m" id="m5" onclick="zmien(5)">Pytania 36 - 45</button>
     </div>
     <div id="box"></div>
     <button class="btn-check" onclick="sprawdz()">Sprawdź wynik</button>
@@ -121,7 +123,7 @@
                 c: ["d"]
             }
         ];
-        const p3 = [
+        const p3_a = [
             {
                 id: 16,
                 q: "16. Następujące przedmioty nie mogą być przewożone przez pasażerów w bagażu rejestrowanym:",
@@ -148,12 +150,12 @@
             },
             {
                 id: 20,
-                q: "20. Podczas kontroli bezpieczeństwa osób, urządzenia do wykrywania śladowych ilości materiałów wybuchowych (ETD), w połączeniu z ręcznymi wykrywaczami metali, można stosować:",
+                q: "20. Podczas kontroli bezpieczeństwa osób, urządzenia do wykrywania śladowych ilości materiałów wybuchowych (ETD), w połączeniu z ręcznymi wyktywaczami metali, można stosować:",
                 a: { a: "A) jako podstawową metodę kontroli bezpieczeństwa", b: "B) tylko w przypadku, gdy operator kontroli bezpieczeństwa uzna kontrolę manualną za nieskuteczną lub niepożądaną", c: "C) wyłącznie w stosunku do osób niepełnosprawnych" },
                 c: ["b"]
             }
         ];
-        const p4 = [
+        const p3_b = [
             {
                 id: 21,
                 q: "21. Za płyny, aerozole i żele (LAG) uznaje się:",
@@ -185,15 +187,143 @@
                 c: ["a", "b", "c", "d"]
             }
         ];
+        const p4 = [
+            {
+                id: 26,
+                q: "26. Krajowy Program Ochrony Lotnictwa Cywilnego określa:",
+                a: { a: "A) zadania państwowych organów w zakresie ochrony lotnictwa", b: "B) requirements dotyczące kontroli bezpieczeństwa pasażerów", c: "C) procedury certyfikacji personelu ochrony", d: "D) zasady stosowania technicznych środków ochrony" },
+                c: ["a", "b", "c", "d"]
+            },
+            {
+                id: 27,
+                q: "27. Płyny, aerozole i żele (LAG) wnoszone przez pasażerów są zwolnione z kontroli, jeśli:",
+                a: { a: "A) są zapakowane w torby STEB nienaruszone i zabezpieczone", b: "B) są przeznaczone do użycia w trakcie podróży do celów leczniczych", c: "C) ich pojemność w pojedynczym pojemniku nie przekracza 100 ml", d: "D) zostały zakupione w strefie wolnocłowej lotniska w UE" },
+                c: ["a", "b", "c", "d"]
+            },
+            {
+                id: 28,
+                q: "28. Kontrola bezpieczeństwa bagażu kabinowego może być realizowana za pomocą:",
+                a: { a: "A) urządzeń rentgenowskich (X-ray)", b: "B) systemów EDS", c: "C) kontroli manualnej", d: "D) psów do wykrywania materiałów wybuchowych" },
+                c: ["a", "b", "c", "d"]
+            },
+            {
+                id: 29,
+                q: "29. Strefa zastrzeżona lotniska obejmuje:",
+                a: { a: "A) strefy odpraw biletowo-bagażowych", b: "B) strefy sortowni bagażu rejestrowanego", c: "C) płyty postojowe statków powietrznych", d: "D) hale przylotów przed kontrolą paszportową" },
+                c: ["b", "c"]
+            },
+            {
+                id: 30,
+                q: "30. Operator kontroli bezpieczeństwa ma prawo do:",
+                a: { a: "A) wezwania osoby do okazania zawartości bagażu", b: "B) odmowy zezwolenia na wejście do strefy zastrzeżonej", c: "C) zatrzymania osoby podejrzanej o przestępstwo", d: "D) użycia środków przymusu bezpośredniego" },
+                c: ["a", "b"]
+            },
+            {
+                id: 31,
+                q: "31. Przedmioty zabronione w bagażu kabinowym to m.in.:",
+                a: { a: "A) nożyczki o długości ostrza powyżej 6 cm", b: "B) repliki broni palnej", c: "C) jednorazowe maszynki do golenia", d: "D) napoje w pojemnikach 150 ml" },
+                c: ["a", "b", "d"]
+            },
+            {
+                id: 32,
+                q: "32. Bagaż rejestrowany, który uległ rozszczelnieniu lub naruszeniu po kontroli:",
+                a: { a: "A) musi zostać poddany ponownej kontroli bezpieczeństwa", b: "B) może zostać załadowany za zgodą kapitana", c: "C) zostaje wycofany z przewozu", d: "D) podlega dodatkowej kontroli manualnej" },
+                c: ["a"]
+            },
+            {
+                id: 33,
+                q: "33. Kto odpowiada za zapewnienie ochrony lotniska przed aktami bezprawnej ingerencji?",
+                a: { a: "A) Prezes ULC", b: "B) Zarządzający lotniskiem", c: "C) Straż Graniczna", d: "D) Policja" },
+                c: ["b"]
+            },
+            {
+                id: 34,
+                q: "34. Przepustki samochodowe uprawniające do wjazdu do strefy operacyjnej wydaje:",
+                a: { a: "A) Komendant Straży Granicznej", b: "B) Zarządzający lotniskiem", c: "C) Państwowa Agencja Żeglugi Powietrznej", d: "D) Wojewoda" },
+                c: ["b"]
+            },
+            {
+                id: 35,
+                q: "35. Kontroli bezpieczeństwa zapasów portu lotniczego dokonuje się przed ich wprowadzeniem do:",
+                a: { a: "A) strefy operacyjnej lotniska", b: "B) części krytycznej strefy zastrzeżonej", c: "C) obiektów administracji", d: "D) magazynów ogólnych" },
+                c: ["b"]
+            }
+        ];
+        const p5 = [
+            {
+                id: 36,
+                q: "36. Przepustki osobowe uprawniające do wejścia do strefy zastrzeżonej wydaje podmiot zarządzający lotniskiem po:",
+                a: { a: "A) przeprowadzeniu weryfikacji tożsamości", b: "B) uzyskaniu pozytywnego wyniku sprawdzenia przeszłości", c: "C) ukończeniu przez osobę szkolenia w zakresie świadomości ochrony lotnictwa", d: "D) uiszczeniu opłaty skarbowej" },
+                c: ["b", "c"]
+            },
+            {
+                id: 37,
+                q: "37. Bagaż kabinowy pasażerów transferowych może być zwolniony z kontroli bezpieczeństwa, jeśli:",
+                a: { a: "A) pochodzi z portu lotniczego w państwie trzecim stosującym standardy ochrony uznane za równoważne", b: "B) pasażer nie opuszczał pokładu samolotu", c: "C) bagaż był stale nadzorowany przez załogę", d: "D) lot odbywa się w granicach Unii Europejskiej" },
+                c: ["a"]
+            },
+            {
+                id: 38,
+                q: "38. Służba Ochrony Lotniska (SOL) wykonuje zadania w oparciu o przepisy ustawy:",
+                a: { a: "A) Prawo lotnicze", b: "B) O ochronie osób i mienia", c: "C) O Policji", d: "D) Kodeks postępowania karnego" },
+                c: ["a", "b"]
+            },
+            {
+                id: 39,
+                q: "39. Płyny zakupione w strefie bezcłowej lotniska poza UE, aby mogły być przewiezione przez pasażera transferowego, muszą być:",
+                a: { a: "A) zapakowane w torbę STEB wraz z widocznym dowodem zakupu", b: "B) zgłoszone do kontroli manualnej", c: "C) poddane badaniu dedykowanym urządzeniem do kontroli płynów (LEDS)", d: "D) nadane do luku jako bagaż rejestrowany" },
+                c: ["a", "c"]
+            },
+            {
+                id: 40,
+                q: "40. Formacją odpowiedzialną za nadzór nad kontrolą bezpieczeństwa realizowaną przez SOL jest:",
+                a: { a: "A) Policja", b: "B) Straż Graniczna", c: "C) Służba Celno-Skarbowa", d: "D) Urząd Lotnictwa Cywilnego" },
+                c: ["b"]
+            },
+            {
+                id: 41,
+                q: "41. Przedmioty zabronione w bagażu rejestrowanym to kategorycznie:",
+                a: { a: "A) urządzenia wybuchowe i substancje zapalające", b: "B) gazy palne i toksyczne", c: "C) noże o długości ostrza powyżej 6 cm", d: "D) aerozole medyczne" },
+                c: ["a"]
+            },
+            {
+                id: 42,
+                q: "42. Sprawdzenie przeszłości (background check) personelu lotniczego wykonuje się w celu weryfikacji:",
+                a: { a: "A) niekaralności danej osoby", b: "B) historii zatrudnienia i edukacji z ostatnich 5 lat", c: "C) profilu psychologicznego", d: "D) statusu obywatelstwa" },
+                c: ["a", "b"]
+            },
+            {
+                id: 43,
+                q: "43. Część krytyczna strefy zastrzeżonej lotniska (CSRA) musi być fizycznie odizolowana od:",
+                a: { a: "A) stref ogólnodostępnych", b: "B) niekrytycznych stref zastrzeżonych", c: "C) rejonów wieży kontroli lotów", d: "D) zaplecza technicznego" },
+                c: ["a", "b"]
+            },
+            {
+                id: 44,
+                q: "44. W przypadku wykrycia broni palnej bez odpowiednich uprawnień podczas kontroli, operator ma obowiązek natychmiast:",
+                a: { a: "A) zatrzymać bagaż i pasażera", b: "B) powiadomić dyżurnego Straży Granicznej lub Policji", c: "C) zabezpieczyć przedmiot w sejfie depozytowym", d: "D) anulować kartę pokładową pasażera" },
+                c: ["a", "b"]
+            },
+            {
+                id: 45,
+                q: "45. Kontrola bezpieczeństwa pojazdów wjeżdżających do strefy zastrzeżonej polega na:",
+                a: { a: "A) kontroli manualnej wnętrza i bagażnika", b: "B) sprawdzeniu podwozia i komory silnika", c: "C) weryfikacji ważności przepustki samochodowej", d: "D) kontroli tożsamości wszystkich osób w pojeździe" },
+                c: ["a", "b", "c", "d"]
+            }
+        ];
         let baza = p1;
         function zmien(nr) {
             document.getElementById('wynik').style.display = 'none';
             document.getElementById('m1').classList.toggle('active', nr === 1);
             document.getElementById('m2').classList.toggle('active', nr === 2);
             document.getElementById('m3').classList.toggle('active', nr === 3);
+            document.getElementById('m4').classList.toggle('active', nr === 4);
+            document.getElementById('m5').classList.toggle('active', nr === 5);
             if (nr === 1) baza = p1;
             else if (nr === 2) baza = p2;
-            else if (nr === 3) baza = p3.concat(p4); // Tutaj połączyłem obie paczki pytań!
+            else if (nr === 3) baza = p3_a.concat(p3_b);
+            else if (nr === 4) baza = p4;
+            else if (nr === 5) baza = p5;
             rysuj();
         }
         function rysuj() {
