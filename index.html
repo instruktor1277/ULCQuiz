@@ -3,455 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz ULC</title>
+    <title>Operator Kontroli Bezpieczeństwa ULC</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f7f6; color: #333; }
-        .menu { display: flex; gap: 10px; margin-bottom: 20px; justify-content: center; flex-wrap: wrap; }
-        .btn-m { background: #34495e; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
-        .btn-m.active { background: #3498db; }
-        .question { background: white; padding: 20px; border-left: 5px solid #3498db; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        label { display: block; margin-bottom: 8px; cursor: pointer; padding: 4px; }
-        label:hover { background: #f0f4f8; }
-        .btn-check { display: block; width: 200px; margin: 20px auto; background: #2ecc71; color: white; padding: 12px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 16px; }
-        #wynik { margin-top: 20px; padding: 15px; background: #e8f8f5; border: 2px solid #2ecc71; border-radius: 4px; text-align: center; font-size: 18px; font-weight: bold; display: none; }
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #0275d8; margin-bottom: 20px; }
+        .menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 25px; }
+        .btn { background-color: #343a40; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 14px; transition: 0.2s; }
+        .btn:hover { background-color: #23272b; }
+        .btn.active { background-color: #0275d8; }
+        .pytanie { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 6px; border-left: 5px solid #0275d8; }
+        .pytanie p { margin-top: 0; font-size: 16px; line-height: 1.5; }
+        label { display: block; padding: 8px 10px; margin: 4px 0; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px; cursor: pointer; transition: 0.2s; }
+        label:hover { background: #e9ecef; }
+        input[type="checkbox"] { margin-right: 10px; transform: scale(1.2); }
+        .status { margin-top: 10px; font-weight: bold; padding: 8px; border-radius: 4px; display: none; }
+        #wynik-box { display: none; background: #e2f0d9; border: 2px solid #385723; color: #385723; padding: 15px; text-align: center; font-size: 18px; font-weight: bold; border-radius: 6px; margin-top: 20px; }
+        .action-box { text-align: center; margin-top: 25px; }
+        .btn-check { background-color: #28a745; font-size: 18px; padding: 12px 30px; }
+        .btn-check:hover { background-color: #218838; }
     </style>
 </head>
 <body>
-    <h1 style="text-align:center; color:#2c3e50; font-size:22px;">Operator Kontroli Bezpieczeństwa ULC</h1>
+
+<div class="container">
+    <h1>Operator Kontroli Bezpieczeństwa ULC</h1>
+    
     <div class="menu">
-        <button class="btn-m active" id="m1" onclick="zmien(1)">Pytania 1 - 10</button>
-        <button class="btn-m" id="m2" onclick="zmien(2)">Pytania 11 - 20</button>
-        <button class="btn-m" id="m3" onclick="zmien(3)">Pytania 21 - 28</button>
-        <button class="btn-m" id="m4" onclick="zmien(4)">Pytania 29 - 40</button>
-        <button class="btn-m" id="m5" onclick="zmien(5)">Pytania 41 - 50</button>
+        <button class="btn active" id="m1" onclick="zmienZestaw(1)">Pytania 1 - 10</button>
+        <button class="btn" id="m2" onclick="zmienZestaw(2)">Pytania 11 - 20</button>
+        <button class="btn" id="m3" onclick="zmienZestaw(3)">Pytania 21 - 30</button>
+        <button class="btn" id="m4" onclick="zmienZestaw(4)">Pytania 31 - 40</button>
     </div>
+
     <div id="box"></div>
-    <button class="btn-check" onclick="sprawdz()">Sprawdź wynik</button>
-    <div id="wynik"></div>
-    <script>
-        const p1 = [
-            {
-                id: 1,
-                q: "1. Pasażer może wnieść do stref zastrzelonych lotniska lub na pokład statku powietrznego przedmioty zabronione, wymienione w dodatku 4-C załącznika do rozporządzenia wykonawczego Komisji nr 2015/1998 pod warunkiem, że:",
-                a: { a: "A) odpowiedni organ wyrazi zgodę na przewóz danego przedmiotu", b: "B) pasażer wnoszący przedmioty zabronione przeszedł sprawdzenie przeszłości, zgodnie z pkt 11.1.3 załącznika do rozporządzenia wykonawczego Komisji nr 2015/1998", c: "C) pasażerowi wnoszącemu przedmioty zabronione towarzyszy uzbrojona eskorta", d: "D) przewoźnik lotniczy został poinformowany o pasażerze i przewożonym przez niego przedmiocie przed wejściem pasażerów na pokład statku powietrznego", e: "E) spełnione są mające zastosowanie zasady ochrony lotnictwa" },
-                c: ["a", "d", "e"]
-            },
-            {
-                id: 2,
-                q: "2. Podczas kontroli bezpieczeństwa osób, ręczny wykrywacz metali:",
-                a: { a: "A) jest podstawowym środkiem kontroli bezpieczeństwa", b: "B) jest pomocny przy ustalaniu miejsca ukrycia materiałów wybuchowych", c: "C) można stosować tylko jako dodatkowy środek kontroli bezpieczeństwa", d: "D) można stosować zamiast kontroli manualnej", e: "E) nie zastępuje wymogów kontroli manualnej", f: "F) stosowany jest wyłącznie do kontroli bezpieczeństwa osób z ograniczoną możliwością poruszania się" },
-                c: ["c", "e"]
-            },
-            {
-                id: 3,
-                q: "3. Wskaż kategorie pasażerów zwolnionych z kontroli bezpieczeństwa:",
-                a: { a: "A) funkcjonariusze Służby Ochrony Państwa wykonujący czynności związane z zapewnieniem ochrony ministrowi spraw wewnętrznych", b: "B) osoby konwojowane pod uzbrojoną eskortą", c: "C) personel misji dyplomatycznych", d: "D) wicemarszałkowie Senatu" },
-                c: ["a", "d"]
-            },
-            {
-                id: 4,
-                q: "4. Kontrolę bezpieczeństwa pasażera potencjalnie uciążliwego przeprowadza się, za pomocą:",
-                a: { a: "A) kontroli manualnej", b: "B) psów do wykrywania materiałów wybuchowych", c: "C) ręcznego wykrywacza metali", d: "D) urządzenia rentgenowskiego" },
-                c: ["a", "b"]
-            },
-            {
-                id: 5,
-                q: "5. Sprzęt ułatwiający podróżowanie osobom z ograniczoną możliwością poruszania się:",
-                a: { a: "A) poddaje się kontroli wzrokowej", b: "B) poddaje się w miarę możliwości kontroli bezpieczeństwa jako bagaż kabinowy", c: "C) zwolniony jest z kontroli bezpieczeństwa za zgodą przewoźnika lotniczego", d: "D) zwolniony jest z kontroli bezpieczeństwa" },
-                c: ["b"]
-            },
-            {
-                id: 6,
-                q: "6. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
-                a: { a: "A) funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej", b: "B) funkcjonariusze Służby Kontrwywiadu Wojskowego po okazaniu ważnej legitymacji służbowej", c: "C) funkcjonariusze właściwych służb państwowych wykonujących zadania związane z pełnieniem wart ochronnych na pokładach statków powietrznych obcych przewoźników lotniczych na podstawie zawartych porozumień i umów międzynarodowych w tym zakresie posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku", d: "D) osoba posiadająca legitymację służbową wydaną przez Urząd Lotnictwa Cywilnego podczas wykonywania zadań i obowiązków służbowych na lotnisku", e: "E) pracownicy i funkcjonariusze Agencji Bezpieczeństwa Wewnętrznego i żołnierze wyznaczeni na stanowisko służbowe w Służbie Wywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku" },
-                c: ["c", "e"]
-            },
-            {
-                id: 7,
-                q: "7. Funkcjonariusze Straży Granicznej, Służby Celno-Skarbowej i Służby Ochrony Państwa mogą wejść do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej, jeżeli są eskortowani przez osoby posiadające:",
-                a: { a: "A) certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa Urzędu Lotnictwa Cywilnego", b: "B) czasową kartę identyfikacyjną danego portu lotniczego", c: "C) odpowiednik karty pokładowej", d: "D) ważną kartę identyfikacyjną członka załogi" },
-                c: ["a", "b"]
-            },
-            {
-                id: 8,
-                q: "8. Czasowa karta identyfikacyjna portu lotniczego dla funkcjonariuszy Straży Granicznej, Policji, Służby Celno-Skarbowej oraz innych służb państwowych zawiera:",
-                a: { a: "A) datę wydania", b: "B) nazwisko funkcjonariusza", c: "C) nr PESEL", d: "D) numer służbowy funkcjonariusza", e: "E) oznaczenia stref, do których funkcjonariusz ma dostęp" },
-                c: ["d", "e"]
-            },
-            {
-                id: 9,
-                q: "9. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
-                a: { a: "A) w momencie opuszczania terytorium kraju na okres dłuższy niż 2 tygodnie", b: "B) w momencie unieważnienia karty", c: "C) w momencie zmiany pracodawcy", d: "D) w przypadku gdy pracownik udaje się na zwolnienie lekarskie trwające powyżej 14 dni", e: "E) w razie zmiany potrzeby dostępu do stref, w odniesieniu do których udzielono upoważnienia" },
-                c: ["b", "c", "e"]
-            },
-            {
-                id: 10,
-                q: "10. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą:",
-                a: { a: "A) kontroli wzrokowej", b: "B) ręcznego wykrywacza metali", c: "C) urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wyktywaczami metali", d: "D) urządzeń do wykrywania śladowych ilości materiałów wybuchowych" },
-                c: ["c"]
-            }
-        ];
-        const p2 = [
-            {
-                id: 11,
-                q: "11. Kartę identyfikacyjną portu lotniczego nosi się w widocznym miejscu przynajmniej wówczas:",
-                a: { a: "A) gdy jej posiadacz przechodzi przez punkt kontroli bezpieczeństwa", b: "B) gdy jej posiadacz przechodzi przez punkt kontroli dostępu", c: "C) gdy jej posiadacz znajduje się w strefach ogólnodostępnych lotniska", d: "D) gdy jej posiadacz znajduje się w strefach zastrzeżonych lotniska" },
-                c: ["d"]
-            },
-            {
-                id: 12,
-                q: "12. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części lotniska niż część krytyczna strefy zastrzeżonej, uważa się za zabezpieczone przed bezprawną ingerencją, jeśli:",
-                a: { a: "A) nie są pozostawione bez nadzoru, a dostęp do nich mają wyłącznie osoby zaangażowane w zabezpieczanie i ładowanie ładunku oraz poczty na pokład statku powietrznego", b: "B) pozostają tam nie dłużej niż jedną godzinę", c: "C) tak przewiduje program ochrony przewoźnika lotniczego" },
-                c: ["a"]
-            },
-            {
-                id: 13,
-                q: "13. Ładunek i poczta poddawane sunt kontroli bezpieczeństwa z zastosowaniem co najmniej jednej z poniższych metod:",
-                a: { a: "A) kontrola wzrokowa", b: "B) psy do wykrywania materiałów wybuchowych", c: "C) sprawdzenie przeszłości nadawcy przesyłki", d: "D) systemy do wykrywania urządzeń wybuchowych", e: "E) urządzenia do wykrywania metali" },
-                c: ["a", "b", "d"]
-            },
-            {
-                id: 14,
-                q: "14. Podczas kontroli bezpieczeństwa bagażu rejestrowanego stosuje się:",
-                a: { a: "A) kontrolę wzrokową", b: "B) psy do wykrywania urządzeń wybuchowych", c: "C) systemy wykrywania urządzeń wybuchowych", d: "D) urządzenia rentgenowskie", e: "E) wykrywacze metali" },
-                c: ["d"]
-            },
-            {
-                id: 15,
-                q: "15. Następujące przedmioty uznaje się za przedmioty zabronione w przesyłkach zawierających ładunek i pocztę:",
-                a: { a: "A) wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", b: "B) wyposażenie wykorzystywane do sztuk walki", c: "C) zabawki w kształcie broni, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", d: "D) zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z mającymi zastosowanie zasadami bezpieczeństwa w lotnictwie cywilnym" },
-                c: ["d"]
-            },
-            {
-                id: 16,
-                q: "16. Następujące przedmioty nie mogą być przewożone przez pasażerów w bagażu rejestrowanym:",
-                a: { a: "A) dynamit i proch strzelniczy", b: "B) fajerwerki i inne materiały pirotechniczne", c: "C) lonty", d: "D) narzędzia z ostrzem lub trzonkiem o długości powyżej 6 cm, nadające się do użycia jako broń, takie jak śrubokręty i dłuta", e: "E) urządzenia do porażania, takie jak paralizatory, tasery i pałki paraliżujące" },
-                c: ["a", "b", "c", "d", "e"]
-            },
-            {
-                id: 17,
-                q: "17. Przedmioty zabronione do przewozu w bagażu kabinowym, o ile nie są zabronione do przewozu w bagażu rejestrowanym, mogą być:",
-                a: { a: "A) oznakowane przez przewoźnika lotniczego jako bagaż kabinowy i skierowane do luku bagażowego w trakcie kontroli bezpieczeństwa pasażerów i bagażu kabinowego", b: "B) po usunięciu z bagażu kabinowego umieszczone w specjalnie do tego celu przeznaczonym pojemniku i zniszczone na koszt przewoźnika lotniczego lub zarządzającego lotniskiem", c: "C) przechowane na lotnisku za opłatą, w przeznaczonym do tego celu pomieszczeniu, do czasu zgłoszenia się po ich odbiór pasażera", d: "D) umieszczone przez pasażera w bagażu rejestrowanym podczas trwania odprawy biletowo – bagażowej" },
-                c: ["b", "c", "d"]
-            },
-            {
-                id: 18,
-                q: "18. Następujące przedmioty nie mogą być wnoszone przez pasażerów do stref zastrzeżonych lotniska ani na pokład statku powietrznego:",
-                a: { a: "A) celowniki teleskopowe do broni palnej", b: "B) fajerwerki", c: "C) ładowarki do telefonów komórkowych", d: "D) pałki gumowe", e: "E) proce", f: "F) strzały do łuków" },
-                c: ["b", "d", "e", "f"]
-            },
-            {
-                id: 19,
-                q: "19. Podczas kontroli bezpieczeństwa bagażu kabinowego stosuje się:",
-                a: { a: "A) bramkowe wykrywacze metali", b: "B) komory symulacyjne", c: "C) kontrolę manualną", d: "D) psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą manualną", e: "E) urządzenia do wykrywania metali" },
-                c: ["c", "d"]
-            },
-            {
-                id: 20,
-                q: "20. Podczas kontroli bezpieczeństwa osób, urządzenia do wykrywania śladowych ilości materiałów wybuchowych, w połączeniu z ręcznymi wykrywaczami metali, można stosować:",
-                a: { a: "A) jako podstawową metodę kontroli bezpieczeństwa", b: "B) tylko w przypadku, gdy operator kontroli bezpieczeństwa uzna kontrolę manualną za nieskuteczną lub niepożądaną", c: "C) wyłącznie w stosunku do osób niepełnosprawnych" },
-                c: ["b"]
-            }
-        ];
-        const p3 = [
-            {
-                id: 21,
-                q: "21. Na lotniskach, na których nie funkcjonują lotnicze przejścia graniczne, formalności związane z przewozem broni i amunicji statkiem powietrznym dokonuje:",
-                a: { a: "A) Policja", b: "B) przewoźnik lotniczy", c: "C) Służba Celno-Skarbowa", d: "D) Służba Ochrony Lotniska" },
-                c: ["a"]
-            },
-            {
-                id: 22,
-                q: "22. Ręczny wykrywacz metali:",
-                a: { a: "A) jest w stanie wykryć metalowe przedmioty żelazne", b: "B) jest w stanie wykryć metalowe przedmioty nieżelazne", c: "C) jest używany jako podstawowa metoda kontroli bezpieczeństwa osób", d: "D) jest w stanie wykryć przedmioty z tworzyw sztucznych", e: "E) posiada wskaźnik wizualny sygnalizujący, że urządzenie funkcjonuje" },
-                c: ["a", "b", "e"]
-            },
-            {
-                id: 23,
-                q: "23. Kontrolą manualną jest zespół czynności kontroli bezpieczeństwa:",
-                a: { a: "A) wykonywanych ręcznie bez ingerencji w wewnętrzne powłoki ciała oraz w sposób powodujący w jak najmniejszym stopniu naruszenie intymności, w celu wykrycia w odzieży lub na ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji", b: "B) wykonywanych ręcznie z ingerencją w wewnętrzne powłoki ciała, w celu wykrycia w odzieży lub ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji", c: "C) wykonywanych za pomocą bramki do wykrywania metali i ręcznego wykrywacza metali, w celu wykrycia w odzieży lub na ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji" },
-                c: ["a"]
-            },
-            {
-                id: 24,
-                q: "24. Pracownik służby ochrony lotniska przy wykonywaniu zadań z zakresu kontroli bezpieczeństwa w lotnictwie cywilnym ma prawo do:",
-                a: { a: "A) dokonywania kontroli manualnej i przeglądania zawartości bagażu", b: "B) korzystania ze środków chemicznych oraz wykorzystania psów do wykrywania przedmiotów lub substancji, które mogą stanowić przedmiot niebezpieczny", c: "C) niedopuszczenia do wejścia na obszar lub do obiektu podlegających ochronie osoby nieposiadającej wymaganych uprawnień", d: "D) samodzielnej neutralizacji na stanowisku kontrolnym wykrytego urządzenia wybuchowego", e: "E) zwolnienia z kontroli bezpieczeństwa osób poruszających się na wózku inwalidzkim" },
-                c: ["a", "b", "c"]
-            },
-            {
-                id: 25,
-                q: "25. W szkoleniu w celu uzyskania certyfikatu operatora kontroli bezpieczeństwa może wziąć udział osoba:",
-                a: { a: "A) co do której ustalono brak negatywnych przesłanek do wykonywania przez tę osobę kontroli bezpieczeństwa w lotnictwie cywilnym", b: "B) która ukończyła szkolenie świadomości ochrony lotnictwa cywilnego", c: "C) potrafiąca nawiązać kontakt z osobami kontrolowanymi w co najmniej jednym języku obcym w podstawowym zakresie", d: "D) zamieszkująca na terenie Polski co najmniej 3 lata" },
-                c: ["a", "b"]
-            },
-            {
-                id: 26,
-                q: "26. Bramka do wykrywania metali:",
-                a: { a: "A) jest na stałe przymocowana do twardego podłoża", b: "B) musi być odporna na zalanie wodą", c: "C) wykrywa przedmiot metalowy niezależnie od jego położenia i usytuowania", d: "D) wykrywa przedmioty z plastiku niezależnie od ich położenia i usytuowania" },
-                c: ["a", "c"]
-            },
-            {
-                id: 27,
-                q: "27. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego zastosowane środki lub metoda:",
-                a: { a: "A) są zależne od częstotliwości dostaw w danym porcie lotniczym", b: "B) uwzględniają rodzaj zaopatrzenia", c: "C) zapewniają dostateczny poziom bezpieczeństwa, na ile to możliwe, jeżeli chodzi o wykrycie przedmiotów zabronionych ukrytych w zaopatrzeniu", d: "D) zawsze przewidują wykorzystanie psów do wykrywania materiałów wybuchowych w powiązaniu z systemami wykrywania materiałów wybuchowych" },
-                c: ["b", "c"]
-            },
-            {
-                id: 28,
-                q: "28. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
-                a: { a: "A) aerozole odstraszające zwierzęta", b: "B) farby drogowe w pojemnikach o pojemności powyżej 10 litrów", c: "C) granaty dymne", d: "D) masy bitumiczne uszczelniające w pojemnikach o pojemności powyżej 20 litrów", e: "E) pistolety sygnałowe", f: "F) spirytus salicylowy" },
-                c: ["a", "c", "e"]
-            }
-        ];
-        const p4_a = [
-            {
-                id: 29,
-                q: "29. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego, stosuje się:",
-                a: { a: "A) kontrolę wzrokową", b: "B) psy do wykrywania materiałów wybuchowych", c: "C) systemy wykrywania urządzeń wybuchowych", d: "D) urządzenia do wykrywania metali" },
-                c: ["b"]
-            },
-            {
-                id: 30,
-                q: "30. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
-                a: { a: "A) bramkowe detektory metali", b: "B) detektory promieniowania jonizującego", c: "C) kontrolę manualną", d: "D) systemy do wykrywania urządzeń wybuchowych", e: "E) urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z kontrolą wzrokową" },
-                c: ["c", "e"]
-            },
-            {
-                id: 31,
-                q: "31. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu pokładowym:",
-                a: { a: "A) latarki akumulatorowe", b: "B) metalowe pojemniki na lód", c: "C) pistolety sygnałowe", d: "D) rozpylacze kwasu", e: "E) tasery" },
-                c: ["c", "d", "e"]
-            },
-            {
-                id: 32,
-                q: "32. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego, stosuje się:",
-                a: { a: "A) kontrolę wzrokową", b: "B) systemy wykrywania urządzeń wybuchowych", c: "C) urządzenia do wykrywania niemetali", d: "D) urządzenia do wykrywania śladowych ilości materiałów wybuchowych" },
-                c: ["d"]
-            },
-            {
-                id: 33,
-                q: "33. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
-                a: { a: "A) urządzenia do wykrywania metali", b: "B) detektory promieniowania jonizującego", c: "C) systemy do wykrywania urządzeń wybuchowych", d: "D) urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z kontrolą wzrokową", e: "E) urządzenia rentgenowskie" },
-                c: ["d", "e"]
-            },
-            {
-                id: 34,
-                q: "34. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu pokładowym:",
-                a: { a: "A) gazy obronne", b: "B) latarki akumulatorowe", c: "C) metalowe pojemniki na lód", d: "D) pistolety na CO2", e: "E) rozpylacze kwasu" },
-                c: ["a", "d", "e"]
-            },
-            {
-                id: 35,
-                q: "35. Status ochrony nadany przesyłkom oznacza:",
-                a: { a: "A) „SCO” – bezpieczne tylko dla pasażerskiego i towarowego statku powietrznego", b: "B) „SHR” – bezpieczny dla pasażerskiego, towarowego i pocztowego statku powietrznego, zgodnie z wymogami wysokiego ryzyka", c: "C) „SPO” – bezpieczne tylko dla pasażerskiego i pocztowego statku powietrznego", d: "D) „SPX” – bezpieczne tylko dla pasażerskiego i pocztowego statku powietrznego" },
-                c: ["b"]
-            },
-            {
-                id: 36,
-                q: "36. Dokumentacja dołączona do każdej przesyłki zawierającej ładunek i pocztę, w stosunku do których zastosowano środki kontroli, zawiera między innymi następujące informacje:",
-                a: { a: "A) nazwisko osoby wystawiającej list przewozowy", b: "B) nazwisko osoby, która nadała status ochrony lub równoważną identyfikację oraz datę i godzinę nadania", c: "C) niepowtarzalny alfanumeryczny identyfikator uznanego nadawcy, nadany przez Prezesa Urzędu Lotnictwa Cywilnego", d: "D) niepowtarzalny identyfikator każdego zarejestrowanego agenta...", e: "E) opis zawartości przesyłki, status ochrony przesyłki i powód wydania statusu ochrony" },
-                c: ["b", "e"]
-            },
-            {
-                id: 37,
-                q: "37. Następujące przedmioty uznaje się za przedmioty zabronione w przesyłkach zawierających ładunek i pocztę:",
-                a: { a: "A) broń palna przewożona zgodnie z mającymi zastosowanie zasadami bezpieczeństwa", b: "B) wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", c: "C) zabawki w kształcie broni, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", d: "D) zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z mającymi zastosowanie zasadami" },
-                c: ["d"]
-            },
-            {
-                id: 38,
-                q: "38. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części pomieszczeń zarejestrowanego agenta, do których dostęp nie jest kontrolowany, uznaje się za zabezpieczone przed nieupoważnioną ingerencją, jeżeli:",
-                a: { a: "A) nie są fizycznie zabezpieczone w sposób zapobiegający wprowadzeniu do nich przedmiotu zabronionego", b: "B) nie są pozostawione bez nadzoru, a dostęp do nich mają wyłącznie osoby zaangażowane w zabezpieczanie i ładowanie ładunku oraz poczty na pokład statku powietrznego", c: "C) pozostają tam nie dłużej niż dwie godziny", d: "D) tak przewiduje program ochrony przewoźnika lotniczego" },
-                c: ["b"]
-            },
-            {
-                id: 39,
-                q: "39. Przed załadunkiem do luku bagażowego statku powietrznego, poczta przewoźnika lotniczego i materiały przewoźnika lotniczego poddawane są środkom kontroli w zakresie ochrony i zabezpieczane zgodnie z zasadami stosowanymi w odniesieniu do:",
-                a: { a: "A) bagażu kabinowego", b: "B) ładunków i poczty", c: "C) przedmiotów przenoszonych przez osoby niebędące pasażerami" },
-                c: ["b"]
-            },
-            {
-                id: 40,
-                q: "40. Następujące przedmioty uznaje się za przedmioty zabronione w poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy:",
-                a: { a: "A) broń pneumatyczna", b: "B) gazy pieprzowe", c: "C) kastety", d: "D) noże o długości ostrza poniżej 6 cm", e: "E) nożyczki o długości 6 cm", f: "F) piłki tenisowe" },
-                c: ["a", "b", "c"]
-            }
-        ];
-        const p4_b = [
-              {
-        id: 41,
-        q: "41. Który z wymienionych niżej dokumentów uprawnia do wejścia do strefy zastrzeżonej lotniska bez eskorty?",
-        o: { "a": "ważna karta identyfikacyjna portu lotniczego", "b": "bilet lotniczy wraz z paszportem", "c": "legitymacja szkolna lub studencka", "d": "karta stałego klienta linii lotniczych" },
-        c: ["a"]
-    },
-    {
-        id: 42,
-        q: "42. Wstęp do strefy zastrzeżonej lotniska pasażera posiadającego ważną kartę pokładową:",
-        o: { "a": "nie wymaga poddania kontroli bezpieczeństwa", "b": "wymaga poddania kontroli bezpieczeństwa pasażera i jego bagażu kabinowego", "c": "wymaga uzyskania dodatkowej przepustki osobistej", "d": "jest dozwolony wyłącznie w asyście pracownika ochrony" },
-        c: ["b"]
-    },
-    {
-        id: 43,
-        q: "43. Krajowy program ochrony lotnictwa cywilnego określa zadania m.in. dla:",
-        o: { "a": "zarządzających lotniskami i przewoźników lotniczych", "b": "wyłącznie dla Straży Granicznej", "c": "biur podróży sprzedających bilety", "d": "pasażerów podróżujących czarterami" },
-        c: ["a"]
-    },
-    {
-        id: 44,
-        q: "44. Za przeprowadzenie kontroli bezpieczeństwa pasażerów i bagażu na lotnisku w Polsce odpowiada bezpośrednio:",
-        o: { "a": "Państwowa Straż Pożarna", "b": "zarządzający lotniskiem (np. za pomocą SOL lub podmiotu uprawnionego)", "c": "obsługa techniczna samolotu", "d": "Urząd Celno-Skarbowy" },
-        c: ["b"]
-    },
-    {
-        id: 45,
-        q: "45. Zabezpieczenie przed dostępem osób nieuprawnionych do bagażu rejestrowanego po kontroli bezpieczeństwa leży w obowiązkach:",
-        o: { "a": "samych pasażerów", "b": "zarządzającego lotniskiem oraz przewoźnika lotniczego", "c": "Państwowej Inspekcji Pracy", "d": "firm sprzątających pokład" },
-        c: ["b"]
-    },
-    {
-        id: 46,
-        q: "46. Płynne materiały wybuchowe mogą być przewożone w bagażu kabinowym pod warunkiem, że:",
-        o: { "a": "są zapakowane w oryginalne puszki", "b": "są całkowicie zabronione do przewozu przez pasażerów", "c": "pasażer posiada zaświadczenie od producenta", "d": "pojemność opakowania nie przekracza 1 litra" },
-        c: ["b"]
-    },
-    {
-        id: 47,
-        q: "47. Testy sprawnościowe urządzeń rentgenowskich (X-ray) wykorzystywanych do kontroli bezpieczeństwa przeprowadza się:",
-        o: { "a": "raz na pięć lat", "b": "zgodnie z wymaganiami określonymi w przepisach krajowych i unijnych", "c": "tylko po zgłoszeniu awarii przez operatora", "d": "wyłącznie podczas kontroli Prezesa ULC" },
-        c: ["b"]
-    },
-    {
-        id: 48,
-        q: "48. Broń palna może być przewożona na pokładzie statku powietrznego w kabinie pasażerskiej:",
-        o: { "a": "za zgodą kapitana w każdym przypadku", "b": "wyłącznie przez uprawnionych funkcjonariuszy na ściśle określonych zasadach", "c": "jeśli jest rozłożona na części w bagażu podręcznym", "d": "jeśli pasażer dokonał dodatkowej opłaty gabarytowej" },
-        c: ["b"]
-    },
-    {
-        id: 49,
-        q: "49. Koordynatorem działań w przypadku wystąpienia aktu bezprawnego wdrożonego na terenie lotniska jest:",
-        o: { "a": "instytucja zapewniająca służby żeglugi powietrznej", "b": "odpowiednie służby państwowe (np. Straż Graniczna, Policja) we współpracy z zarządzającym", "c": "agent obsługi naziemnej", "d": "kierownik lotniskowej restauracji" },
-        c: ["b"]
-    },
-    {
-        id: 50,
-        q: "50. Na karcie identyfikacyjnej portu lotniczego znajdują się:",
-        o: { "a": "funkcja, jaką posiadacz karty pełni w porcie lotniczym", "b": "nazwa pracodawcy posiadacza, o ile nie jest zaprogramowana elektronicznie", "c": "nazwisko posiadacza", "d": "strefy, do których posiadacz ma dostęp" },
-        c: ["b", "c", "d"]
-    },
-    {
-        id: 51,
-        q: "51. Czasowa karta identyfikacyjna portu lotniczego zawiera:",
-        o: { "a": "datę wydania", "b": "funkcję, jaką posiadacz karty pełni w porcie lotniczym", "c": "zabezpieczenie przed jej podrobieniem lub przerobieniem", "d": "zdjęcie posiadacza" },
-        c: ["c"]
-    },
-    {
-        id: 52,
-        q: "52. Na jednorazowej karcie identyfikacyjnej portu lotniczego znajdują się:",
-        o: { "a": "data wydania", "b": "napisy: „GOŚĆ” i „VISITOR”", "c": "nazwa pracodawcy posiadacza", "d": "nazwisko posiadacza" },
-        c: ["b"]
-    },
-    {
-        id: 53,
-        q: "53. Czasowa karta identyfikacyjna portu lotniczego dla funkcjonariuszy Straży Granicznej, Policji, Służby Celnej oraz innych służb państwowych zawiera:",
-        o: { "a": "imię i nawisko", "b": "numer służbowy funkcjonariusza", "c": "oznaczenia stref, do których funkcjonariusz ma dostęp", "d": "zabezpieczenie przed jej podrobieniem lub przerobieniem", "e": "zdjęcie posiadacza" },
-        c: ["d"]
-    },
-    {
-        id: 54,
-        q: "54. Ładunek i poczta, którym nadano oznaczenie „KC” oznacza przesyłkę otrzymaną od:",
-        o: { "a": "uznanego dostawcy", "b": "zarejestrowanego agenta", "c": "zarejestrowanego dostawcy", "d": "znanego nadawcy" },
-        c: ["d"]
-    },
-    {
-        id: 55,
-        q: "55. Czasowa karta identyfikacyjna portu lotniczego dla funkcjonariuszy Straży Granicznej, Policji, Służby Celnej oraz innych służb państwowych zawiera:",
-        o: { "a": "datę ważności", "b": "nazwisko funkcjonariusza", "c": "numer służbowy funkcjonariusza", "d": "oznaczenia stref, do których funkcjonariusz ma dostęp" },
-        c: ["a"]
-    },
-    {
-        id: 56,
-        q: "56. Funkcjonariusze Straży Granicznej, Służby Celnej i Służby Ochrony Państwa mogą wejść do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej, jeżeli są eskortowani przez osoby posiadające:",
-        o: { "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa Urzędu Lotnictwa Cywilnego", "b": "czasową kartę identyfikacyjną danego portu lotniczego", "c": "nie ma wymogu eskortowania funkcjonariuszy służb państwowych udających się do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej", "d": "odpowiednik karty pokładowej", "e": "ważną kartę identyfikacyjną członka załogi" },
-        c: ["c"]
-    },
-    {
-        id: 57,
-        q: "57. Funkcjonariusze i żołnierze Agencji Bezpieczeństwa Wewnętrznego, Żandarmerii Wojskowej i Policji mogą wejść do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej w asyście osoby posiadającej:",
-        o: { "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa ULC", "b": "czasową kartę identyfikacyjną danego portu lotniczego", "c": "ważną kartę identyfikacyjną członka załogi", "d": "ważną legitymację inspektora ULC" },
-        c: ["b"]
-    },
-    {
-        id: 58,
-        q: "58. Dokumentem uprawniającym do eskortowania osób w strefach zastrzeżonych lotniska jest:",
-        o: { "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa ULC", "b": "ważna karta identyfikacyjna członka załogi", "c": "ważna karta identyfikacyjna portu lotniczego", "d": "ważna karta pokładowa" },
-        c: ["c"]
-    },
-    {
-        id: 59,
-        q: "59. Ładunek i poczta, którym nadano oznaczenie „RA” oznacza przesyłkę otrzymaną od:",
-        o: { "a": "uznanego dostawcy", "b": "zarejestrowanego agenta", "c": "zarejestrowanego dostawcy", "d": "znanego dostawcy" },
-        c: ["b"]
-    },
-    {
-        id: 60,
-        q: "60. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą następujących środków:",
-        o: { "a": "bramki do wykrywania metali", "b": "kontrolia manualna", "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych", "d": "urządzenia rentgenowskie" },
-        c: ["b"]
-    }
-];
 
-function zmien(nr) {
-    document.getElementById('wynik').style.display = 'none';
-    document.getElementById('m1').classList.toggle('active', nr === 1);
-    document.getElementById('m2').classList.toggle('active', nr === 2);
-    document.getElementById('m3').classList.toggle('active', nr === 3);
-    document.getElementById('m4').classList.toggle('active', nr === 4);
-    document.getElementById('m5').classList.toggle('active', nr === 5);
-    if (nr === 1) baza = p1;
-    else if (nr === 2) baza = p2;
-    else if (nr === 3) baza = p3;
-    else if (nr === 4) baza = p4_a;
-    else if (nr === 5) baza = p4_b;
-    rysuj();
-}
+    <div class="action-box">
+        <button class="btn btn-check" onclick="sprawdzTest()">Sprawdź wynik</button>
+    </div>
 
-function rysuj() {
-    let html = '';
-    baza.forEach(p => {
-        html += '<div class="pytanie" id="t-' + p.id + '"><p><strong>' + p.q + '</strong></p><div id="f-' + p.id + '">';
-        for (let k in p.o) {
-            html += '<label><input type="checkbox" name="p-' + p.id + '" value="' + k + '"> ' + k.toUpperCase() + '. ' + p.o[k] + '</label><br>';
-        }
-        html += '</div></div><hr>';
-    });
-    document.getElementById('box').innerHTML = html;
-}
+    <div id="wynik-box"></div>
+</div>
 
-function sprawdz() {
-    let pkt = 0;
-    baza.forEach(p => {
-        let cb = document.querySelectorAll('input[name="p-' + p.id + '" ]::checked');
-        if(cb.length === 0) { cb = document.querySelectorAll('input[name="p-' + p.id + '"]:checked'); }
-        let odp = Array.from(cb).map(box => box.value);
-        let f = document.getElementById('f-' + p.id);
-        if (odp.length === 0) {
-            f.innerHTML += ' <span style="color:orange;">⚠️ Brak odpowiedzi!</span>';
-            return;
-        }
-        let ok = p.c.length === odp.length && p.c.every(v => odp.includes(v));
-        if (ok) {
-            f.innerHTML += ' <span style="color:green;">✓ Poprawna!</span>';
-            pkt++;
-        } else {
-            f.innerHTML += ' <span style="color:red;">✗ Błędna. Poprawna: ' + p.c.join(', ').toUpperCase() + '</span>';
-        }
-    });
-    let r = document.getElementById('wynik');
-    r.style.display = 'block';
-    r.innerHTML = 'Wynik zestawu: ' + pkt + ' z ' + baza.length;
-}
-
-rysuj();
+<script>
+// --- TUTAJ W KOLEJNYM KROKU WKLEIMY BAZĘ PYTAŃ ---
 </script>
+
 </body>
 </html>
