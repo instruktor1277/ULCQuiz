@@ -108,8 +108,141 @@ const p1 = [
         c: ["c"]
     }
 ];
+const p2 = [
+    {
+        id: 11,
+        q: "11. Kartę identyfikacyjną portu lotniczego nosi się w widocznym miejscu przynajmniej wówczas:",
+        o: { "a": "gdy jej posiadacz przechodzi przez punkt kontroli bezpieczeństwa", "b": "gdy jej posiadacz przechodzi przez punkt kontroli dostępu", "c": "gdy jej posiadacz znajduje się w strefach ogólnodostępnych lotniska", "d": "gdy jej posiadacz znajduje się w strefach zastrzeżonych lotniska" },
+        c: ["d"]
+    },
+    {
+        id: 12,
+        q: "12. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części lotniska niż część krytyczna strefy zastrzeżonej, uważa się za zabezpieczone przed bezprawną ingerencją, jeśli:",
+        o: { "a": "nie są pozostawione bez nadzoru, a dostęp do nich mają wyłącznie osoby zaangażowane w zabezpieczanie i ładowanie", "b": "pozostają tam nie dłużej niż jedną godzinę", "c": "tak przewiduje program ochrony przewoźnika lotniczego" },
+        c: ["a"]
+    },
+    {
+        id: 13,
+        q: "13. Ładunek i poczta poddawane są kontroli bezpieczeństwa z zastosowaniem co najmniej jednej z poniższych metod:",
+        o: { "a": "kontrola wzrokowa", "b": "psy do wykrywania materiałów wybuchowych", "c": "sprawdzenie przeszłości nadawcy przesyłki", "d": "systemy do wykrywania urządzeń wybuchowych", "e": "urządzenia do wykrywania metali" },
+        c: ["a", "b", "d"]
+    },
+    {
+        id: 14,
+        q: "14. Podczas kontroli bezpieczeństwa bagażu rejestrowanego stosuje się:",
+        o: { "a": "kontrolę wzrokową", "b": "psy do wykrywania urządzeń wybuchowych", "c": "systemy wykrywania urządzeń wybuchowych", "d": "urządzenia rentgenowskie", "e": "wykrywacze metali" },
+        c: ["c", "d"]
+    },
+    {
+        id: 15,
+        q: "15. Następujące przedmioty uznaje się za przedmioty zabronione w przesyłkach zawierających ładunek i pocztę:",
+        o: { "a": "wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", "b": "wyposażenie wykorzystywane do sztuk walki", "c": "zabawki w kształcie broni, repliki i imitacje broni palnej...", "d": "zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z zasadami..." },
+        c: ["d"]
+    },
+    {
+        id: 16,
+        q: "16. Następujące przedmioty nie mogą być przewożone przez pasażerów w bagażu rejestrowanym:",
+        o: { "a": "dynamit i proch strzelniczy", "b": "fajerwerki i inne materiały pirotechniczne", "c": "lonty", "d": "narzędzia z ostrzem lub trzonkiem o długości powyżej 6 cm, nadające się do użycia jako broń...", "e": "urządzenia do porażania, takie jak paralizatory, tasery i pałki paraliżujące" },
+        c: ["a", "b", "c"]
+    },
+    {
+        id: 17,
+        q: "17. Przedmioty zabronione do przewozu w bagażu kabinowym, o ile nie są zabronione do przewozu w bagażu rejestrowanym, mogą być:",
+        o: { "a": "oznakowane przez przewoźnika lotniczego jako bagaż kabinowy i skierowane do luku bagażowego...", "b": "po usunięciu z bagażu kabinowego umieszczone w specjalnie do tego celu przeznaczonym pojemniku i zniszczone...", "c": "przechowane na lotnisku za opłatą, w przeznaczonym do tego celu pomieszczeniu...", "d": "umieszczone przez pasażera w bagażu rejestrowanym podczas trwania odprawy biletowo-bagażowej" },
+        c: ["b", "c", "d"]
+    },
+    {
+        id: 18,
+        q: "18. Następujące przedmioty nie mogą być wnoszone przez pasażerów do stref zastrzeżonych lotniska ani na pokład statku powietrznego:",
+        o: { "a": "celowniki teleskopowe do broni palnej", "b": "fajerwerki", "c": "ładowarki do telefonów komórkowych", "d": "pałki gumowe", "e": "proce", "f": "strzały do łuków" },
+        c: ["b", "d", "e", "f"]
+    },
+    {
+        id: 19,
+        q: "19. Podczas kontroli bezpieczeństwa bagażu kabinowego stosuje się:",
+        o: { "a": "bramkowe wykrywacze metali", "b": "komory symulacyjne", "c": "kontrolę manualną", "d": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą manualną", "e": "urządzenia do wykrywania metali" },
+        c: ["c", "d"]
+    },
+    {
+        id: 20,
+        q: "20. Podczas kontroli bezpieczeństwa osób, urządzenia do wykrywania śladowych ilości materiałów wybuchowych, w połączeniu z ręcznymi wykrywaczami metali, można stosować:",
+        o: { "a": "jako podstawową metodę kontroli bezpieczeństwa", "b": "tylko w przypadku, gdy operator kontroli bezpieczeństwa uzna kontrolę manualną za nieskuteczną lub niepożądaną", "c": "wyłącznie w stosunku do osób niepełnosprawnych" },
+        c: ["b"]
+    }
+];
 
-// --- TUTAJ W KOLEJNYM KROKU WKLEIMY PYTANIA 11 - 20 ---
+const p3 = [];
+const p4 = [];
+
+let baza = p1;
+
+function zmienZestaw(nr) {
+    document.getElementById('wynik-box').style.display = 'none';
+    document.getElementById('m1').classList.toggle('active', nr === 1);
+    document.getElementById('m2').classList.toggle('active', nr === 2);
+    document.getElementById('m3').classList.toggle('active', nr === 3);
+    document.getElementById('m4').classList.toggle('active', nr === 4);
+    
+    if (nr === 1) baza = p1;
+    else if (nr === 2) baza = p2;
+    else if (nr === 3) baza = p3;
+    else if (nr === 4) baza = p4;
+    
+    rysujTest();
+}
+
+function rysujTest() {
+    let html = '';
+    if (baza.length === 0) {
+        html = '<p style="text-align:center; color: #6c757d;">Ten zestaw pytań jest jeszcze pusty. Poproś o wygenerowanie danych!</p>';
+    } else {
+        baza.forEach(p => {
+            html += `<div class="pytanie" id="block-${p.id}">
+                <p><strong>${p.q}</strong></p>
+                <div id="ans-${p.id}">`;
+            for (let k in p.o) {
+                html += `<label><input type="checkbox" name="p-${p.id}" value="${k}"> ${k.toUpperCase()}. ${p.o[k]}</label>`;
+            }
+            html += `</div><div class="status" id="stat-${p.id}"></div></div>`;
+        });
+    }
+    document.getElementById('box').innerHTML = html;
+}
+
+function sprawdzTest() {
+    if (baza.length === 0) return;
+    let pkt = 0;
+    
+    baza.forEach(p => {
+        let cb = document.querySelectorAll(`input[name="p-${p.id}"]:checked`);
+        let odp = Array.from(cb).map(box => box.value);
+        let statDiv = document.getElementById(`stat-${p.id}`);
+        
+        statDiv.style.display = 'block';
+        
+        if (odp.length === 0) {
+            statDiv.style.color = 'orange';
+            statDiv.innerHTML = '⚠️ Brak odpowiedzi!';
+            return;
+        }
+        
+        let ok = p.c.length === odp.length && p.c.every(v => odp.includes(v));
+        if (ok) {
+            statDiv.style.color = 'green';
+            statDiv.innerHTML = '✓ Poprawna!';
+            pkt++;
+        } else {
+            statDiv.style.color = 'red';
+            statDiv.innerHTML = '✗ Błędna. Poprawna to: ' + p.c.join(', ').toUpperCase();
+        }
+    });
+    
+    let r = document.getElementById('wynik-box');
+    r.style.display = 'block';
+    r.innerHTML = 'Twój wynik w tym zestawie: ' + pkt + ' z ' + baza.length;
+}
+
+rysujTest();
 
 </script>
 
