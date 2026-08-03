@@ -338,50 +338,10 @@
                 a: { a: "A) funkcja, jaką posiadacz karty pełni w porcie lotniczym", b: "B) nazwa pracodawcy posiadacza, o ile nie jest zaprogramowana elektronicznie", c: "C) nazwisko posiadacza", d: "D) strefy, do których posiadacz karty ma dostęp" },
                 c: ["b", "c", "d"]
             }
-        ];
-        let baza = p1;
-        function zmien(nr) {
-            document.getElementById('wynik').style.display = 'none';
-            document.getElementById('m1').classList.toggle('active', nr === 1);
-            document.getElementById('m2').classList.toggle('active', nr === 2);
-            document.getElementById('m3').classList.toggle('active', nr === 3);
-            document.getElementById('m4').classList.toggle('active', nr === 4);
-            document.getElementById('m5').classList.toggle('active', nr === 5);
-            if (nr === 1) baza = p1;
-            else if (nr === 2) baza = p2;
-            else if (nr === 3) baza = p3;
-            else if (nr === 4) baza = p4_a;
-            else if (nr === 5) baza = p4_b;
-            rysuj();
-        }
-        function rysuj() {
-            let html = '';
-            baza.forEach(p => {
-                html += '<div class="question"><p><b>' + p.q + '</b></p>';
-                for (let k in p.a) {
-                    html += '<label><input type="checkbox" name="p-' + p.id + '" value="' + k + '"> ' + p.a[k] + '</label>';
-                }
-                html += '<div id="f-' + p.id + '" style="margin-top:8px; font-weight:bold;"></div></div>';
-            });
-            document.getElementById('box').innerHTML = html;
-        }
-        function sprawdz() {
-            let pkt = 0;
-            baza.forEach(p => {
-                let cb = document.querySelectorAll('input[name="p-' + p.id + '"]:checked');
-                let odp = Array.from(cb).map(box => box.value);
-                let f = document.getElementById('f-' + p.id);
-                if (odp.length === 0) { f.innerHTML = '<span style="color:orange">⚠️ Brak odpowiedzi!</span>'; return; }
-                let ok = p.c.length === odp.length && p.c.every(v => odp.includes(v));
-                if (ok) { f.innerHTML = '<span style="color:green">✓ Poprawna!</span>'; pkt++; }
-                else { f.innerHTML = '<span style="color:red">✗ Błędna. Poprawna: ' + p.c.join(', ').toUpperCase() + '</span>'; }
-            });
-            let r = document.getElementById('wynik');
-            r.style.display = 'block';
-            r.innerHTML = 'Wynik zestawu: ' + pkt + ' z ' + baza.length;
-        }
-        rysuj();<!-- PYTANIA 51 - 60 -->
+            <!-- TUTAJ KOŃCZY SIĘ TWOJE PYTANIE NR 50 -->
 
+<!-- PYTANIA 51 - 60 (TERAZ WE WŁAŚCIWYM MIEJSCU) -->
+<hr>
 <div class="pytanie" id="p51">
     <p><strong>51. Czasowa karta identyfikacyjna portu lotniczego zawiera:</strong></p>
     <label><input type="radio" name="q51" value="a"> a. datę wydania</label><br>
@@ -482,7 +442,53 @@
     <label><input type="radio" name="q60" value="d"> d. urządzenia rentgenowskie</label>
 </div>
 
-    </script>
+<!-- DOPIERO TUTAJ ZAMYKAMY STRONĘ I URUCHAMIAMY FUNKCJĘ -->
+<script>
+    rysuj();
+</script>
 </body>
 </html>
 
+        ];
+        let baza = p1;
+        function zmien(nr) {
+            document.getElementById('wynik').style.display = 'none';
+            document.getElementById('m1').classList.toggle('active', nr === 1);
+            document.getElementById('m2').classList.toggle('active', nr === 2);
+            document.getElementById('m3').classList.toggle('active', nr === 3);
+            document.getElementById('m4').classList.toggle('active', nr === 4);
+            document.getElementById('m5').classList.toggle('active', nr === 5);
+            if (nr === 1) baza = p1;
+            else if (nr === 2) baza = p2;
+            else if (nr === 3) baza = p3;
+            else if (nr === 4) baza = p4_a;
+            else if (nr === 5) baza = p4_b;
+            rysuj();
+        }
+        function rysuj() {
+            let html = '';
+            baza.forEach(p => {
+                html += '<div class="question"><p><b>' + p.q + '</b></p>';
+                for (let k in p.a) {
+                    html += '<label><input type="checkbox" name="p-' + p.id + '" value="' + k + '"> ' + p.a[k] + '</label>';
+                }
+                html += '<div id="f-' + p.id + '" style="margin-top:8px; font-weight:bold;"></div></div>';
+            });
+            document.getElementById('box').innerHTML = html;
+        }
+        function sprawdz() {
+            let pkt = 0;
+            baza.forEach(p => {
+                let cb = document.querySelectorAll('input[name="p-' + p.id + '"]:checked');
+                let odp = Array.from(cb).map(box => box.value);
+                let f = document.getElementById('f-' + p.id);
+                if (odp.length === 0) { f.innerHTML = '<span style="color:orange">⚠️ Brak odpowiedzi!</span>'; return; }
+                let ok = p.c.length === odp.length && p.c.every(v => odp.includes(v));
+                if (ok) { f.innerHTML = '<span style="color:green">✓ Poprawna!</span>'; pkt++; }
+                else { f.innerHTML = '<span style="color:red">✗ Błędna. Poprawna: ' + p.c.join(', ').toUpperCase() + '</span>'; }
+            });
+            let r = document.getElementById('wynik');
+            r.style.display = 'block';
+            r.innerHTML = 'Wynik zestawu: ' + pkt + ' z ' + baza.length;
+        }
+        rysuj();
