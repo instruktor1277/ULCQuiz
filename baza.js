@@ -683,5 +683,116 @@ const bazaPytan = [
     },
     c: ["a", "b", "c", "d"]
 }
+,
+{
+    id: 71,
+    q: "71. Wskaż przedmioty zabronione do wnoszenia przez pasażerów do stref zastrzeżonych lotniska oraz na pokład statku powietrznego w bagażu kabinowym z kategorii 'narzędzia robotnicze':",
+    o: { 
+        "a": "wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", 
+        "b": "narzędzia z ostrzem lub trzonkiem o długości powyżej 6 cm nadające się do użycia jako broń (np. śrubokręty, dłuta)", 
+        "c": "pistolety do wbijania gwoździ i pistolety nitarskie", 
+        "d": "piły, w tym bezprzewodowe przenośne piły elektryczne" 
+    },
+    c: ["a", "b", "c", "d"]
+},
+{
+    id: 72,
+    q: "72. Noże i nożyczki mogą być przewożone przez pasażerów w bagażu kabinowym, pod warunkiem że długość ich ostrzy mierzona od punktu obrotu (zwornika) nie przekracza:",
+    o: { 
+        "a": "3 cm", 
+        "b": "5 cm", 
+        "c": "6 cm", 
+        "d": "10 cm" 
+    },
+    c: ["c"]
+},
+{
+    id: 73,
+    q: "73. Przedmioty o ostrych krawędziach lub ostrych końcach (np. siekiery, topory, łyżwy) są:",
+    o: { 
+        "a": "całkowicie zabronione do transportu drogą lotniczą", 
+        "b": "dozwolone do przewozu wyłącznie w bagażu rejestrowanym", 
+        "c": "dozwolone do przewozu w bagażu kabinowym, jeśli są odpowiednio zabezpieczone osłonami", 
+        "d": "zwolnione z kontroli bezpieczeństwa" 
+    },
+    c: ["b"]
+},
+{
+    id: 74,
+    q: "74. Wskaż urządzenia, które zalicza się do kategorii 'urządzeń do ogłuszania lub obezwładniania' zabronionych w bagażu kabinowym:",
+    o: { 
+        "a": "urządzenia do porażania prądem (np. paralizatory, tasery, pałki paraliżujące)", 
+        "b": "urządzenia do ogłuszania i uboju zwierząt", 
+        "c": "chemiczne substancje, gazy i aerozole do obezwładniania (np. gazy pieprzowe, rozpylacze kwasu)", 
+        "d": "kajdanki metalowe" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 75,
+    q: "75. Broń palna, amunicja i przedmioty przeznaczone do wystrzeliwania pocisków mogą być przewożone na pokładzie statku powietrznego:",
+    o: { 
+        "a": "w bagażu kabinowym, pod warunkiem zgłoszenia tego załodze", 
+        "b": "wyłącznie jako bagaż rejestrowany w luku bagażowym, na ściśle określonych zasadach i po spełnieniu procedur bezpieczeństwa", 
+        "c": "w kieszeni pasażera, jeśli posiada on ważne pozwolenie na broń", 
+        "d": "tylko przez pilotów statku powietrznego" 
+    },
+    c: ["b"]
+},
+{
+    id: 76,
+    q: "76. Repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią, są w bagażu kabinowym pasażera:",
+    o: { 
+        "a": "dozwolone, ponieważ nie stanowią realnego zagrożenia bojowego", 
+        "b": "zabronione, ponieważ mogą zostać użyte do wywołania paniki lub sterroryzowania załogi", 
+        "c": "dozwolone pod warunkiem, że są wykonane z tworzywa sztucznego", 
+        "d": "zwolnione z kontroli bezpieczeństwa" 
+    },
+    c: ["b"]
+},
+{
+    id: 77,
+    q: "77. Operator kontroli bezpieczeństwa, w przypadku powzięcia wątpliwości co do charakteru przedmiotu niewymienionego wprost na liście przedmiotów zabronionych:",
+    o: { 
+        "a": "musi bezwzględnie zezwolić na jego wniesienie na pokład", 
+        "b": "ma prawo odmówić pasażerowi wniesienia tego przedmiotu, jeżeli uzna, że budzi on uzasadnione obawy o bezpieczeństwo lotu", 
+        "c": "musi skonsultować się telefonicznie z Prezesem ULC przed podjęciem decyzji", 
+        "d": "przekazuje decyzję kapitanowi samolotu przed wejściem pasażera na pokład" 
+    },
+    c: ["b"]
+},
+{
+    id: 78,
+    q: "78. Podczas kontroli bezpieczeństwa bagażu kabinowego za pomocą urządzenia rentgenowskiego, operator (screen) powinien analizować obraz pod kątem wykrycia:",
+    o: { 
+        "a": "anomalii gęstościowych wewnątrz przedmiotów", 
+        "b": "konturów broni palnej, noży lub innych narzędzi", 
+        "c": "organicznych materiałów masowych, które mogą wskazywać na obecność materiałów wybuchowych", 
+        "d": "wartości rynkowej przewożonej elektroniki" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 79,
+    q: "79. Wykrywacz materiałów wybuchowych (ETD) pobiera próby śladowe (wymazy) w celu identyfikacji mikroskopijnych cząstek substancji wybuchowych z:",
+    o: { 
+        "a": "dłoni, pasków lub obuwia kontrolowanej osoby", 
+        "b": "wnętrza, zamków lub rączek bagażu kabinowego", 
+        "c": "powierzchni urządzeń elektronicznych (np. laptopów)", 
+        "d": "wnętrza zabezpieczonych kosmetyczek" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 80,
+    q: "80. Do strefy zastrzeżonej lotniska zabrania się wnoszenia przedmiotów, które mogą zostać użyte do popełnienia aktu bezprawnej ingerencji, chyba że:",
+    o: { 
+        "a": "zostały poddane kontroli bezpieczeństwa i wydano na nie odpowiednie upoważnienie ze względu na charakter wykonywanej pracy", 
+        "b": "pasażer oświadczy, że są to pamiątki rodzinne", 
+        "c": "należą do personelu sprzątającego pokład", 
+        "d": "znajdują się w oryginalnych, nienaruszonych opakowaniach fabrycznych" 
+    },
+    c: ["a"]
+}
 
 ]
