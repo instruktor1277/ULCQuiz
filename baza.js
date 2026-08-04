@@ -794,5 +794,116 @@ const bazaPytan = [
     },
     c: ["a"]
 }
+,
+{
+    id: 81,
+    q: "81. W odniesieniu do bagażu rejestrowanego, który został poddany kontroli bezpieczeństwa i w stosunku do którego istnieją uzasadnione obawy, że mogło dojść do naruszenia jego integralności:",
+    o: { 
+        "a": "może zostać załadowany do statku powietrznego po uzyskaniu zgody kapitana", 
+        "b": "poddaje się go ponownej kontroli bezpieczeństwa przed załadunkiem do statku powietrznego", 
+        "c": "zostaje automatycznie przekazany do utylizacji", 
+        "d": "zostaje oznaczony jako bagaż wysokiego ryzyka i załadowany bez zmian" 
+    },
+    c: ["b"]
+},
+{
+    id: 82,
+    q: "82. Zaopatrzenie pokładowe, które dostarczane jest do strefy zastrzeżonej lotniska przez „znanego dostawcę zaopatrzenia pokładowego” wyznaczonego przez właściwy organ:",
+    o: { 
+        "a": "musi być każdorazowo poddawane pełnej kontroli bezpieczeństwa na bramkach lotniskowych", 
+        "b": "może być zwolnione z kontroli bezpieczeństwa, pod warunkiem że dostawca zastosował wymagane środki kontroli i zabezpieczył ładunek przed nieupoważnionym dostępem", 
+        "c": "podlega wyłącznie kontroli dokumentów przewozowych", 
+        "d": "jest zwolnione z jakichkolwiek procedur weryfikacyjnych" 
+    },
+    c: ["b"]
+},
+{
+    id: 83,
+    q: "83. Jeżeli pasażer odmawia poddania się kontroli bezpieczeństwa (manualnej lub za pomocą urządzeń):",
+    o: { 
+        "a": "zezwala mu się na wejście do strefy zastrzeżonej po podpisaniu oświadczenia o odpowiedzialności", 
+        "b": "odmawia mu się wstępu do stref zastrzeżonych lotniska oraz na pokład statku powietrznego", 
+        "c": "kontrolę przeprowadza się przymusowo w asyście Policji", 
+        "d": "pasażer zostaje zatrzymany w strefie ogólnodostępnej na 24 godziny" 
+    },
+    c: ["b"]
+},
+{
+    id: 84,
+    q: "84. Podczas kontroli bagażu kabinowego przy użyciu urządzeń rentgenowskich (X-ray), ciemne, jednolite obszary o bardzo dużej gęstości, których promienie nie są w stanie przeniknąć (tzw. obszary nieprzenikliwe), operator musi:",
+    o: { 
+        "a": "uznać za bezpieczne i przepuścić bagaż", 
+        "b": "zastosować dodatkową metodę kontroli, np. kontrolę manualną tego miejsca, aby upewnić się, że nie ukryto tam przedmiotów zabronionych", 
+        "c": "zwrócić bagaż pasażerowi w celu nadania go jako rejestrowany", 
+        "d": "zgłosić natychmiastowy alarm bojowy dla całego terminala" 
+    },
+    c: ["b"]
+},
+{
+    id: 85,
+    q: "85. Które z poniższych środków ochrony fizycznej zapobiegają nieupoważnionemu dostępowi do ładunku i poczty po przeprowadzeniu kontroli bezpieczeństwa?",
+    o: { 
+        "a": "umieszczenie przesyłek w zamykanych lub zaplombowanych ładowniach/pojazdach", 
+        "b": "zastosowanie taśm zabezpieczających wykazujących ślady otwarcia (tamper-evident)", 
+        "c": "zapewnienie stałego nadzoru fizycznego przez uprawniony personel", 
+        "d": "owinięcie przesyłek zwykłą folią stretch bez oznaczeń" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 86,
+    q: "86. Zaopatrzenie portu lotniczego obejmuje wszelkie towary przeznaczone do:",
+    o: { 
+        "a": "sprzedaży w sklepach wolnocłowych i punktach handlowych w strefie zastrzeżonej", 
+        "b": "użytku, konsumpcji lub zapewnienia funkcjonowania portu lotniczego w strefie zastrzeżonej", 
+        "c": "konsumpcji na pokładzie statków powietrznych przez pasażerów i załogę", 
+        "d": "osobistego użytku pasażerów w strefie ogólnodostępnej" 
+    },
+    c: ["a", "b"]
+},
+{
+    id: 87,
+    q: "87. Wskaż, jakie wymagania musi spełnić osoba ubiegająca się o wydanie stałej karty identyfikacyjnej portu lotniczego (KIPL):",
+    o: { 
+        "a": "pomyślne przejście sprawdzenia przeszłości (background check)", 
+        "b": "uzasadniona potrzeba operacyjna dostępu do stref zastrzeżonych lotniska", 
+        "c": "odbycie szkolenia w zakresie świadomości ochrony lotnictwa cywilnego", 
+        "d": "posiadanie wyższego wykształcenia o profilu lotniczym" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 88,
+    q: "88. Certyfikat operatora kontroli bezpieczeństwa (certyfikat OKB) wydawany przez Prezesa ULC zachowuje ważność przez okres:",
+    o: { 
+        "a": "1 roku", 
+        "b": "3 lat", 
+        "c": "5 lat", 
+        "d": "bezterminowo, o ile operator pracuje w zawodzie" 
+    },
+    c: ["b"]
+},
+{
+    id: 89,
+    q: "89. Do kategorii przedmiotów zabronionych w bagażu kabinowym 'broń palna i inne urządzenia wystrzeliwujące pociski' zalicza się również:",
+    o: { 
+        "a": "broń zabawkową, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", 
+        "b": "pistolety sygnałowe i startowe", 
+        "c": "łuki, kusze i strzały", 
+        "d": "urządzenia do miotania harpunów i włóczni" 
+    },
+    c: ["a", "b", "c", "d"]
+},
+{
+    id: 90,
+    q: "90. Wnoszone przez pasażerów do strefy zastrzeżonej płyny medyczne lub dietetyczne o pojemności powyżej 100 ml (np. płynne leki, odżywki dla dzieci):",
+    o: { 
+        "a": "są całkowicie zabronione i podlegają konfiskacie", 
+        "b": "są dozwolone, ale muszą zostać wyjęte z bagażu kabinowego i poddane osobnemu sprawdzeniu przy użyciu dedykowanych urządzeń do kontroli LAG", 
+        "c": "są przepuszczane bez żadnej kontroli na podstawie deklaracji słownej", 
+        "d": "wymagają zgody kapitana statku powietrznego" 
+    },
+    c: ["b"]
+}
 
 ]
