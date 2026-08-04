@@ -95,7 +95,7 @@
     {
         "id": 9,
         "q": "9. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
-        "o: { 
+        "o": { 
             "a": "w momencie opuszczania terytorium kraju na okres dłuższy niż 2 tygodnie", 
             "b": "w momencie unieważnienia karty", 
             "c": "w momencie zmiany pracodawcy", 
