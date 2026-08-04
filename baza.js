@@ -44,7 +44,7 @@ const bazaPytan = [
             "c": "ręcznego wykrywacza metali", 
             "d": "urządzenia rentgenowskiego" 
         },
-        c: ["a", "c", "d"]
+        c: ["a", "b"]
     },
     {
         id: 5,
