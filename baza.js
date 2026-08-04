@@ -1371,5 +1371,127 @@ const bazaPytan = [
     },
     c: ["d", "e"]
 }
+,
+{
+    id: 131,
+    q: "131. Następujące przedmioty nie mogą być wnoszone przez pasażerów do stref zastrzeżonych lotniska ani na pokład statku powietrznego:",
+    o: { 
+        "a": "bezprzewodowe przenośne piły elektryczne", 
+        "b": "celowniki teleskopowe do broni palnej", 
+        "c": "fajerwerki", 
+        "d": "ładowarki do telefonów komórkowych", 
+        "e": "strzały do łuków", 
+        "f": "tasaki kuchenne" 
+    },
+    c: ["a", "c", "e", "f"]
+},
+{
+    id: 132,
+    q: "132. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+    o: { 
+        "a": "bramkowe detektory metali", 
+        "b": "detektory promieniowania jonizującego", 
+        "c": "kontrola manualna", 
+        "d": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą wzrokową", 
+        "e": "systemy do wykrywania urządzeń wybuchowych" 
+    },
+    c: ["c"]
+},
+{
+    id: 133,
+    q: "133. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
+    o: { 
+        "a": "imitacje broni palnej", 
+        "b": "imitacje urządzeń wybuchowych", 
+        "c": "kubki plastikowe", 
+        "d": "pojemniki z gazami łzawiącymi", 
+        "e": "spinacze biurowe", 
+        "f": "wiertarki" 
+    },
+    c: ["a", "b", "d", "f"]
+},
+{
+    id: 134,
+    q: "134. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
+    o: { 
+        "a": "części składowe broni palnej", 
+        "b": "fajerwerki i inne materiały pirotechniczne", 
+        "c": "łuki i strzały", 
+        "d": "szpadle i łopaty", 
+        "e": "tonery do kserokopiarek laserowych", 
+        "f": "worki na śmieci o pojemności powyżej 120 litrów" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 135,
+    q: "135. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
+    o: { 
+        "a": "opony samochodowe", 
+        "b": "pojemniki z gazami pieprzowymi", 
+        "c": "proch strzelniczy", 
+        "d": "rękawice robocze", 
+        "e": "spirytus salicylowy", 
+        "f": "strzelby myśliwskie" 
+    },
+    c: ["b", "c", "f"]
+},
+{
+    id: 136,
+    q: "136. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
+    o: { 
+        "a": "amunicja strzelecka", 
+        "b": "ceramiczne doniczki do kwiatów", 
+        "c": "komputery przenośne (laptopy)", 
+        "d": "paralizatory elektryczne", 
+        "e": "plastyczne materiały wybuchowe", 
+        "f": "zabawki w kształcie wiertarek, które można pomylić z prawdziwymi wiertarkami" 
+    },
+    c: ["a", "d", "e"]
+},
+{
+    id: 137,
+    q: "137. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego zastosowane środki lub metoda:",
+    o: { 
+        "a": "muszą zostać uzgodnione z producentem zaopatrzenia", 
+        "b": "określane są przez Urząd Lotnictwa Cywilnego", 
+        "c": "uwzględniają rodzaj zaopatrzenia" 
+    },
+    c: ["c"]
+},
+{
+    id: 138,
+    q: "138. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego zastosowane środki lub metoda:",
+    o: { 
+        "a": "są zależne od wielkości ruchu lotniczego w danym porcie lotniczym", 
+        "b": "zapewniają dostateczny poziom bezpieczeństwa, na ile to możliwe, jeżeli chodzi o wykrycie przedmiotów zabronionych ukrytych w zaopatrzeniu", 
+        "c": "zawsze przewidują wykorzystanie psów do wykrywania materiałów wybuchowych w powiązaniu z systemami wykrywania materiałów wybuchowych" 
+    },
+    c: ["b"]
+},
+{
+    id: 139,
+    q: "139. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+    o: { 
+        "a": "bramkowe detektory metali", 
+        "b": "kontrola manualna", 
+        "c": "psy do wykrywania materiałów wybuchowych w powiązaniu z kontrolą wzrokową", 
+        "d": "ręczne detektory metali", 
+        "e": "systemy wykrywania materiałów wybuchowych" 
+    },
+    c: ["b", "c", "e"]
+},
+{
+    id: 140,
+    q: "140. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+    o: { 
+        "a": "komora symulacyjna", 
+        "b": "kontrola wzrokowa", 
+        "c": "ręczne detektory metali w połączeniu z kontrolą wzrokową", 
+        "d": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w powiązaniu z kontrolą wzrokową", 
+        "e": "urządzenia rentgenowskie" 
+    },
+    c: ["b", "d", "e"]
+}
     
 ]
