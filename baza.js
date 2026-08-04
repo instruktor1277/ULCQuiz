@@ -9,7 +9,7 @@ const bazaPytan = [
             "d": "przewoźnik lotniczy został poinformowany o pasażerze i przewożonym przez niego przedmiocie przed wejściem pasażerów na pokład statku powietrznego", 
             "e": "spełnione są mające zastosowanie zasady ochrony lotnictwa" 
         },
-        c: ["b", "d", "e"]
+        c: ["a", "d", "e"]
     },
     {
         id: 2,
