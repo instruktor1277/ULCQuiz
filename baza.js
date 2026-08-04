@@ -689,11 +689,11 @@ const bazaPytan = [
     q: "71. Wskaż przedmioty zabronione do wnoszenia przez pasażerów do stref zastrzeżonych lotniska oraz na pokład statku powietrznego w bagażu kabinowym z kategorii 'narzędzia robotnicze':",
     o: { 
         "a": "wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", 
-        "b": "narzędzia z ostrzem lub trzonkiem o długości powyżej 6 cm nadające się do użycia jako broń (np. śrubokręty, dłuta)", 
+        "b": "narzędzia z ostrzem lub trzonkiem o długości powyżej 6 cm nadające się do użycia jako broń, takie jak śrubokręty i dłuta", 
         "c": "pistolety do wbijania gwoździ i pistolety nitarskie", 
         "d": "piły, w tym bezprzewodowe przenośne piły elektryczne" 
     },
-    c: ["a", "b", "c", "d"]
+    c: ["b"]
 },
 {
     id: 72,
@@ -724,9 +724,9 @@ const bazaPytan = [
         "a": "urządzenia do porażania prądem (np. paralizatory, tasery, pałki paraliżujące)", 
         "b": "urządzenia do ogłuszania i uboju zwierząt", 
         "c": "chemiczne substancje, gazy i aerozole do obezwładniania (np. gazy pieprzowe, rozpylacze kwasu)", 
-        "d": "kajdanki metalowe" 
+        "d": "substancje i mieszaniny chemiczne, gazy i aerozole w pojemnikach, przeznaczone do obezwładniania lub unieszkodliwiania" 
     },
-    c: ["a", "b", "c"]
+    c: ["a", "b", "c", "d"]
 },
 {
     id: 75,
@@ -745,7 +745,7 @@ const bazaPytan = [
     o: { 
         "a": "dozwolone, ponieważ nie stanowią realnego zagrożenia bojowego", 
         "b": "zabronione, ponieważ mogą zostać użyte do wywołania paniki lub sterroryzowania załogi", 
-        "c": "dozwolone pod warunkiem, że są wykonane z tworzywa sztucznego", 
+        "c": "dozwolone pod warunkiem, że są wykonane z tworzywa sztuktnego", 
         "d": "zwolnione z kontroli bezpieczeństwa" 
     },
     c: ["b"]
@@ -793,8 +793,7 @@ const bazaPytan = [
         "d": "znajdują się w oryginalnych, nienaruszonych opakowaniach fabrycznych" 
     },
     c: ["a"]
-}
-,
+},
 {
     id: 81,
     q: "81. W odniesieniu do bagażu rejestrowanego, który został poddany kontroli bezpieczeństwa i w stosunku do którego istnieją uzasadnione obawy, że mogło dojść do naruszenia jego integralności:",
@@ -832,7 +831,7 @@ const bazaPytan = [
     id: 84,
     q: "84. Podczas kontroli bagażu kabinowego przy użyciu urządzeń rentgenowskich (X-ray), ciemne, jednolite obszary o bardzo dużej gęstości, których promienie nie są w stanie przeniknąć (tzw. obszary nieprzenikliwe), operator musi:",
     o: { 
-        "a": "uznać za bezpieczne i przepuścić bagaż", 
+        "a": "uznad za bezpieczne i przepuścić bagaż", 
         "b": "zastosować dodatkową metodę kontroli, np. kontrolę manualną tego miejsca, aby upewnić się, że nie ukryto tam przedmiotów zabronionych", 
         "c": "zwrócić bagaż pasażerowi w celu nadania go jako rejestrowany", 
         "d": "zgłosić natychmiastowy alarm bojowy dla całego terminala" 
@@ -843,13 +842,14 @@ const bazaPytan = [
     id: 85,
     q: "85. Które z poniższych środków ochrony fizycznej zapobiegają nieupoważnionemu dostępowi do ładunku i poczty po przeprowadzeniu kontroli bezpieczeństwa?",
     o: { 
-        "a": "umieszczenie przesyłek w zamykanych lub zaplombowanych ładowniach/pojazdach", 
+        "a": "umieszczone przesyłek w zamykanych lub zaplombowanych ładowniach/pojazdach", 
         "b": "zastosowanie taśm zabezpieczających wykazujących ślady otwarcia (tamper-evident)", 
         "c": "zapewnienie stałego nadzoru fizycznego przez uprawniony personel", 
         "d": "owinięcie przesyłek zwykłą folią stretch bez oznaczeń" 
     },
     c: ["a", "b", "c"]
-},
+}
+,
 {
     id: 86,
     q: "86. Zaopatrzenie portu lotniczego obejmuje wszelkie towary przeznaczone do:",
@@ -892,7 +892,7 @@ const bazaPytan = [
         "c": "łuki, kusze i strzały", 
         "d": "urządzenia do miotania harpunów i włóczni" 
     },
-    c: ["a", "b", "c", "d"]
+    c: ["b", "d"]
 },
 {
     id: 90,
@@ -904,8 +904,7 @@ const bazaPytan = [
         "d": "wymagają zgody kapitana statku powietrznego" 
     },
     c: ["b"]
-}
-,
+},
 {
     id: 91,
     q: "91. Przedmioty zabronione w bagażu kabinowym z kategorii 'przedmioty z ostrym końcem lub ostrą krawędzią' obejmują między innymi:",
@@ -963,12 +962,12 @@ const bazaPytan = [
 },
 {
     id: 96,
-    q: "96. Broń palna, amunicja oraz elementy broni palnej przewożone w bagażu rejestrowanym muszą być:",
+    q: "96. Broń palna, amunicja oraz elementy broni palnej przewożone w bagażu rejestrowanym must be:",
     o: { 
         "a": "odpowiednio zabezpieczone, rozładowane i zgłoszone podczas odprawy biletowo-bagażowej, a ich transport odbywa się według specjalnych procedur", 
         "b": "zapakowane w zwykłą folię stretch i umieszczone na wierzchu ubrań", 
         "c": "umieszczone w bagażu podręcznym pasażera w celu stałego nadzoru", 
-        "d": "przewożone bez konieczności informowania przewoźnika" 
+        "d": "przewoźnikowi przekazywane bez konieczności informowania" 
     },
     c: ["a"]
 },
@@ -1016,5 +1015,4 @@ const bazaPytan = [
     },
     c: ["b"]
 }
-
 ]
