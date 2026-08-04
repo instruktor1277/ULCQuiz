@@ -1140,5 +1140,116 @@ const bazaPytan = [
     },
     c: ["c"]
 }
+,
+{
+    id: 111,
+    q: "111. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części lotniska niż część krytyczna strefy zastrzeżonej, uważa się za zabezpieczone przed bezprawną ingerencją, jeśli:",
+    o: { 
+        "a": "pozostają tam nie dłużej niż jedną godzinę", 
+        "b": "są fizycznie zabezpieczone tak, by nie dopuścić do wprowadzenia jakiegokolwiek przedmiotu, który mógłby zostać użyty w akcie bezprawnej ingerencji", 
+        "c": "tak przewiduje program ochrony przewoźnika lotniczego" 
+    },
+    c: ["b"]
+},
+{
+    id: 112,
+    q: "112. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części lotniska niż część krytyczna strefy zastrzeżonej, uważa się za zabezpieczone przed bezprawną ingerencją, jeśli:",
+    o: { 
+        "a": "jeszcze tego samego dnia zostaną załadowane do statku powietrznego", 
+        "b": "nie są pozostawione bez nadzoru, a dostęp ogranicza się do osób zaangażowanych w zabezpieczenie i ładowanie ładunku lub poczty do statku powietrznego", 
+        "c": "z analizy ryzyka przeprowadzonej przez Szefa Agencji Bezpieczeństwa Wewnętrznego wynika, że nic tym przesyłkom nie grozi" 
+    },
+    c: ["b"]
+},
+{
+    id: 113,
+    q: "113. Przed załadunkiem do luku bagażowego statku powietrznego poczta przewoźnika lotniczego i materiały przewoźnika lotniczego poddawane są kontroli bezpieczeństwa i zabezpieczane zgodnie z zasadami kontroli bezpieczeństwa i zasadami zabezpieczenia:",
+    o: { 
+        "a": "bagażu kabinowego", 
+        "b": "bagażu rejestrowanego", 
+        "c": "przedmiotów przenoszonych przez osoby niebędące pasażerami" 
+    },
+    c: ["b"]
+},
+{
+    id: 114,
+    q: "114. Przed załadunkiem do jakiejkolwiek części statku powietrznego innej niż luk bagażowy, poczta przewoźnika lotniczego i materiały przewoźnika lotniczego poddawane są kontroli bezpieczeństwa i zabezpieczane zgodnie z zasadami kontroli bezpieczeństwa i zasadami zabezpieczenia:",
+    o: { 
+        "a": "bagażu kabinowego", 
+        "b": "bagażu rejestrowanego", 
+        "c": "ładunków i poczty" 
+    },
+    c: ["a"]
+},
+{
+    id: 115,
+    q: "115. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego, stosuje się:",
+    o: { 
+        "a": "kontrolę manualną", 
+        "b": "kontrolę wzrokową", 
+        "c": "ręczne wykrywacze metali", 
+        "d": "systemy wykrywania materiałów wybuchowych" 
+    },
+    c: ["a", "b", "d"]
+},
+{
+    id: 116,
+    q: "116. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego, stosuje się:",
+    o: { 
+        "a": "psy do wykrywania materiałów wybuchowych", 
+        "b": "urządzenia do wykrywania śladowych ilości narkotyków i środków odurzających", 
+        "c": "urządzenia rentgenowskie", 
+        "d": "wzierniki endoskopowe" 
+    },
+    c: ["a", "c"]
+},
+{
+    id: 117,
+    q: "117. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy, stosuje się:",
+    o: { 
+        "a": "bramkowe wykrywacze metali", 
+        "b": "komory symulacyjne", 
+        "c": "kontrolę manualną", 
+        "d": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą manualną" 
+    },
+    c: ["c", "d"]
+},
+{
+    id: 118,
+    q: "118. Następujące przedmioty uznaje się za przedmioty zabronione w poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego:",
+    o: { 
+        "a": "amunicja", 
+        "b": "fajerwerki i inne materiały pirotechniczne", 
+        "c": "noże do cięcia kartonów", 
+        "d": "ostrza do maszynek do golenia", 
+        "e": "pistolety do wstrzeliwania kołków i gwoździ" 
+    },
+    c: ["a", "b"]
+},
+{
+    id: 119,
+    q: "119. Następujące przedmioty uznaje się za przedmioty zabronione w poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego:",
+    o: { 
+        "a": "części składowe broni palnej", 
+        "b": "dynamit, proch strzelniczy i plastyczne materiały wybuchowe", 
+        "c": "noże o długości ostrza powyżej 6 cm", 
+        "d": "spłonki", 
+        "e": "wyrzutnie rac sygnalizacyjnych" 
+    },
+    c: ["b", "d"]
+},
+{
+    id: 120,
+    q: "120. Następujące przedmioty uznaje się za przedmioty zabronione w poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy:",
+    o: { 
+        "a": "łomy stalowe", 
+        "b": "miotacze gazów łzawiących", 
+        "c": "papier ścierny w rulonach", 
+        "d": "piłki tenisowe", 
+        "e": "pistolety i rewolwery", 
+        "f": "szpady i szable" 
+    },
+    c: ["a", "b", "e", "f"]
+}
     
 ]
