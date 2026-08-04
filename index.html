@@ -27,10 +27,12 @@
 <body>
 <div class="container">
     <h1>Operator Kontroli Bezpieczeństwa ULC</h1>
-    <div class="menu">
-        <button class="btn active" id="m1" onclick="pokaz(1)">Pytania 1 - 10</button>
-        <button class="btn" id="m2" onclick="pokaz(2)">Pytania 11 - 20</button>
-    </div>
+   <div class="menu">
+    <button class="btn active" id="m1" onclick="pokaz(1)">Pytania 1 - 10</button>
+    <button class="btn" id="m2" onclick="pokaz(2)">Pytania 11 - 20</button>
+    <button class="btn" id="m3" onclick="pokaz(3)">Pytania 21 - 30</button>
+</div>
+
     <div id="box"></div>
     <div class="action-box"><button class="btn btn-check" onclick="sprawdz()">Sprawdź wynik</button></div>
     <div id="wynik-box"></div>
@@ -136,7 +138,58 @@ const bazaPytan = [
         id: 20, q: "20. Podczas kontroli bezpieczeństwa osób, urządzenia do wykrywania śladowych ilości materiałów wybuchowych, w połączeniu z ręcznymi wykrywaczami metali, można stosować:",
         o: { "a": "jako podstawową metodę kontroli bezpieczeństwa", "b": "tylko w przypadku, gdy operator kontroli bezpieczeństwa uzna kontrolę manualną za nieskuteczną lub niepożądaną", "c": "wyłącznie w stosunku do osób niepełnosprawnych" },
         c: ["b"]
+    },
+        {
+        id: 21, q: "21. Na lotniskach, na których nie funkcjonują lotnicze przejścia graniczne, formalności związane z przewozem broni i amunicji statkiem powietrznym dokonuje:",
+        o: { "a": "Policja", "b": "przewoźnik lotniczy", "c": "Służba Celno-Skarbowa", "d": "Służba Ochrony Lotniska" },
+        c: ["d"]
+    },
+    {
+        id: 22, q: "22. Ręczny wykrywacz metali:",
+        o: { "a": "jest w stanie wykryć metalowe przedmioty żelazne", "b": "jest w stanie wykryć metalowe przedmioty nieżelazne", "c": "jest używany jako podstawowa metoda kontroli bezpieczeństwa osób", "d": "jest w stanie wykryć przedmioty z tworzyw sztucznych", "e": "posiada wskaźnik wizualny sygnalizujący, że urządzenie funkcjonuje" },
+        c: ["a", "b", "e"]
+    },
+    {
+        id: 23, q: "23. Kontrolą manualną jest zespół czynności kontroli bezpieczeństwa:",
+        o: { "a": "wykonywanych ręcznie bez ingerencji w wewnętrzne powłoki ciała oraz w sposób powodujący w jak najmniejszym stopniu naruszenie intymności, w celu wykryciu w odzieży lub na ciele oraz w przedmiotach osobistych kontrolowanej osoby zabronionych przedmiotów, urządzeń lub substancji", "b": "wykonywanych ręcznie z ingerencją w wewnętrzne powłoki ciała...", "c": "wykonywanych za pomocą bramki do wykrywania metali i ręcznego wykrywacza metali..." },
+        c: ["a"]
+    },
+    {
+        id: 24, q: "24. Pracownik służby ochrony lotniska przy wykonywaniu zadań z zakresu kontroli bezpieczeństwa w lotnictwie cywilnym ma prawo do:",
+        o: { "a": "dokonywania kontroli manualnej i przeglądania zawartości bagażu", "b": "korzystania ze środków chemicznych oraz wykorzystania psów do wykrywania przedmiotów lub substancji, które mogą stanowić przedmiot niebezpieczny", "c": "niedopuszczenia do wejścia na obszar lub do obiektu podlegających ochronie osoby nieposiadającej wymaganych uprawnień", "d": "samodzielnej neutralizacji na stanowisku kontrolnym wykrytego urządzenia wybuchowego", "e": "zwolnienia z kontroli bezpieczeństwa osób poruszających się na wózku inwalidzkim" },
+        c: ["a", "b", "c"]
+    },
+    {
+        id: 25, q: "25. W szkoleniu w celu uzyskania certyfikatu operatora kontroli bezpieczeństwa może wziąć udział osoba:",
+        o: { "a": "co do której ustalono brak negatywnych przesłanek do wykonywania przez tę osobę kontroli bezpieczeństwa w lotnictwie cywilnym", "b": "która ukończyła szkolenie świadomości ochrony lotnictwa cywilnego", "c": "potrafiąca nawiązać kontakt z osobami kontrolowanymi w co najmniej jednym języku obcym w podstawowym zakresie", "d": "zamieszkująca na terenie Polski co najmniej 3 lata" },
+        c: ["a", "b", "c"]
+    },
+    {
+        id: 26, q: "26. Bramka do wykrywania metali:",
+        o: { "a": "jest na stałe przymocowana do twardego podłoża", "b": "musi być odporna na zalanie wodą", "c": "wykrywa przedmiot metalowy niezależnie od jego położenia i usytuowania", "d": "wykrywa przedmioty z plastiku niezależnie od ich położenia i usytuowania" },
+        c: ["a", "c"]
+    },
+    {
+        id: 27, q: "27. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego zastosowane środki lub metoda:",
+        o: { "a": "są zależne od częstotliwości dostaw w danym porcie lotniczym", "b": "uwzględniają rodzaj zaopatrzenia", "c": "zapewniają dostateczny poziom bezpieczeństwa, na ile to możliwe, jeżeli chodzi o wykrycie przedmiotów zabronionych ukrytych w zaopatrzeniu", "d": "zawsze przewidują wykorzystanie psów do wykrywania materiałów wybuchowych..." },
+        c: ["b", "c"]
+    },
+    {
+        id: 28, q: "28. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
+        o: { "a": "aerozole odstraszające zwierzęta", "b": "farby drogowe w pojemnikach o pojemności powyżej 10 litrów", "c": "granaty dymne", "d": "masy bitumiczne uszczelniające w pojemnikach o pojemności powyżej 20 litrów", "e": "pistolety sygnałowe", "f": "spirytus salicylowy" },
+        c: ["a", "c", "e"]
+    },
+    {
+        id: 29, q: "29. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do luku bagażowego statku powietrznego, stosuje się:",
+        o: { "a": "kontrolę wzrokową", "b": "psy do wykrywania materiałów wybuchowych", "c": "systemy wykrywania urządzeń wybuchowych", "d": "urządzenia do wykrywania metali" },
+        c: ["b", "c"]
+    },
+    {
+        id: 30, q: "30. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się doomed pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+        o: { "a": "bramkowe detektory metali", "b": "detektory promieniowania jonizującego", "c": "kontrolę manualną", "d": "systemy do wykrywania urządzeń wybuchowych", "e": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z kontrolą wzrokową" },
+        c: ["c", "e"]
     }
+
 ];
 let aktywnePytania = [];
 
