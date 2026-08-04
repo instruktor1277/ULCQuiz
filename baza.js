@@ -1603,5 +1603,117 @@ const bazaPytan = [
     },
     c: ["c"]
 }
-    
+ ,
+{
+    id: 151,
+    q: "151. Bramka do wykrywania metali:",
+    o: { 
+        "a": "jest jedyną metodą kontroli bezpieczeństwa osób", 
+        "b": "posiada wskaźnik wizualny sygnalizujący, że urządzenie funkcjonuje", 
+        "c": "w przypadku wykrycia przedmiotów metalowych wysyła zarówno sygnał optyczny, jak i dźwiękowy", 
+        "d": "wykrywa przedmioty metalowe do wysokości 150 cm od podłoża, na którym została zamocowana" 
+    },
+    c: ["b", "c"]
+},
+{
+    id: 152,
+    q: "152. Sygnał optyczny wysyłany przez bramkę do wykrywania metali w przypadku wykrycia przedmiotów metalowych:",
+    o: { 
+        "a": "jest taki sam we wszystkich przypadkach wykrycia przedmiotów metalowych", 
+        "b": "może być wyłączony, jeśli przeszkadza kontrolowanym podróżnym", 
+        "c": "wskazuje siłę sygnału wykrytego przez bramkę" 
+    },
+    c: ["c"]
+},
+{
+    id: 153,
+    q: "153. Ręczny wykrywacz metali:",
+    o: { 
+        "a": "jest pomocny w wykrywaniu materiałów wybuchowych", 
+        "b": "jest używany jako metoda pomocnicza przy kontroli bezpieczeństwa bagażu kabinowego", 
+        "c": "jest w stanie wykryć metalowe przedmioty żelazne i nieżelazne", 
+        "d": "w przypadku wykrycia przedmiotów metalowych wysyła sygnał dźwiękowy, który jest odbierany w promieniu 1 metra" 
+    },
+    c: ["c"]
+},
+{
+    id: 154,
+    q: "154. System wykrywania materiałów wybuchowych wysyła sygnał alarmowy w każdej z następujących okoliczności:",
+    o: { 
+        "a": "w przypadku wykrycia materiału wybuchowego", 
+        "b": "w przypadku wykrycia przedmiotów metalowych", 
+        "c": "w przypadku wykrycia przedmiotu zapobiegającego wykryciu materiału wybuchowego" 
+    },
+    c: ["a", "c"]
+},
+{
+    id: 155,
+    q: "155. Kontrolę bezpieczeństwa osób, bagażu, ładunków, poczty, zaopatrzenia pokładowego i zaopatrzenia portu lotniczego, wykonują osoby:",
+    o: { 
+        "a": "które w momencie rozpoczęcia wykonywania zadań w zakresie kontroli bezpieczeństwa ukończyły co najmniej 21 lat", 
+        "b": "które w momencie rozpoczęcia wykonywania zadań w zakresie kontroli bezpieczeństwa nie ukończyły 60 lat", 
+        "c": "posiadające certyfikat operatora kontroli bezpieczeństwa wydany lub uznany przez Prezesa Urzędu Lotnictwa Cywilnego", 
+        "d": "wpisane na prowadzoną przez Prezesa Urzędu Lotnictwa Cywilnego listę operatorów kontroli bezpieczeństwa" 
+    },
+    c: ["c", "d"]
+},
+{
+    id: 156,
+    q: "156. Warunkiem dokonania przez Prezesa Urzędu Lotnictwa Cywilnego wpisu osoby na listę operatorów kontroli bezpieczeństwa jest:",
+    o: { 
+        "a": "brak negatywnych przesłanek do wykonywania przez tę osobę kontroli bezpieczeństwa w lotnictwie cywilnym", 
+        "b": "posiadanie dostępu do informacji niejawnych oznaczonych klauzulą „zastrzeżone”", 
+        "c": "pozytywne ukończenie szkolenia specjalistycznego zawodowego osób wykonujących badania pojazdów", 
+        "d": "uzyskanie certyfikatu operatora kontroli bezpieczeństwa" 
+    },
+    c: ["a", "d"]
+},
+{
+    id: 157,
+    q: "157. Warunkiem dokonania przez Prezesa Urzędu Lotnictwa Cywilnego wpisu osoby na listę operatorów kontroli bezpieczeństwa jest:",
+    o: { 
+        "a": "brak negatywnych przesłanek do wykonywania przez tę osobę kontroli bezpieczeństwa w lotnictwie cywilnym", 
+        "b": "posiadanie karty identyfikacyjnej portu lotniczego, w którym dana osoba będzie wykonywała zadania operatora kontroli bezpieczeństwa", 
+        "c": "pozytywne ukończenie szkolenia specjalistycznego zawodowego osób stosujących środki kontroli w zakresie ochrony ładunku i poczty inne niż kontrola bezpieczeństwa", 
+        "d": "pozytywne ukończenie szkolenia w celu uzyskania certyfikatu operatora kontroli bezpieczeństwa" 
+    },
+    c: ["a", "d"]
+},
+{
+    id: 158,
+    q: "158. Pracownik służby ochrony lotniska przy wykonywaniu zadań z zakresu kontroli bezpieczeństwa w lotnictwie cywilnym ma prawo do:",
+    o: { 
+        "a": "dokonywania kontroli osobistej, jeśli po przeprowadzeniu kontroli bezpieczeństwa nie można stwierdzić, czy osoba kontrolowana posiada materiały i przedmioty niebezpieczne, a zachodzi takie podejrzenie", 
+        "b": "korzystania z urządzeń technicznych do wykrywania urządzeń lub substancji, których posiadanie jest zabronione", 
+        "c": "niedopuszczenia do wejścia na obszar lub do obiektu podlegających ochronie osoby nieposiadającej wymaganych uprawnień", 
+        "d": "sprawdzania przedmiotów wprowadzanych do strefy zastrzeżonej lotniska", 
+        "e": "zwolnienia z kontroli bezpieczeństwa dzieci poniżej 5 roku życia" 
+    },
+    c: ["a", "b", "c", "d"]
+},
+{
+    id: 159,
+    q: "159. Pracownik służby ochrony lotniska przy wykonywaniu zadań z zakresu kontroli bezpieczeństwa w lotnictwie cywilnym ma prawo do:",
+    o: { 
+        "a": "dokonywania kontroli manualnej i przeglądania zawartości bagażu", 
+        "b": "korzystania ze środków chemicznych oraz wykorzystania psów do wykrywania przedmiotów lub substancji, które mogą stanowić przedmiot niebezpieczny", 
+        "c": "niedopuszczenia do wejścia na obszar lub do obiektu podlegających ochronie osoby nieposiadającej wymaganych uprawnień", 
+        "d": "samodzielnej neutralizacji na stanowisku kontrolnym wykrytego urządzenia wybuchowego", 
+        "e": "zwolnienia z kontroli bezpieczeństwa osób z wyraźnym kalectwem" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 160,
+    q: "160. Dodatkowe środki ochrony bezpieczeństwa pasażerów, bagażu, ładunków oraz przesyłek pocztowych w sytuacji kryzysowej w lotnictwie cywilnym może wprowadzić:",
+    o: { 
+        "a": "Komendant Główny Policji po zasięgnięciu opinii Komendanta Głównego Państwowej Straży Pożarnej", 
+        "b": "Minister Transportu, Budownictwa i Gospodarki Morskiej po zasięgnięciu opinii Ministra Spraw Wewnętrznych", 
+        "c": "Prezes Urzędu Lotnictwa Cywilnego po zasięgnięciu opinii Komendanta Głównego Straży Granicznej", 
+        "d": "Szef Agencji Bezpieczeństwa Wewnętrznego po zasięgnięciu opinii Szefa Agencji Wywiadu", 
+        "e": "Zarządzający lotniskiem po zasięgnięciu opinii zespołu ochrony lotniska" 
+    },
+    c: ["c"]
+}
+   
 ]
