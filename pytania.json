@@ -58,7 +58,7 @@
         "c": ["b"]
     },
     {
-        "id: 6,
+        "id": 6,
         "q": "6. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
         "o": { 
             "a": "funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej", 
@@ -95,7 +95,7 @@
     {
         "id": 9,
         "q": "9. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
-        "o": { 
+        "o: { 
             "a": "w momencie opuszczania terytorium kraju na okres dłuższy niż 2 tygodnie", 
             "b": "w momencie unieważnienia karty", 
             "c": "w momencie zmiany pracodawcy", 
