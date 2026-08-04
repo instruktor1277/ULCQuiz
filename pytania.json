@@ -14,7 +14,7 @@
     {
         "id": 2,
         "q": "2. Podczas kontroli bezpieczeństwa osób, ręczny wykrywacz metali:",
-        "o: { 
+        "o": { 
             "a": "jest podstawowym środkiem kontroli bezpieczeństwa", 
             "b": "jest pomocny przy ustalaniu miejsca ukrycia materiałów wybuchowych", 
             "c": "można stosować tylko jako dodatkowy środek kontroli bezpieczeństwa", 
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "q: "4. Kontrolę bezpieczeństwa pasażera potencjalnie uciążliwego przeprowadza się, za pomocą:",
+        "q": "4. Kontrolę bezpieczeństwa pasażera potencjalnie uciążliwego przeprowadza się, za pomocą:",
         "o": { 
             "a": "kontroli manualnej", 
             "b": "psów do wykrywania materiałów wybuchowych", 
@@ -58,7 +58,7 @@
         "c": ["b"]
     },
     {
-        "id": 6,
+        "id: 6,
         "q": "6. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
         "o": { 
             "a": "funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej", 
