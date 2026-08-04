@@ -343,6 +343,117 @@ const bazaPytan = [
         "f": "piłki tenisowe" 
     },
     c: ["a", "b", "c", "d", "e"]
+} 
+,
+{
+    id: 41,
+    q: "41. Znanych nadawców ładunku i poczty wyznacza:",
+    o: { 
+        "a": "Prezes Urzędu Lotnictwa Cywilnego", 
+        "b": "uznany nadawca", 
+        "c": "zarejestrowany agent", 
+        "d": "zarządzający portem lotniczym" 
+    },
+    c: ["a"]
+},
+{
+    id: 42,
+    q: "42. Przesyłki zawierające ładunek i pocztę, w stosunku do których zastosowano środki kontroli, oczekujące na załadunek do statku powietrznego uważa się za zabezpieczone przed nieupoważnioną ingerencją, jeżeli znajdują się:",
+    o: { 
+        "a": "w części krytycznej strefy zastrzeżonej lotniska", 
+        "b": "w części operacyjnej lotniska", 
+        "c": "w części zastrzeżonej lotniska" 
+    },
+    c: ["a"]
+},
+{
+    id: 43,
+    q: "43. Jeżeli nieupoważnione osoby mogły mieć dostęp do stref zastrzeżonych lotniska:",
+    o: { 
+        "a": "zwołuje się Zespół Ochrony lotniska", 
+        "b": "niezwłocznie dokonuje się przeszukania całego lotniska, aby upewnić się, na ile to możliwe, że nie zostały wniesione przedmioty zabronione", 
+        "c": "niezwłocznie dokonuje się przeszukania części, do których mogły mieć dostęp te osoby, aby upewnić się, na ile to możliwe, że nie znajdują się w nich przedmioty zabronione", 
+        "d": "wstrzymuje się odloty statków powietrznych do czasu odnalezienia tych osób" 
+    },
+    c: ["c"]
+},
+{
+    id: 44,
+    q: "44. W celu uzyskania pozwolenia na dostęp do stref zastrzeżonych lotniska odlatujący podróżny przedstawia:",
+    o: { 
+        "a": "dokument potwierdzający dokonanie odprawy celnej", 
+        "b": "dokument potwierdzający zakup biletu lotniczego", 
+        "c": "ważną kartę pokładową lub jej odpowiednik", 
+        "d": "zaświadczenie od biura podróży, które organizuje podróż drogą lotniczą" 
+    },
+    c: ["c"]
+},
+{
+    id: 45,
+    q: "45. Kartę pokładową lub jej odpowiednik, przedstawianą przez odlatującego podróżnego, sprawdza się przed udzieleniem mu pozwolenia na dostęp do stref zastrzeżonych w celu:",
+    o: { 
+        "a": "prowadzenia statystyki natężenia ruchu lotniczego", 
+        "b": "upewnienia się co do jej ważności", 
+        "c": "zastosowania odpowiedniej metody kontroli bezpieczeństwa w zależności od portu lotniczego, do którego odlatuje" 
+    },
+    c: ["b"]
+},
+{
+    id: 46,
+    q: "46. Karty identyfikacyjne członka załogi i portu lotniczego wydaje się na okres nie dłuższy niż:",
+    o: { 
+        "a": "10 lat", 
+        "b": "2 lat", 
+        "c": "3 lat", 
+        "d": "5 lat" 
+    },
+    c: ["d"]
+},
+{
+    id: 47,
+    q: "47. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
+    o: { 
+        "a": "na żądanie podmiotu wydającego", 
+        "b": "w momencie rozpoczęcia urlopu trвающей dłużej niż 30 dni kalendarzowych", 
+        "c": "w momencie rozwiązania stosunku pracy", 
+        "d": "w momencie unieważnienia karty", 
+        "e": "w momencie wygaśnięcia ważności karty" 
+    },
+    c: ["a", "c", "d", "e"]
+},
+{
+    id: 48,
+    q: "48. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
+    o: { 
+        "a": "w momencie zmiany pracodawcy", 
+        "b": "w momencie opuszczania terytorium kraju na okres dłuższy niż 2 tygodnie", 
+        "c": "w momencie unieważnienia karty", 
+        "d": "w momencie wygaśnięcia ważności karty", 
+        "e": "w razie zmiany potrzeby dostępu do stref, w odniesieniu do których udzielono upoważnienia" 
+    },
+    c: ["a", "c", "d", "e"]
+},
+{
+    id: 49,
+    q: "49. Na karcie identyfikacyjnej portu lotniczego znajdują się:",
+    o: { 
+        "a": "nazwa podmiotu wydającego lub portu lotniczego", 
+        "b": "data urodzenia posiadacza", 
+        "c": "nazwisko i zdjęcie posiadacza", 
+        "d": "data ważności, o ile nie jest zaprogramowana elektronicznie" 
+    },
+    c: ["a", "c", "d"]
+},
+{
+    id: 50,
+    q: "50. Na karcie identyfikacyjnej portu lotniczego znajdują się:",
+    o: { 
+        "a": "funkcja, jaką posiadacz karty pełni w porcie lotniczym", 
+        "b": "nazwa pracodawcy posiadacza, o ile nie jest zaprogramowana elektronicznie", 
+        "c": "nazwisko posiadacza", 
+        "d": "strefy, do których posiadacz karty ma dostęp" 
+    },
+    c: ["a", "b", "c", "d"]
 }
 
 ]
