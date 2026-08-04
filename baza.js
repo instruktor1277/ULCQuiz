@@ -1493,5 +1493,115 @@ const bazaPytan = [
     },
     c: ["b", "d", "e"]
 }
+,
+{
+    id: 141,
+    q: "141. Ładunek i poczta poddawane są kontroli bezpieczeństwa z zastosowaniem co najmniej jednej z poniższych metod:",
+    o: { 
+        "a": "kontrola wzrokowa", 
+        "b": "psy do wykrywania materiałów wybuchowych", 
+        "c": "sprawdzenie przeszłości nadawcy przesyłki", 
+        "d": "systemy do wykrywania urządzeń wybuchowych", 
+        "e": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych" 
+    },
+    c: ["a", "b", "d", "e"]
+},
+{
+    id: 142,
+    q: "142. Na lotniskach, na których funkcjonują lotnicze przejścia graniczne, formalności związane z przewozem broni i amunicji statkiem powietrznym dokonuje:",
+    o: { 
+        "a": "przewoźnik lotniczy", 
+        "b": "Służba Celno-Skarbowa", 
+        "c": "służba ochrony lotniska", 
+        "d": "Straż Graniczna" 
+    },
+    c: ["b", "d"]
+},
+{
+    id: 143,
+    q: "143. Ręczny wykrywacz metali:",
+    o: { 
+        "a": "jest używany jako podstawowa metoda kontroli bezpieczeństwa osób", 
+        "b": "jest w stanie wykryć metalowe przedmioty żelazne i nieżelazne", 
+        "c": "jest w stanie wykryć przedmioty plastikowe", 
+        "d": "posiada wskaźnik wizualny sygnalizujący, że urządzenie funkcjonuje" 
+    },
+    c: ["b", "d"]
+},
+{
+    id: 144,
+    q: "144. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego stosuje się pojedynczo następujące środki lub metody kontroli:",
+    o: { 
+        "a": "kontrolę manualną", 
+        "b": "kontrolę wzrokową", 
+        "c": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą przy użyciu urządzenia rentgenowskiego", 
+        "d": "systemy do wykrywania urządzeń wybuchowych", 
+        "e": "urządzenia do wykrywania metali" 
+    },
+    c: ["a", "b"]
+},
+{
+    id: 145,
+    q: "145. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą:",
+    o: { 
+        "a": "kontroli wzrokowej", 
+        "b": "ręcznego wykrywacza metali", 
+        "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali", 
+        "d": "urządzeń do wykrywania śladowych ilości materiałów wybuchowych" 
+    },
+    c: ["c"]
+},
+{
+    id: 146,
+    q: "146. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części lotniska niż część krytyczna strefy zastrzeżonej, uważa się za zabezpieczone przed bezprawną ingerencją, jeśli:",
+    o: { 
+        "a": "nie są pozostawione bez nadzoru, a dostęp do nich mają wyłącznie osoby zaangażowane w zabezpieczanie i ładowanie ładunku oraz poczty na pokład statku powietrznego", 
+        "b": "pozostają tam nie dłużej niż jedną godzinę", 
+        "c": "tak przewiduje program ochrony przewoźnika lotniczego" 
+    },
+    c: ["a"]
+},
+{
+    id: 147,
+    q: "147. W szkoleniu w celu uzyskania certyfikatu operatora kontroli bezpieczeństwa może wziąć udział osoba:",
+    o: { 
+        "a": "co do której ustalono brak negatywnych przesłanek do wykonywania przez tę osobę kontroli bezpieczeństwa w lotnictwie cywilnym", 
+        "b": "która ukończyła szkolenie świadomości ochrony lotnictwa cywilnego", 
+        "c": "potrafiąca nawiązać kontakt z osobami kontrolowanymi w co najmniej jednym języku obcym w podstawowym zakresie" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 148,
+    q: "148. Wskaż kategorie pasażerów zwolnionych z kontroli bezpieczeństwa:",
+    o: { 
+        "a": "osoby konwojowane pod uzbrojoną eskortą", 
+        "b": "personel misji dyplomatycznych", 
+        "c": "wicemarszałkowie Senatu", 
+        "d": "żołnierze Żandarmerii Wojskowej wykonujący czynności związane z zapewnieniem ochrony ministrowi obrony narodowej" 
+    },
+    c: ["c", "d"]
+},
+{
+    id: 149,
+    q: "149. Po dostarczeniu do strefy operacyjnej lub strefy zastrzeżonej lotniska płynów, aerozoli i żeli oraz toreb zabezpieczonych w sposób umożliwiający łatwe stwierdzenie ich naruszenia, stanowiących zaopatrzenie portu lotniczego:",
+    o: { 
+        "a": "poddaje się je obowiązkowej kontroli bezpieczeństwa za pomocą urządzenia rentgenowskiego", 
+        "b": "poddaje się je obowiązkowej kontroli za pomocą urządzeń do wykrywania śladowych ilości materiałów wybuchowych (ETD)", 
+        "c": "przeprowadza się ich kontrolę wzrokową w celu sprawdzenia, czy nie wykazują one oznak naruszenia" 
+    },
+    c: ["c"]
+},
+{
+    id: 150,
+    q: "150. Osoby posiadające uprawnienia do wykonywania zadań operatora kontroli bezpieczeństwa podlegają procesowi ponownej certyfikacji:",
+    o: { 
+        "a": "co roku", 
+        "b": "przynajmniej co 2 lata", 
+        "c": "przynajmniej co 3 lata", 
+        "d": "przynajmniej co 5 lat" 
+    },
+    c: ["c"]
+}
     
 ]
