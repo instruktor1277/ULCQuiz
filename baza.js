@@ -905,5 +905,116 @@ const bazaPytan = [
     },
     c: ["b"]
 }
+,
+{
+    id: 91,
+    q: "91. Przedmioty zabronione w bagażu kabinowym z kategorii 'przedmioty z ostrym końcem lub ostrą krawędzią' obejmują między innymi:",
+    o: { 
+        "a": "siekiery, topory i tasaki", 
+        "b": "łyżwy", 
+        "c": "nożyczki o długości ostrzy powyżej 6 cm mierzonych od zwornika", 
+        "d": "rurki bambusowe do napojów" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 92,
+    q: "92. Do kategorii 'tępych narzędzi' zabronionych w bagażu kabinowym, które mogą spowodować poważne obrażenia w przypadku ich użycia do uderzenia, należą:",
+    o: { 
+        "a": "pałki gumowe, pałki obciągane skórą i pałki policyjne", 
+        "b": "kije baseballowe i kije do softballu", 
+        "c": "wyposażenie wykorzystywane do sztuk walki (np. kastety, nunchaku)", 
+        "d": "zwykłe parasole przeciwdeszczowe bez ostrego szpica" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 93,
+    q: "93. Materiały wybuchowe i substancje zapalające oraz urządzenia wybuchowe (np. granaty, miny, detonatory, petardy) przewożone przez pasażerów są:",
+    o: { 
+        "a": "całkowicie zabronione zarówno w bagażu kabinowym, jak i w bagażu rejestrowanym", 
+        "b": "dozwolone wyłącznie w bagażu rejestrowanym po opłaceniu dodatkowego ubezpieczenia", 
+        "c": "dozwolone w bagażu kabinowym, o ile nie zawierają zapalników", 
+        "d": "zwolnione z kontroli bezpieczeństwa w przypadku lotów czarterowych" 
+    },
+    c: ["a"]
+},
+{
+    id: 94,
+    q: "94. Kto na lotnisku koordynuje działania w przypadku wystąpienia aktu bezprawnej ingerencji (np. zagrożenie bombowe, porwanie samolotu na ziemi)?",
+    o: { 
+        "a": "odpowiednie służby państwowe (np. Straż Graniczna, Policja) w ramach lotniskowego komitetu kryzysowego", 
+        "b": "agent obsługi naziemnej (handlingowej)", 
+        "c": "personel sprzątający terminal pasażerski", 
+        "d": "kierownik lotniskowej wieży kontroli lotów" 
+    },
+    c: ["a"]
+},
+{
+    id: 95,
+    q: "95. Testy sprawnościowe i kalibrację urządzeń rentgenowskich (X-ray) oraz bramkowych wykrywaczy metali (WTMD) na lotnisku przeprowadza się:",
+    o: { 
+        "a": "raz na kilka lat podczas audytu unijnego", 
+        "b": "regularnie, zgodnie z krajowym programem kontroli jakości oraz wytycznymi producenta sprzętu", 
+        "c": "tylko po zgłoszeniu awarii lub błędnego działania przez operatora", 
+        "d": "wyłącznie na pisemne żądanie linii lotniczych" 
+    },
+    c: ["b"]
+},
+{
+    id: 96,
+    q: "96. Broń palna, amunicja oraz elementy broni palnej przewożone w bagażu rejestrowanym muszą być:",
+    o: { 
+        "a": "odpowiednio zabezpieczone, rozładowane i zgłoszone podczas odprawy biletowo-bagażowej, a ich transport odbywa się według specjalnych procedur", 
+        "b": "zapakowane w zwykłą folię stretch i umieszczone na wierzchu ubrań", 
+        "c": "umieszczone w bagażu podręcznym pasażera w celu stałego nadzoru", 
+        "d": "przewożone bez konieczności informowania przewoźnika" 
+    },
+    c: ["a"]
+},
+{
+    id: 97,
+    q: "97. Jeśli operator kontroli bezpieczeństwa na obrazie rentgenowskim bagażu kabinowego zauważy kształt przypominający improwizowane urządzenie wybuchowe (IED), jego pierwszym obowiązkiem jest:",
+    o: { 
+        "a": "natychmiastowe otwarcie torby i wyjęcie podejrzanego przedmiotu", 
+        "b": "wstrzymanie taśmociągu, zabezpieczenie podejrzanego bagażu przed dostępem pasażera oraz powiadomienie przełożonego i wezwanie wyspecjalizowanych służb (np. pirotechników Straży Granicznej)", 
+        "c": "oddanie bagażu pasażerowi z prośbą o wyrzucenie podejrzanej rzeczy do kosza", 
+        "d": "poproszenie pasażera o samodzielne rozmontowanie urządzenia" 
+    },
+    c: ["b"]
+},
+{
+    id: 98,
+    q: "98. Przeszukiwanie manualne bagażu kabinowego lub rejestrowanego powinno być realizowane:",
+    o: { 
+        "a": "w obecności pasażera (posiadacza bagażu) lub jego upoważnionego przedstawiciela, z wyjątkiem ściśle określonych procedur bezpieczeństwa", 
+        "b": "zawsze na osobności, w ukryciu przed pasażerem", 
+        "c": "wyłącznie przez dyrektora portu lotniczego", 
+        "d": "w dowolnym losowym miejscu, bez używania rękawiczek ochronnych" 
+    },
+    c: ["a"]
+},
+{
+    id: 99,
+    q: "99. Status „zarejestrowanego agenta” (RA) w strukturze ochrony lotnictwa cywilnego nadawany jest przez:",
+    o: { 
+        "a": "zarządzającego danym portem lotniczym", 
+        "b": "Prezesa Urzędu Lotnictwa Cywilnego po spełnieniu wymogów prawnych i pomyślnym przejściu wizji lokalnej", 
+        "c": "Komendanta Głównego Straży Granicznej", 
+        "d": "Międzynarodowe Zrzeszenie Przewoźników Powietrznych (IATA)" 
+    },
+    c: ["b"]
+},
+{
+    id: 100,
+    q: "100. Która z poniższych stref lotniska stanowi obszar, do którego dostęp jest kontrolowany i do wejścia wymagane jest posiadanie ważnej karty identyfikacyjnej lub karty pokładowej?",
+    o: { 
+        "a": "strefa ogólnodostępna (np. hala odlotów przed stanowiskami kontroli)", 
+        "b": "strefa zastrzeżona lotniska (SRA)", 
+        "c": "ogólnodostępny parking przed terminalem", 
+        "d": "lotniskowa stacja paliw znajdująca się poza ogrodzeniem operacyjnym" 
+    },
+    c: ["b"]
+}
 
 ]
