@@ -8,11 +8,14 @@
         body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; color: #333; }
         .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         h1 { text-align: center; color: #0275d8; margin-bottom: 20px; }
-        .menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 25px; }
+        .menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 25px; border-bottom: 2px solid #dee2e6; padding-bottom: 15px; }
         .btn { background-color: #343a40; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 14px; transition: 0.2s; }
         .btn:hover { background-color: #23272b; }
         .btn.active { background-color: #0275d8; }
+        .btn-exam { background-color: #28a745; font-size: 15px; font-weight: bold; padding: 12px 20px; box-shadow: 0 4px 6px rgba(40,167,69,0.3); }
+        .btn-exam:hover { background-color: #218838; }
         .pytanie { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 6px; border-left: 5px solid #0275d8; }
+        .pytanie.exam-mode { border-left-color: #28a745; }
         .pytanie p { margin-top: 0; font-size: 16px; line-height: 1.5; }
         label { display: block; padding: 8px 10px; margin: 4px 0; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px; cursor: pointer; transition: 0.2s; }
         label:hover { background: #e9ecef; }
@@ -20,14 +23,19 @@
         .status { margin-top: 10px; font-weight: bold; padding: 8px; border-radius: 4px; display: none; }
         #wynik-box { display: none; background: #e2f0d9; border: 2px solid #385723; color: #385723; padding: 15px; text-align: center; font-size: 18px; font-weight: bold; border-radius: 6px; margin-top: 20px; }
         .action-box { text-align: center; margin-top: 25px; }
-        .btn-check { background-color: #28a745; font-size: 18px; padding: 12px 30px; }
-        .btn-check:hover { background-color: #218838; }
+        .btn-check { background-color: #0275d8; font-size: 18px; padding: 12px 30px; }
+        .btn-check:hover { background-color: #0069d9; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>Operator Kontroli Bezpieczeństwa ULC</h1>
+    
+    <div class="menu">
+        <button class="btn btn-exam" id="m-exam" onclick="generujEgzamin()">📝 GENERUJ EGZAMIN (20 PYTAŃ)</button>
+    </div>
     <div class="menu" id="menu-box"></div>
+    
     <div id="box"></div>
     <div class="action-box"><button class="btn btn-check" onclick="sprawdzTest()">Sprawdź wynik</button></div>
     <div id="wynik-box"></div>
@@ -35,46 +43,81 @@
 <script>
 let wszystkiePytania = [];
 let aktywnePytania = [];
+let czyTrybEgzaminu = false;
 
-// Ładowanie pytań ze specjalnego skryptu, który zaraz stworzymy
 const script = document.createElement('script');
 script.src = 'baza.js';
 script.onload = () => {
     if (typeof bazaPytan !== 'undefined') {
         wszystkiePytania = bazaPytan;
-        generujMenu();
+        generujMenuNauki();
         pokazZestaw(1);
     }
 };
 document.head.appendChild(script);
 
-function generujMenu() {
+function generujMenuNauki() {
     let iloscZestawow = Math.ceil(wszystkiePytania.length / 10);
     let html = '';
     for(let i = 1; i <= iloscZestawow; i++) {
         let odNum = (i-1)*10 + 1;
         let doNum = Math.min(i*10, wszystkiePytania.length);
-        html += `<button class="btn" id="m${i}" onclick="pokazZestaw(${i})">Pytania ${odNum} - ${doNum}</button>`;
+        html += `<button class="btn" id="m${i}" onclick="pokazZestaw(${i})">Zestaw ${i} (${odNum}-${doNum})</button>`;
     }
     document.getElementById('menu-box').innerHTML = html;
 }
 
 function pokazZestaw(nr) {
+    czyTrybEgzaminu = false;
     document.getElementById('wynik-box').style.display = 'none';
+    
     let przyciski = document.querySelectorAll('.menu .btn');
     przyciski.forEach(b => b.classList.remove('active'));
+    
     let aktywneBtn = document.getElementById(`m${nr}`);
     if(aktywneBtn) aktywneBtn.classList.add('active');
 
     let start = (nr - 1) * 10;
     aktywnePytania = wszystkiePytania.slice(start, start + 10);
+    rysujPytania();
+}
+
+function generujEgzamin() {
+    czyTrybEgzaminu = true;
+    document.getElementById('wynik-box').style.display = 'none';
     
+    let przyciski = document.querySelectorAll('.menu .btn');
+    przyciski.forEach(b => b.classList.remove('active'));
+    document.getElementById('m-exam').classList.add('active');
+
+    // Kopiujemy bazę i losowo mieszamy pytania
+    let skopiowane = [...wszystkiePytania];
+    skopiowane.sort(() => Math.random() - 0.5);
+    
+    // Wybieramy dokładnie 20 losowych pytań
+    aktywnePytania = skopiowane.slice(0, 20);
+    rysujPytania();
+}
+
+function rysujPytania() {
     let html = '';
-    aktywnePytania.forEach(p => {
-        html += `<div class="pytanie" id="block-${p.id}"><p><strong>${p.q}</strong></p><div id="ans-${p.id}">`;
-        for (let k in p.o) {
-            html += `<label><input type="checkbox" name="p-${p.id}" value="${k}"> ${k.toUpperCase()}. ${p.o[k]}</label>`;
+    aktywnePytania.forEach((p, index) => {
+        let numerWyswietlany = czyTrybEgzaminu ? (index + 1) + " (z bazy nr " + p.id + ")" : p.q.split('.')[0] + ".";
+        let trescPytania = czyTrybEgzaminu ? p.q.substring(p.q.indexOf('.') + 1) : p.q.substring(p.q.indexOf('.') + 1);
+        
+        html += `<div class="pytanie ${czyTrybEgzaminu ? 'exam-mode' : ''}" id="block-${p.id}">
+            <p><strong>Pytanie ${numerWyswietlany}${trescPytania}</strong></p>
+            <div id="ans-${p.id}">`;
+            
+        // Losowe mieszanie opcji odpowiedzi (a, b, c...), żeby nie uczyć się układu
+        let kluczeOpcji = Object.keys(p.o);
+        if(czyTrybEgzaminu) {
+            kluczeOpcji.sort(() => Math.random() - 0.5);
         }
+        
+        kluczeOpcji.forEach(k => {
+            html += `<label><input type="checkbox" name="p-${p.id}" value="${k}"> ${k.toUpperCase()}. ${p.o[k]}</label>`;
+        });
         html += `</div><div class="status" id="stat-${p.id}"></div></div>`;
     });
     document.getElementById('box').innerHTML = html;
@@ -105,7 +148,9 @@ function sprawdzTest() {
     });
     let r = document.getElementById('wynik-box');
     r.style.display = 'block';
-    r.innerHTML = 'Twój wynik w tym zestawie: ' + pkt + ' z ' + aktywnePytania.length;
+    r.innerHTML = czyTrybEgzaminu ? 
+        'Wynik egzaminu próbnego: ' + pkt + ' z ' + aktywnePytania.length + ' (' + Math.round((pkt/aktywnePytania.length)*100) + '%)' :
+        'Twój wynik w tym zestawie: ' + pkt + ' z ' + aktywnePytania.length;
 }
 </script>
 </body>
