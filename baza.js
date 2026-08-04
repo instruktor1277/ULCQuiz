@@ -994,4 +994,151 @@ const bazaPytan = [
     },
     c: ["a", "c", "e"]
 }
+,
+{
+    id: 98,
+    q: "98. Kontrola manualna bagażu rejestrowanego polega na:",
+    o: { 
+        "a": "kontroli ręcznej bagażu, w tym całej jego zawartości, aby upewnić się, na ile to możliwe, że nie zawiera on przedmiotów zabronionych", 
+        "b": "kontroli ręcznej tylko tych wybranych części bagażu, w których spodziewane jest wykrycie przedmiotów zabronionych", 
+        "c": "kontroli ręcznej wyłącznie zewnętrznych części bagażu bez ingerencji do jego wnętrza", 
+        "d": "wykorzystaniu psów do wykrywania materiałów wybuchowych" 
+    },
+    c: ["a"]
+},
+{
+    id: 99,
+    q: "99. Jeżeli do kontroli bezpieczeństwa bagażu rejestrowanego stosowane są urządzenia rentgenowskie lub systemy wykrywania materiałów wybuchowych, to przedmioty, których gęstość uniemożliwia operatorowi analizę zawartości tego bagażu:",
+    o: { 
+        "a": "nie mogą być dopuszczone do przewozu drogą lotniczą", 
+        "b": "poddawane są kontroli bezpieczeństwa przy użyciu innej metody", 
+        "c": "uważa się za bezpieczne – nie zawierające przedmiotów zabronionych" 
+    },
+    c: ["b"]
+},
+{
+    id: 100,
+    q: "100. Bagaż rejestrowany, który poddano już kontroli bezpieczeństwa, nie zabezpieczony przed bezprawną ingerencją:",
+    o: { 
+        "a": "można poddać powtórnej kontroli bezpieczeństwa, ale tylko wtedy, gdy zdecydują o tym przełożeni", 
+        "b": "poddaje się powtórnej kontroli bezpieczeństwa", 
+        "c": "poddaje się powtórnej kontroli bezpieczeństwa tylko wtedy, gdy przewożący go statek powietrzny odlatuje do Stanów Zjednoczonych Ameryki lub do Izraela", 
+        "d": "powinien być jak najszybciej dostarczony do statku powietrznego" 
+    },
+    c: ["b"]
+},
+{
+    id: 101,
+    q: "101. Następujące przedmioty nie mogą być przewożone przez pasażerów w bagażu rejestrowanym:",
+    o: { 
+        "a": "amunicja", 
+        "b": "lampy lutownicze", 
+        "c": "plastyczne materiały wybuchowe", 
+        "d": "pociski i naboje dymne", 
+        "e": "przedmioty przeznaczone do rąbania, takie jak siekiery, topory i tasaki" 
+    },
+    c: ["a", "c", "d"]
+},
+{
+    id: 102,
+    q: "102. Następujące przedmioty nie mogą być przewożone przez pasażerów w bagażu rejestrowanym:",
+    o: { 
+        "a": "dynamit i proch strzelniczy", 
+        "b": "fajerwerki i inne materiały pirotechniczne", 
+        "c": "narzędzia z ostrzem lub trzonkiem o długości powyżej 6 cm, nadające się do użycia jako broń, takie jak śrubokręty i dłuta", 
+        "d": "spłonki", 
+        "e": "urządzenia do porażania, takie jak paralizatory, tasery i pałki paraliżujące" 
+    },
+    c: ["a", "b", "d"]
+},
+{
+    id: 103,
+    q: "103. Następujące przedmioty uznaje się za przedmioty zabronione w przesyłkach zawierających ładunek i pocztę:",
+    o: { 
+        "a": "łomy stalowe", 
+        "b": "wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", 
+        "c": "zabawki w kształcie broni, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", 
+        "d": "zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z mającymi zastosowanie zasadami bezpieczeństwa w lotnictwie cywilnym" 
+    },
+    c: ["d"]
+},
+{
+    id: 104,
+    q: "104. Podczas kontroli bezpieczeństwa ładunku lub poczty:",
+    o: { 
+        "a": "bezwzględnie muszą zostać użyte systemy wykrywania materiałów wybuchowych", 
+        "b": "zastosowane środki lub metody zapewniają poziom bezpieczeństwa wystarczający, aby upewnić się, na ile to możliwe, że w przesyłce nie ukryto przedmiotów zabronionych", 
+        "c": "zawsze należy zastosować co najmniej trzy metody kontroli bezpieczeństwa" 
+    },
+    c: ["b"]
+},
+{
+    id: 105,
+    q: "105. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy, stosuje się:",
+    o: { 
+        "a": "24 godzinną kwarantannę", 
+        "b": "systemy do wykrywania materiałów wybuchowych", 
+        "c": "urządzenia do prześwietlania osób niewykorzystujące promieniowania jonizującego", 
+        "d": "urządzenia rentgenowskie" 
+    },
+    c: ["d"]
+},
+{
+    id: 106,
+    q: "106. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+    o: { 
+        "a": "bramkowe detektory metali", 
+        "b": "detektory promieniowania jonizującego", 
+        "c": "kontrolę manualną", 
+        "d": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą wzrokową", 
+        "e": "systemy do wykrywania urządzeń wybuchowych" 
+    },
+    c: ["c"]
+},
+{
+    id: 107,
+    q: "107. Kontrola wzrokowa zaopatrzenia pokładowego polega na dokładnych oględzinach tego zaopatrzenia i jest dopuszczalna jedynie:",
+    o: { 
+        "a": "gdy rzeczywiście można zobaczyć wszystkie elementy zaopatrzenia, stosując środki pomocnicze lub bez ich udziału", 
+        "b": "gdy statek powietrzny realizuje rejs do: Słowacji, Węgier, Rumunii lub Bułgarii", 
+        "c": "gdy ukrycie przedmiotów zabronionych jest niemożliwe ze względu na charakter zaopatrzenia", 
+        "d": "w małych portach lotniczych" 
+    },
+    c: ["a", "c"]
+},
+{
+    id: 108,
+    q: "108. Ładunek i poczta poddawane są kontroli bezpieczeństwa z zastosowaniem co najmniej jednej z poniższych metod:",
+    o: { 
+        "a": "bramkowe wyktywacze metali", 
+        "b": "kontrola manualna", 
+        "c": "rozmowa z nadawcą dotyczącą zawartości przesyłki", 
+        "d": "systemy wykrywania materiałów wybuchowych", 
+        "e": "urządzenia rentgenowskie" 
+    },
+    c: ["b", "d", "e"]
+},
+{
+    id: 109,
+    q: "109. Ładunek i poczta poddawane są kontroli bezpieczeństwa z zastosowaniem co najmniej jednej z poniższych metod:",
+    o: { 
+        "a": "12 godzinna kwarantanna", 
+        "b": "kontrola wzrokowa", 
+        "c": "psy do wykrywania materiałów wybuchowych", 
+        "d": "sprawdzenie przeszłości nadawcy przesyłki", 
+        "e": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych" 
+    },
+    c: ["b", "c", "e"]
+},
+{
+    id: 110,
+    q: "110. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę uważa się za zabezpieczone przed bezprawną ingerencją, jeżeli:",
+    o: { 
+        "a": "ich ilość nie przekracza 10 sztuk", 
+        "b": "zawierają jedynie części samochodowe", 
+        "c": "znajdują się w części krytycznej strefy zastrzeżonej lotniska" 
+    },
+    c: ["c"]
+}
+    
 ]
