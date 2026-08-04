@@ -568,5 +568,120 @@ const bazaPytan = [
     },
     c: ["b"]
 }
+,
+{
+    id: 61,
+    q: "61. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą następujących środków:",
+    o: { 
+        "a": "kontrola manualna", 
+        "b": "psy do wykrywania materiałów wybuchowych", 
+        "c": "urządzenia do prześwietlania osób niewykorzystujące promieniowania jonizującego", 
+        "d": "urządzenia do wykrywania śladowych ilości narkotyków i środków odurzających" 
+    },
+    c: ["a"]
+},
+{
+    id: 62,
+    q: "62. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą następujących środków:",
+    o: { 
+        "a": "kontrola wzrokowa", 
+        "b": "ręczne wykrywacze metali", 
+        "c": "urządzenia do prześwietlania osób niewykorzystujących promieniowania jonizującego", 
+        "d": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali" 
+    },
+    c: ["d"]
+},
+{
+    id: 63,
+    q: "63. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą następujących środków:",
+    o: { 
+        "a": "kontrola manualna", 
+        "b": "psy do wykrywania materiałów wybuchowych", 
+        "c": "ręczne wykrywacze metali", 
+        "d": "urządzenia do wykrywania metali (MDE)", 
+        "e": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali" 
+    },
+    c: ["a", "d", "e"]
+},
+{
+    id: 64,
+    q: "64. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
+    o: { 
+        "a": "członkowie załogi statku powietrznego podczas wykonywania obowiązków służbowych", 
+        "b": "funkcjonariusze Centralnego Biura Antykorupcyjnego posiadający ważną kartę identyfikacyjną portu lotniczego, podczas wykonywania zadań i obowiązków służbowych na lotnisku", 
+        "c": "funkcjonariusze Policji i Służby Celnej po okazaniu ważnej legitymacji służbowej", 
+        "d": "pracownicy wewnętrznej służby ochrony", 
+        "e": "zarządzający lotniskiem", 
+        "f": "żołnierze i funkcjonariusze Straży Granicznej, Biura Ochrony Rządu i Żandarmerii Wojskowej posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku" 
+    },
+    c: ["b", "f"]
+},
+{
+    id: 65,
+    q: "65. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
+    o: { 
+        "a": "dyrektor ds. bezpieczeństwa portu lotniczego", 
+        "b": "funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej", 
+        "c": "funkcjonariusze Służby Kontrwywiadu Wojskowego po okazaniu ważnej legitymacji służbowej", 
+        "d": "osoba posiadająca certyfikat inspektora lotnictwa cywilnego wydanego przez Prezesa ULC podczas wykonywania zadań i obowiązków służbowych na lotnisku", 
+        "e": "żołnierze i funkcjonariusze Agencji Bezpieczeństwa Wewnętrznego i Służby Wywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku" 
+    },
+    c: ["d", "e"]
+},
+{
+    id: 66,
+    q: "66. Do strefy zastrzeżonej portu lotniczego, bez poddawania kontroli bezpieczeństwa, mogą wjechać pojazdy używane w celu:",
+    o: { 
+        "a": "dostarczania zaopatrzenia pokładowego", 
+        "b": "dostawy towarów do sklepów wolnocłowych", 
+        "c": "prowadzenia działań ratowniczych i gaśniczych", 
+        "d": "utrzymania nawierzchni lotniskowych w stanie sprawności eksploatacyjnej" 
+    },
+    c: ["c"]
+},
+{
+    id: 67,
+    q: "67. Podczas kontroli bezpieczeństwa bagażu kabinowego, laptopy i inne duże urządzenia elektryczne:",
+    o: { 
+        "a": "mogą pozostać w bagażu pod warunkiem, że torba jest otwarta", 
+        "b": "muszą być wyjmowane z bagażu przed kontrolą w celu prześwietlenia ich oddzielnie (chyba że urządzenie rentgenowskie pozwala na badanie wewnątrz)", 
+        "c": "są zwolnione z prześwietlenia promieniowaniem rentgenowskim", 
+        "d": "wymagają każdorazowo przeprowadzenia kontroli manualnej" 
+    },
+    c: ["b"]
+},
+{
+    id: 68,
+    q: "68. Płyny, aerozole i żele (LAG) wnoszone przez pasażerów mogą być zwolnione z kontroli bezpieczeństwa odpowiednimi urządzeniami, jeżeli:",
+    o: { 
+        "a": "są zapakowane w torbę STEB zabezpieczoną przed otwarciem i pochodzą z lotniskowego sklepu wolnocłowego", 
+        "b": "są przeznaczone do użycia w trakcie podróży do celów leczniczych lub ze względów dietetycznych (w tym żywność dla niemowląt)", 
+        "c": "ich pojemność pojedyncza nie przekracza 100 ml i mieszczą się w jednej zamykanej przezroczystej torbie plastikowej o pojemności do 1 litra", 
+        "d": "pasażer zadeklaruje ustnie, że substancje te nie są niebezpieczne" 
+    },
+    c: ["a", "b", "c"]
+},
+{
+    id: 69,
+    q: "69. Płyny, aerozole i żele (LAG) zakupione w porcie lotniczym lub na pokładzie statku powietrznego są zwolnione z kontroli bezpieczeństwa pod warunkiem, że są zapakowane w torbę STEB, w której znajduje się widoczny:",
+    o: { 
+        "a": "bilet lotniczy pasażera", 
+        "b": "dowód zakupu w danym porcie lotniczym lub na pokładzie statku powietrznego w ciągu ostatnich 48 godzin", 
+        "c": "certyfikat bezpieczeństwa produktu wydany przez producenta", 
+        "d": "dowód tożsamości osoby sprzedającej" 
+    },
+    c: ["b"]
+},
+{
+    id: 70,
+    q: "70. Wskaż, które z poniższych substancji zalicza się do płynów, aerozoli i żeli (LAG) podlegających ograniczeniom przy kontroli bezpieczeństwa bagażu kabinowego:",
+    o: { 
+        "a": "pasty (np. pasta do zębów)", 
+        "b": "mieszaniny substancji płynnych i stałych (np. dżemy, zupy)", 
+        "c": "zawartość pojemników pod ciśnieniem (np. pianka do golenia, dezodoranty)", 
+        "d": "produkty o konsystencji żelu (np. żele do włosów, żele pod prysznic)" 
+    },
+    c: ["a", "b", "c", "d"]
+}
 
 ]
