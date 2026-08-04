@@ -686,333 +686,312 @@ const bazaPytan = [
 ,
 {
     id: 71,
-    q: "71. Wskaż przedmioty zabronione do wnoszenia przez pasażerów do stref zastrzeżonych lotniska oraz na pokład statku powietrznego w bagażu kabinowym z kategorii 'narzędzia robotnicze':",
+    q: "71. Przed kontrolą bezpieczeństwa pasażerów:",
     o: { 
-        "a": "wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", 
-        "b": "narzędzia z ostrzem lub trzonkiem o długości powyżej 6 cm nadające się do użycia jako broń, takie jak śrubokręty i dłuta", 
-        "c": "pistolety do wbijania gwoździ i pistolety nitarskie", 
-        "d": "piły, w tym bezprzewodowe przenośne piły elektryczne" 
-    },
-    c: ["b"]
-},
-{
-    id: 72,
-    q: "72. Noże i nożyczki mogą być przewożone przez pasażerów w bagażu kabinowym, pod warunkiem że długość ich ostrzy mierzona od punktu obrotu (zwornika) nie przekracza:",
-    o: { 
-        "a": "3 cm", 
-        "b": "5 cm", 
-        "c": "6 cm", 
-        "d": "10 cm" 
+        "a": "muszą oni schować płaszcze i kurtki do bagażu kabinowego", 
+        "b": "muszą oni wyjąć wszystkie przedmioty z bagażu kabinowego", 
+        "c": "muszą oni zdjąć płaszcze i kurtki, które poddawane są kontroli bezpieczeństwa jako bagaż kabinowy" 
     },
     c: ["c"]
 },
 {
-    id: 73,
-    q: "73. Przedmioty o ostrych krawędziach lub ostrych końcach (np. siekiery, topory, łyżwy) są:",
+    id: 72,
+    q: "72. Kontrolę bezpieczeństwa pasażerów przeprowadza się za pomocą:",
     o: { 
-        "a": "całkowicie zabronione do transportu drogą lotniczą", 
-        "b": "dozwolone do przewozu wyłącznie w bagażu rejestrowanym", 
-        "c": "dozwolone do przewozu w bagażu kabinowym, jeśli są odpowiednio zabezpieczone osłonami", 
-        "d": "zwolnione z kontroli bezpieczeństwa" 
+        "a": "bramki do wykrywania metali", 
+        "b": "kontroli manualnej", 
+        "c": "psów do wykrywania materiałów wybuchowych", 
+        "d": "urządzeń do prześwietlania osób niewykorzystujących promieniowania jonizującego", 
+        "e": "urządzeń rentgenowskich" 
     },
-    c: ["b"]
+    c: ["a", "b", "c", "d", "e"]
+},
+{
+    id: 73,
+    q: "73. Kontrolę bezpieczeństwa pasażerów przeprowadza się za pomocą:",
+    o: { 
+        "a": "bramki do wykrywania metali", 
+        "b": "komór symulacyjnych", 
+        "c": "kontroli manualnej", 
+        "d": "psów do wykrywania materiałów wybuchowych", 
+        "e": "urządzeń do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali" 
+    },
+    c: ["a", "c", "d", "e"]
 },
 {
     id: 74,
-    q: "74. Wskaż urządzenia, które zalicza się do kategorii 'urządzeń do ogłuszania lub obezwładniania' zabronionych w bagażu kabinowym:",
+    q: "74. Kontrolę bezpieczeństwa pasażerów przeprowadza się:",
     o: { 
-        "a": "urządzenia do porażania prądem (np. paralizatory, tasery, pałki paraliżujące)", 
-        "b": "urządzenia do ogłuszania i uboju zwierząt", 
-        "c": "chemiczne substancje, gazy i aerozole do obezwładniania (np. gazy pieprzowe, rozpylacze kwasu)", 
-        "d": "substancje i mieszaniny chemiczne, gazy i aerozole w pojemnikach, przeznaczone do obezwładniania lub unieszkodliwiania" 
+        "a": "pod nadzorem przewoźnika lotniczego", 
+        "b": "separując pasażerów poddanych kontroli bezpieczeństwa od nieskontrolowanych, wykorzystując środki osobowe lub bariery techniczne", 
+        "c": "w bezpośrednim sąsiedztwie stanowisk odprawy biletowo-bagażowej", 
+        "d": "w miejscu wyodrębnionym, do którego nie ma dostępu personel lotniska, z wyjątkiem pracowników służby ochrony lotniska", 
+        "e": "w sposób uniemożliwiający fizyczne kontaktowanie się pasażerów skontrolowanych z pasażerami oczekującymi na kontrolę" 
     },
-    c: ["a", "b", "c", "d"]
+    c: ["b", "e"]
 },
 {
     id: 75,
-    q: "75. Broń palna, amunicja i przedmioty przeznaczone do wystrzeliwania pocisków mogą być przewożone na pokładzie statku powietrznego:",
+    q: "75. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
     o: { 
-        "a": "w bagażu kabinowym, pod warunkiem zgłoszenia tego załodze", 
-        "b": "wyłącznie jako bagaż rejestrowany w luku bagażowym, na ściśle określonych zasadach i po spełnieniu procedur bezpieczeństwa", 
-        "c": "w kieszeni pasażera, jeśli posiada on ważne pozwolenie na broń", 
-        "d": "tylko przez pilotów statku powietrznego" 
+        "a": "funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej", 
+        "b": "funkcjonariusze pełniący służbę w ramach Europejskiej Agencji Straży Granicznej i Przybrzeżnej posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku", 
+        "c": "funkcjonariusze Służby Kontrwywiadu Wojskowego po okazaniu ważnej legitymacji służbowej", 
+        "d": "osoba posiadająca legitymację służbową wydaną przez Urząd Lotnictwa Cywilnego podczas wykonywania zadań i obowiązków służbowych na lotnisku", 
+        "e": "pracownicy i funkcjonariusze Służby Ochrony Państwa i żołnierze wyznaczeni na stanowisko służbowe w Służbie Kontrwywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku" 
     },
-    c: ["b"]
+    c: ["b", "d", "e"]
 },
 {
     id: 76,
-    q: "76. Repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią, są w bagażu kabinowym pasażera:",
+    q: "76. Następujące przedmioty uznaje się za przedmioty zabronione w przesyłkach zawierających ładunek i pocztę:",
     o: { 
-        "a": "dozwolone, ponieważ nie stanowią realnego zagrożenia bojowego", 
-        "b": "zabronione, ponieważ mogą zostać użyte do wywołania paniki lub sterroryzowania załogi", 
-        "c": "dozwolone pod warunkiem, że są wykonane z tworzywa sztuktnego", 
-        "d": "zwolnione z kontroli bezpieczeństwa" 
+        "a": "wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", 
+        "b": "zabawki w kształcie broni, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", 
+        "c": "zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z mającymi zastosowanie zasadami bezpieczeństwa w lotnictwie cywilnym" 
     },
-    c: ["b"]
+    c: ["c"]
 },
 {
     id: 77,
-    q: "77. Operator kontroli bezpieczeństwa, w przypadku powzięcia wątpliwości co do charakteru przedmiotu niewymienionego wprost na liście przedmiotów zabronionych:",
+    q: "77. Kontrolę bezpieczeństwa pasażera potencjalnie uciążliwego przeprowadza się za pomocą:",
     o: { 
-        "a": "musi bezwzględnie zezwolić na jego wniesienie na pokład", 
-        "b": "ma prawo odmówić pasażerowi wniesienia tego przedmiotu, jeżeli uzna, że budzi on uzasadnione obawy o bezpieczeństwo lotu", 
-        "c": "musi skonsultować się telefonicznie z Prezesem ULC przed podjęciem decyzji", 
-        "d": "przekazuje decyzję kapitanowi samolotu przed wejściem pasażera na pokład" 
+        "a": "bramki do wykrywania metali", 
+        "b": "eskortowany pasażer potencjalnie uciążliwy jest zwolniony z kontroli bezpieczeństwa", 
+        "c": "kontroli manualnej", 
+        "d": "urządzeń do wykrywania substancji narkotycznych" 
     },
-    c: ["b"]
+    c: ["a", "c"]
 },
 {
     id: 78,
-    q: "78. Podczas kontroli bezpieczeństwa bagażu kabinowego za pomocą urządzenia rentgenowskiego, operator (screen) powinien analizować obraz pod kątem wykrycia:",
+    q: "78. Wskaż kategorie pasażerów zwolnionych z kontroli bezpieczeństwa:",
     o: { 
-        "a": "anomalii gęstościowych wewnątrz przedmiotów", 
-        "b": "konturów broni palnej, noży lub innych narzędzi", 
-        "c": "organicznych materiałów masowych, które mogą wskazywać na obecność materiałów wybuchowych", 
-        "d": "wartości rynkowej przewożonej elektroniki" 
-    },
-    c: ["a", "b", "c"]
-},
-{
-    id: 79,
-    q: "79. Wykrywacz materiałów wybuchowych (ETD) pobiera próby śladowe (wymazy) w celu identyfikacji mikroskopijnych cząstek substancji wybuchowych z:",
-    o: { 
-        "a": "dłoni, pasków lub obuwia kontrolowanej osoby", 
-        "b": "wnętrza, zamków lub rączek bagażu kabinowego", 
-        "c": "powierzchni urządzeń elektronicznych (np. laptopów)", 
-        "d": "wnętrza zabezpieczonych kosmetyczek" 
-    },
-    c: ["a", "b", "c"]
-},
-{
-    id: 80,
-    q: "80. Do strefy zastrzeżonej lotniska zabrania się wnoszenia przedmiotów, które mogą zostać użyte do popełnienia aktu bezprawnej ingerencji, chyba że:",
-    o: { 
-        "a": "zostały poddane kontroli bezpieczeństwa i wydano na nie odpowiednie upoważnienie ze względu na charakter wykonywanej pracy", 
-        "b": "pasażer oświadczy, że są to pamiątki rodzinne", 
-        "c": "należą do personelu sprzątającego pokład", 
-        "d": "znajdują się w oryginalnych, nienaruszonych opakowaniach fabrycznych" 
-    },
-    c: ["a"]
-},
-{
-    id: 81,
-    q: "81. W odniesieniu do bagażu rejestrowanego, który został poddany kontroli bezpieczeństwa i w stosunku do którego istnieją uzasadnione obawy, że mogło dojść do naruszenia jego integralności:",
-    o: { 
-        "a": "może zostać załadowany do statku powietrznego po uzyskaniu zgody kapitana", 
-        "b": "poddaje się go ponownej kontroli bezpieczeństwa przed załadunkiem do statku powietrznego", 
-        "c": "zostaje automatycznie przekazany do utylizacji", 
-        "d": "zostaje oznaczony jako bagaż wysokiego ryzyka i załadowany bez zmian" 
-    },
-    c: ["b"]
-},
-{
-    id: 82,
-    q: "82. Zaopatrzenie pokładowe, które dostarczane jest do strefy zastrzeżonej lotniska przez „znanego dostawcę zaopatrzenia pokładowego” wyznaczonego przez właściwy organ:",
-    o: { 
-        "a": "musi być każdorazowo poddawane pełnej kontroli bezpieczeństwa na bramkach lotniskowych", 
-        "b": "może być zwolnione z kontroli bezpieczeństwa, pod warunkiem że dostawca zastosował wymagane środki kontroli i zabezpieczył ładunek przed nieupoważnionym dostępem", 
-        "c": "podlega wyłącznie kontroli dokumentów przewozowych", 
-        "d": "jest zwolnione z jakichkolwiek procedur weryfikacyjnych" 
-    },
-    c: ["b"]
-},
-{
-    id: 83,
-    q: "83. Jeżeli pasażer odmawia poddania się kontroli bezpieczeństwa (manualnej lub za pomocą urządzeń):",
-    o: { 
-        "a": "zezwala mu się na wejście do strefy zastrzeżonej po podpisaniu oświadczenia o odpowiedzialności", 
-        "b": "odmawia mu się wstępu do stref zastrzeżonych lotniska oraz na pokład statku powietrznego", 
-        "c": "kontrolę przeprowadza się przymusowo w asyście Policji", 
-        "d": "pasażer zostaje zatrzymany w strefie ogólnodostępnej na 24 godziny" 
-    },
-    c: ["b"]
-},
-{
-    id: 84,
-    q: "84. Podczas kontroli bagażu kabinowego przy użyciu urządzeń rentgenowskich (X-ray), ciemne, jednolite obszary o bardzo dużej gęstości, których promienie nie są w stanie przeniknąć (tzw. obszary nieprzenikliwe), operator musi:",
-    o: { 
-        "a": "uznad za bezpieczne i przepuścić bagaż", 
-        "b": "zastosować dodatkową metodę kontroli, np. kontrolę manualną tego miejsca, aby upewnić się, że nie ukryto tam przedmiotów zabronionych", 
-        "c": "zwrócić bagaż pasażerowi w celu nadania go jako rejestrowany", 
-        "d": "zgłosić natychmiastowy alarm bojowy dla całego terminala" 
-    },
-    c: ["b"]
-},
-{
-    id: 85,
-    q: "85. Które z poniższych środków ochrony fizycznej zapobiegają nieupoważnionemu dostępowi do ładunku i poczty po przeprowadzeniu kontroli bezpieczeństwa?",
-    o: { 
-        "a": "umieszczone przesyłek w zamykanych lub zaplombowanych ładowniach/pojazdach", 
-        "b": "zastosowanie taśm zabezpieczających wykazujących ślady otwarcia (tamper-evident)", 
-        "c": "zapewnienie stałego nadzoru fizycznego przez uprawniony personel", 
-        "d": "owinięcie przesyłek zwykłą folią stretch bez oznaczeń" 
-    },
-    c: ["a", "b", "c"]
-}
-,
-{
-    id: 86,
-    q: "86. Zaopatrzenie portu lotniczego obejmuje wszelkie towary przeznaczone do:",
-    o: { 
-        "a": "sprzedaży w sklepach wolnocłowych i punktach handlowych w strefie zastrzeżonej", 
-        "b": "użytku, konsumpcji lub zapewnienia funkcjonowania portu lotniczego w strefie zastrzeżonej", 
-        "c": "konsumpcji na pokładzie statków powietrznych przez pasażerów i załogę", 
-        "d": "osobistego użytku pasażerów w strefie ogólnodostępnej" 
-    },
-    c: ["a", "b"]
-},
-{
-    id: 87,
-    q: "87. Wskaż, jakie wymagania musi spełnić osoba ubiegająca się o wydanie stałej karty identyfikacyjnej portu lotniczego (KIPL):",
-    o: { 
-        "a": "pomyślne przejście sprawdzenia przeszłości (background check)", 
-        "b": "uzasadniona potrzeba operacyjna dostępu do stref zastrzeżonych lotniska", 
-        "c": "odbycie szkolenia w zakresie świadomości ochrony lotnictwa cywilnego", 
-        "d": "posiadanie wyższego wykształcenia o profilu lotniczym" 
-    },
-    c: ["a", "b", "c"]
-},
-{
-    id: 88,
-    q: "88. Certyfikat operatora kontroli bezpieczeństwa (certyfikat OKB) wydawany przez Prezesa ULC zachowuje ważność przez okres:",
-    o: { 
-        "a": "1 roku", 
-        "b": "3 lat", 
-        "c": "5 lat", 
-        "d": "bezterminowo, o ile operator pracuje w zawodzie" 
-    },
-    c: ["b"]
-},
-{
-    id: 89,
-    q: "89. Do kategorii przedmiotów zabronionych w bagażu kabinowym 'broń palna i inne urządzenia wystrzeliwujące pociski' zalicza się również:",
-    o: { 
-        "a": "broń zabawkową, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", 
-        "b": "pistolety sygnałowe i startowe", 
-        "c": "łuki, kusze i strzały", 
-        "d": "urządzenia do miotania harpunów i włóczni" 
+        "a": "osoby konwojowane pod uzbrojoną eskortą", 
+        "b": "osoby którym towarzyszy ochrona służb państwowych", 
+        "c": "personel misji dyplomatycznych", 
+        "d": "wicemarszałkowie Senatu" 
     },
     c: ["b", "d"]
 },
 {
-    id: 90,
-    q: "90. Wnoszone przez pasażerów do strefy zastrzeżonej płyny medyczne lub dietetyczne o pojemności powyżej 100 ml (np. płynne leki, odżywki dla dzieci):",
+    id: 79,
+    q: "79. Kontrolę manualną osób przeprowadza się:",
     o: { 
-        "a": "są całkowicie zabronione i podlegają konfiskacie", 
-        "b": "są dozwolone, ale muszą zostać wyjęte z bagażu kabinowego i poddane osobnemu sprawdzeniu przy użyciu dedykowanych urządzeń do kontroli LAG", 
-        "c": "są przepuszczane bez żadnej kontroli na podstawie deklaracji słownej", 
-        "d": "wymagają zgody kapitana statku powietrznego" 
+        "a": "w taki sposób, aby upewnić się, na ile to możliwe, że kontrolowana osoba nie przenosi przedmiotów zabronionych", 
+        "b": "wyłącznie w przypadku awarii bramki do wykrywania metali", 
+        "c": "wyłącznie w stosunku do mężczyzn" 
+    },
+    c: ["a"]
+},
+{
+    id: 80,
+    q: "80. Jeżeli dozwolone jest przewożenie w kabinie pasażerskiej statku powietrznego żywego zwierzęcia:",
+    o: { 
+        "a": "jest ono poddawane takiej samej kontroli bezpieczeństwa jak pasażer lub bagaż kabinowy", 
+        "b": "nie podlega ono kontroli bezpieczeństwa", 
+        "c": "podlega ono kontroli bezpieczeństwa przeprowadzonej wyłącznie przez uprawnionego weterynarza" 
+    },
+    c: ["a"]
+}
+,
+{
+    id: 81,
+    q: "81. Ładunek i poczta, którym nadano oznaczenie „KC” oznacza przesyłkę otrzymaną od:",
+    o: { 
+        "a": "uznanego dostawcy", 
+        "b": "zarejestrowanego agenta", 
+        "c": "znanego dostawcy z portu lotniczego państwa trzeciego", 
+        "d": "znany nadawca" 
+    },
+    c: ["d"]
+},
+{
+    id: 82,
+    q: "82. Przed kontrolą bezpieczeństwa bagażu kabinowego przenośne komputery i inne duże urządzenia elektryczne:",
+    o: { 
+        "a": "muszą zostać obowiązkowo skontrolowane z wykorzystaniem psów do wykrywania materiałów wybuchowych", 
+        "b": "muszą zostać włączone, aby sprawdzić, czy działają", 
+        "c": "usuwa się z bagażu i poddaje kontroli bezpieczeństwa oddzielnie" 
+    },
+    c: ["c"]
+},
+{
+    id: 83,
+    q: "83. Podczas kontroli bezpieczeństwa bagażu kabinowego stosuje się:",
+    o: { 
+        "a": "bramkowe wykrywacze metali", 
+        "b": "komory symulacyjne", 
+        "c": "kontrolę manualną", 
+        "d": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą manualną", 
+        "e": "ręczne wykrywacze metali" 
+    },
+    c: ["c", "d"]
+},
+{
+    id: 84,
+    q: "84. Podczas kontroli bezpieczeństwa bagażu kabinowego stosuje się:",
+    o: { 
+        "a": "ręczne detektory metali", 
+        "b": "systemy wykrywania materiałów wybuchowych", 
+        "c": "urządzenia do prześwietlania osób niewykorzystujące promieniowania jonizującego", 
+        "d": "urządzenia rentgenowskie", 
+        "e": "wzierniki endoskopowe" 
+    },
+    c: ["b", "d"]
+},
+{
+    id: 85,
+    q: "85. Kontrola manualna bagażu kabinowego polega na:",
+    o: { 
+        "a": "kontroli ręcznej bagażu, w tym całej jego zawartości, aby upewnić się, na ile to możliwe, że nie zawiera on przedmiotów zabronionych", 
+        "b": "kontroli ręcznej tylko tych wybranych części bagażu, w których spodziewane jest wykrycie przedmiotów zabronionych", 
+        "c": "poddaniu bagażu 12-godzinnej kwarantannie", 
+        "d": "wyłącznie zewnętrznych oględzinach bagażu bez ingerencji do jego wnętrza" 
+    },
+    c: ["a"]
+},
+{
+    id: 86,
+    q: "86. Kontroli bezpieczeństwa nie podlega bagaż kabinowy:",
+    o: { 
+        "a": "dyrektora portu lotniczego ds. bezpieczeństwa, któremu towarzyszy ochrona SOP", 
+        "b": "funkcionariuszy SOP zapewniających ochronę ministrowi spraw wewnętrznych", 
+        "c": "Prezesa Urzędu Lotnictwa Cywilnego", 
+        "d": "żołnierzy Żandarmerii Wojskowej zapewniających ochronę ministrowi obrony narodowej" 
     },
     c: ["b"]
 },
 {
-    id: 91,
-    q: "91. Przedmioty zabronione w bagażu kabinowym z kategorii 'przedmioty z ostrym końcem lub ostrą krawędzią' obejmują między innymi:",
+    id: 87,
+    q: "87. Kontroli bezpieczeństwa nie podlegają:",
     o: { 
-        "a": "siekiery, topory i tasaki", 
-        "b": "łyżwy", 
-        "c": "nożyczki o długości ostrzy powyżej 6 cm mierzonych od zwornika", 
-        "d": "rurki bambusowe do napojów" 
+        "a": "bagaż kabinowy i rejestrowany dyplomatów", 
+        "b": "bagaż kabinowy i rejestrowany personelu misji konsularnych", 
+        "c": "przesyłki stanowiące pocztę dyplomatyczną spełniające wymogi Konwencji wiedeńskiej o stosunkach dyplomatycznych" 
     },
-    c: ["a", "b", "c"]
+    c: ["c"]
+},
+{
+    id: 88,
+    q: "88. Jeżeli w bagażu kabinowym znajduje się duże urządzenie elektryczne:",
+    o: { 
+        "a": "jest ono kontrolowane jednocześnie z tym bagażem, bez konieczności wyjmowania z bagażu", 
+        "b": "musi ono być obowiązkowo przełożone do bagażu rejestrowanego", 
+        "c": "obowiązkowo do kontroli tego bagażu należy wykorzystać urządzenie do wykrywania śladowych ilości materiałów wybuchowych", 
+        "d": "wyjmuje się je z bagażu i bagaż poddaje się ponownej kontroli bezpieczeństwa, a urządzenie elektryczne podlega oddzielnej kontroli bezpieczeństwa" 
+    },
+    c: ["d"]
+},
+{
+    id: 89,
+    q: "89. Następujące przedmioty nie mogą być wnoszone przez pasażerów do stref zastrzeżonych lotniska ani na pokład statku powietrznego:",
+    o: { 
+        "a": "kije do gry w baseball i softball", 
+        "b": "noże o długości ostrza – 5 cm", 
+        "c": "ręczne latarki", 
+        "d": "urządzenia do ogłuszania i uboju zwierząt", 
+        "e": "wyposażenie wykorzystywane do sztuk walki z ostrym zakończeniem lub ostrą krawędzią", 
+        "f": "zabawki w kształcie broni" 
+    },
+    c: ["a", "d", "e"]
+},
+{
+    id: 90,
+    q: "90. Następujące przedmioty nie mogą być wnoszone przez pasażerów do stref zastrzeżonych lotniska ani na pokład statku powietrznego:",
+    o: { 
+        "a": "gaz pieprzowy", 
+        "b": "imitacje urządzeń wybuchowych", 
+        "c": "nożyczki o długości ostrzy powyżej 6 cm, mierzonych od punktu połączenia obrotowego", 
+        "d": "piłki do gry w baseball", 
+        "e": "pistolety startowe", 
+        "f": "urządzenia do nawigacji samochodowej" 
+    },
+    c: ["a", "b", "c", "e"]
+}
+,
+{
+    id: 91,
+    q: "91. Następujące przedmioty nie mogą być wnoszone przez pasażerów do stref zastrzeżonych lotniska ani na pokład statku powietrznego:",
+    o: { 
+        "a": "bezprzewodowe przenośne piły elektryczne", 
+        "b": "celowniki teleskopowe do broni palnej", 
+        "c": "fajerwerki", 
+        "d": "ładowarki do telefonów komórkowych", 
+        "e": "strzały do łuków", 
+        "f": "tasaki kuchenne" 
+    },
+    c: ["a", "c", "e", "f"]
 },
 {
     id: 92,
-    q: "92. Do kategorii 'tępych narzędzi' zabronionych w bagażu kabinowym, które mogą spowodować poważne obrażenia w przypadku ich użycia do uderzenia, należą:",
+    q: "92. Następujące przedmioty nie mogą być wnoszone przez pasażerów do stref zastrzeżonych lotniska ani na pokład statku powietrznego:",
     o: { 
-        "a": "pałki gumowe, pałki obciągane skórą i pałki policyjne", 
-        "b": "kije baseballowe i kije do softballu", 
-        "c": "wyposażenie wykorzystywane do sztuk walki (np. kastety, nunchaku)", 
-        "d": "zwykłe parasole przeciwdeszczowe bez ostrego szpica" 
+        "a": "amunicja do broni palnej przewożona bez broni", 
+        "b": "bezprzewodowe liczniki rowerowe", 
+        "c": "broń pneumatyczna", 
+        "d": "kołowrotki wędkarskie", 
+        "e": "pałki policyjne", 
+        "f": "szpikulce do lodu" 
     },
-    c: ["a", "b", "c"]
+    c: ["a", "c", "e", "f"]
 },
 {
     id: 93,
-    q: "93. Materiały wybuchowe i substancje zapalające oraz urządzenia wybuchowe (np. granaty, miny, detonatory, petardy) przewożone przez pasażerów są:",
+    q: "93. Pocztę przewoźnika lotniczego i materiały przewoźnika lotniczego można zwolnić ze środków kontroli w zakresie ochrony:",
     o: { 
-        "a": "całkowicie zabronione zarówno w bagażu kabinowym, jak i w bagażu rejestrowanym", 
-        "b": "dozwolone wyłącznie w bagażu rejestrowanym po opłaceniu dodatkowego ubezpieczenia", 
-        "c": "dozwolone w bagażu kabinowym, o ile nie zawierają zapalników", 
-        "d": "zwolnione z kontroli bezpieczeństwa w przypadku lotów czarterowych" 
+        "a": "jeśli pochodzą z części krytycznych stref zastrzeżonych lotniska", 
+        "b": "jeśli tak zdecyduje przewoźnik lotniczy w porozumieniu z zarządzającym lotniskiem", 
+        "c": "w przypadku, gdy statek powietrzny realizuje rejs bez pasażerów", 
+        "d": "w przypadku, gdy statek powietrzny realizuje rejs krajowy" 
     },
     c: ["a"]
 },
 {
     id: 94,
-    q: "94. Kto na lotnisku koordynuje działania w przypadku wystąpienia aktu bezprawnej ingerencji (np. zagrożenie bombowe, porwanie samolotu na ziemi)?",
+    q: "94. Podczas kontroli bezpieczeństwa zaopatrzenia portu lotniczego stosuje się pojedynczo następujące środki lub metody kontroli:",
     o: { 
-        "a": "odpowiednie służby państwowe (np. Straż Graniczna, Policja) w ramach lotniskowego komitetu kryzysowego", 
-        "b": "agent obsługi naziemnej (handlingowej)", 
-        "c": "personel sprzątający terminal pasażerski", 
-        "d": "kierownik lotniskowej wieży kontroli lotów" 
+        "a": "kontrolę manualną", 
+        "b": "kontrolę wzrokową", 
+        "c": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą przy użyciu urządzenia rentgenowskiego", 
+        "d": "systemy do wykrywania urządzeń wybuchowych", 
+        "e": "urządzenia ETD w połączeniu z kontrolą manualną" 
     },
-    c: ["a"]
+    c: ["a", "b"]
 },
 {
     id: 95,
-    q: "95. Testy sprawnościowe i kalibrację urządzeń rentgenowskich (X-ray) oraz bramkowych wykrywaczy metali (WTMD) na lotnisku przeprowadza się:",
+    q: "95. Podczas kontroli bezpieczeństwa poczty przewoźnika lotniczego i materiałów przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy, stosuje się:",
     o: { 
-        "a": "raz na kilka lat podczas audytu unijnego", 
-        "b": "regularnie, zgodnie z krajowym programem kontroli jakości oraz wytycznymi producenta sprzętu", 
-        "c": "tylko po zgłoszeniu awarii lub błędnego działania przez operatora", 
-        "d": "wyłącznie na pisemne żądanie linii lotniczych" 
+        "a": "24 godzinną kwarantannę", 
+        "b": "systemy do wykrywania materiałów wybuchowych", 
+        "c": "urządzenia do wykrywania metali", 
+        "d": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych" 
     },
-    c: ["b"]
+    c: ["b", "d"]
 },
 {
     id: 96,
-    q: "96. Broń palna, amunicja oraz elementy broni palnej przewożone w bagażu rejestrowanym must be:",
+    q: "96. Podczas kontroli bezpieczeństwa bagażu rejestrowanego stosuje się:",
     o: { 
-        "a": "odpowiednio zabezpieczone, rozładowane i zgłoszone podczas odprawy biletowo-bagażowej, a ich transport odbywa się według specjalnych procedur", 
-        "b": "zapakowane w zwykłą folię stretch i umieszczone na wierzchu ubrań", 
-        "c": "umieszczone w bagażu podręcznym pasażera w celu stałego nadzoru", 
-        "d": "przewoźnikowi przekazywane bez konieczności informowania" 
+        "a": "bramkowe wykrywacze metali", 
+        "b": "kontrolę manualną", 
+        "c": "psy do wykrywania materiałów wybuchowych", 
+        "d": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych", 
+        "e": "urządzenia do wykrywania śladowych ilości narkotyków i substancji odurzających" 
     },
-    c: ["a"]
+    c: ["b", "c", "d"]
 },
 {
     id: 97,
-    q: "97. Jeśli operator kontroli bezpieczeństwa na obrazie rentgenowskim bagażu kabinowego zauważy kształt przypominający improwizowane urządzenie wybuchowe (IED), jego pierwszym obowiązkiem jest:",
+    q: "97. Podczas kontroli bezpieczeństwa bagażu rejestrowanego stosuje się:",
     o: { 
-        "a": "natychmiastowe otwarcie torby i wyjęcie podejrzanego przedmiotu", 
-        "b": "wstrzymanie taśmociągu, zabezpieczenie podejrzanego bagażu przed dostępem pasażera oraz powiadomienie przełożonego i wezwanie wyspecjalizowanych służb (np. pirotechników Straży Granicznej)", 
-        "c": "oddanie bagażu pasażerowi z prośbą o wyrzucenie podejrzanej rzeczy do kosza", 
-        "d": "poproszenie pasażera o samodzielne rozmontowanie urządzenia" 
+        "a": "kontrolę manualną", 
+        "b": "ręczne wykrywacze metali", 
+        "c": "systemy wykrywania materiałów wybuchowych", 
+        "d": "urządzenia do prześwietlania osób niewykorzystujące promieniowania jonizującego", 
+        "e": "urządzenia rentgenowskie" 
     },
-    c: ["b"]
-},
-{
-    id: 98,
-    q: "98. Przeszukiwanie manualne bagażu kabinowego lub rejestrowanego powinno być realizowane:",
-    o: { 
-        "a": "w obecności pasażera (posiadacza bagażu) lub jego upoważnionego przedstawiciela, z wyjątkiem ściśle określonych procedur bezpieczeństwa", 
-        "b": "zawsze na osobności, w ukryciu przed pasażerem", 
-        "c": "wyłącznie przez dyrektora portu lotniczego", 
-        "d": "w dowolnym losowym miejscu, bez używania rękawiczek ochronnych" 
-    },
-    c: ["a"]
-},
-{
-    id: 99,
-    q: "99. Status „zarejestrowanego agenta” (RA) w strukturze ochrony lotnictwa cywilnego nadawany jest przez:",
-    o: { 
-        "a": "zarządzającego danym portem lotniczym", 
-        "b": "Prezesa Urzędu Lotnictwa Cywilnego po spełnieniu wymogów prawnych i pomyślnym przejściu wizji lokalnej", 
-        "c": "Komendanta Głównego Straży Granicznej", 
-        "d": "Międzynarodowe Zrzeszenie Przewoźników Powietrznych (IATA)" 
-    },
-    c: ["b"]
-},
-{
-    id: 100,
-    q: "100. Która z poniższych stref lotniska stanowi obszar, do którego dostęp jest kontrolowany i do wejścia wymagane jest posiadanie ważnej karty identyfikacyjnej lub karty pokładowej?",
-    o: { 
-        "a": "strefa ogólnodostępna (np. hala odlotów przed stanowiskami kontroli)", 
-        "b": "strefa zastrzeżona lotniska (SRA)", 
-        "c": "ogólnodostępny parking przed terminalem", 
-        "d": "lotniskowa stacja paliw znajdująca się poza ogrodzeniem operacyjnym" 
-    },
-    c: ["b"]
+    c: ["a", "c", "e"]
 }
 ]
