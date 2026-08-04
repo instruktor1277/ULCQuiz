@@ -1251,5 +1251,125 @@ const bazaPytan = [
     },
     c: ["a", "b", "e", "f"]
 }
+,
+{
+    id: 121,
+    q: "121. Następujące przedmioty uznaje się za przedmioty zabronione w poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy:",
+    o: { 
+        "a": "aerozole odstraszające zwierzęta", 
+        "b": "czekany do wspinaczki wysokogórskiej", 
+        "c": "długopisy", 
+        "d": "klawiatury komputerowe", 
+        "e": "repliki urządzeń wybuchowych", 
+        "f": "strzelby myśliwskie" 
+    },
+    c: ["a", "b", "e", "f"]
+},
+{
+    id: 122,
+    q: "122. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu pokładowym:",
+    o: { 
+        "a": "latarki akumulatorowe", 
+        "b": "metalowe pojemniki na lód", 
+        "c": "pistolety i rewolwery", 
+        "d": "repliki urządzeń wybuchowych", 
+        "e": "urządzenia do uboju zwierząt" 
+    },
+    c: ["c", "d", "e"]
+},
+{
+    id: 123,
+    q: "123. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu pokładowym:",
+    o: { 
+        "a": "materiały pirotechniczne", 
+        "b": "metalowe łyżki stołowe", 
+        "c": "pistolety startowe", 
+        "d": "plastikowe widelce", 
+        "e": "rozpylacze kwasu", 
+        "f": "telefony komórkowe" 
+    },
+    c: ["a", "c", "e"]
+},
+{
+    id: 124,
+    q: "124. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego zastosowane środki lub metoda:",
+    o: { 
+        "a": "są losowane ze specjalnie przygotowanej listy", 
+        "b": "uwzględniają rodzaj zaopatrzenia", 
+        "c": "zawsze przewidują wykorzystanie urządzeń rentgenowskich" 
+    },
+    c: ["b"]
+},
+{
+    id: 125,
+    q: "125. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego zastosowane środki lub metoda:",
+    o: { 
+        "a": "są wcześniej ustalane na każdy dzień tygodnia", 
+        "b": "zapewniają dostateczny poziom bezpieczeństwa, na ile to możliwe, jeżeli chodzi o wykrycie przedmiotów zabronionych ukrytych w zaopatrzeniu", 
+        "c": "zawsze przewidują kontrolę manualną" 
+    },
+    c: ["b"]
+},
+{
+    id: 126,
+    q: "126. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+    o: { 
+        "a": "kontrola wzrokowa", 
+        "b": "psy do wykrywania materiałów wybuchowych w powiązaniu z kontrolą wzrokową", 
+        "c": "ręczne detektory metali", 
+        "d": "urządzenie rentgenowskie", 
+        "e": "wzierniki endoskopowe" 
+    },
+    c: ["a", "b", "d"]
+},
+{
+    id: 127,
+    q: "127. Podczas kontroli bezpieczeństwa zaopatrzenia pokładowego stosuje się pojedynczo lub w kombinacji następujące środki lub metody kontroli:",
+    o: { 
+        "a": "bramkowe detektory metali", 
+        "b": "detektory promieniowania jonizującego", 
+        "c": "kontrola manualna", 
+        "d": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w powiązaniu z kontrolą wzrokową", 
+        "e": "urządzenie rentgenowskie" 
+    },
+    c: ["c", "d", "e"]
+},
+{
+    id: 128,
+    q: "128. Podczas kontroli bezpieczeństwa osób, ręczny wykrywacz metali:",
+    o: { 
+        "a": "jest podstawowym środkiem kontroli bezpieczeństwa", 
+        "b": "jest pomocny przy ustalaniu miejsca ukrycia materiałów wybuchowych", 
+        "c": "można stosować tylko jako dodatkowy środek kontroli bezpieczeństwa", 
+        "d": "można stosować zamiast kontroli manualnej", 
+        "e": "nie zastępuje wymogów kontroli manualnej", 
+        "f": "stosowany jest wyłącznie do kontroli bezpieczeństwa kobiet w zaawansowanej ciąży" 
+    },
+    c: ["c", "e"]
+},
+{
+    id: 129,
+    q: "129. Kontrolę bezpieczeństwa pasażera potencjalnie uciążliwego przeprowadza się za pomocą:",
+    o: { 
+        "a": "bramki do wykrywania metali", 
+        "b": "eskortowany pasażer potencjalnie uciążliwy jest zwolniony z kontroli bezpieczeństwa", 
+        "c": "kontroli manualnej", 
+        "d": "psów do wykrywania materiałów wybuchowych", 
+        "e": "urządzeń do wykrywania substancji narkotycznych" 
+    },
+    c: ["a", "c"]
+},
+{
+    id: 130,
+    q: "130. Wskaż osoby niebędące pasażerami, które są zwolnione z kontroli bezpieczeństwa:",
+    o: { 
+        "a": "dyrektor ds. bezpieczeństwa portu lotniczego", 
+        "b": "funkcjonariusze Izby Skarbowej po okazaniu ważnej legitymacji służbowej", 
+        "c": "funkcjonariusze Służby Kontrwywiadu Wojskowego po okazaniu ważnej legitymacji służbowej", 
+        "d": "pracownicy i funkcjonariusze Agencji Bezpieczeństwa Wewnętrznego i Służby Wywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku", 
+        "e": "strażacy Państwowej Straży Pożarnej upoważnieni do przeprowadzania czynności kontrolno-rozpoznawczych na lotnisku posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku" 
+    },
+    c: ["d", "e"]
+}
     
 ]
