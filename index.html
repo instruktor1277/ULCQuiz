@@ -29,14 +29,15 @@
 <div class="container">
     <h1>Operator Kontroli Bezpieczeństwa ULC</h1>
     
-   <div class="menu">
+  <div class="menu">
     <button class="btn active" id="m1" onclick="zmienZestaw(1)">Pytania 1 - 10</button>
     <button class="btn" id="m2" onclick="zmienZestaw(2)">Pytania 11 - 20</button>
     <button class="btn" id="m3" onclick="zmienZestaw(3)">Pytania 21 - 30</button>
     <button class="btn" id="m4" onclick="zmienZestaw(4)">Pytania 31 - 40</button>
     <button class="btn" id="m5" onclick="zmienZestaw(5)">Pytania 41 - 50</button>
-    <button class="btn" id="m6" onclick="zmienZestaw(6)">Pytania 51 - 60</button> <!-- DOPISZ TĘ LINIJKĘ -->
+    <button class="btn" id="m6" onclick="zmienZestaw(6)">Pytania 51 - 60</button>
 </div>
+
 
 
 
@@ -520,229 +521,128 @@ const p5 = [
     {
         id: 41,
         q: "41. Znanych nadawców ładunku i poczty wyznacza:",
-        o: { 
-            "a": "Prezes Urzędu Lotnictwa Cywilnego", 
-            "b": "uznany nadawca", 
-            "c": "zarejestrowany agent", 
-            "d": "zarządzający portem lotniczym" 
-        },
+        o: { "a": "Prezes Urzędu Lotnictwa Cywilnego", "b": "uznany nadawca", "c": "zarejestrowany agent", "d": "zarządzający portem lotniczym" },
         c: ["a"]
     },
     {
         id: 42,
         q: "42. Przesyłki zawierające ładunek i pocztę, w stosunku do których zastosowano środki kontroli, oczekujące na załadunek do statku powietrznego uważa się za zabezpieczone przed nieupoważnioną ingerencją, jeżeli znajdują się:",
-        o: { 
-            "a": "w części krytycznej strefy zastrzeżonej lotniska", 
-            "b": "w części operacyjnej lotniska", 
-            "c": "w części zastrzeżonej lotniska" 
-        },
+        o: { "a": "w części krytycznej strefy zastrzeżonej lotniska", "b": "w części operacyjnej lotniska", "c": "w części zastrzeżonej lotniska" },
         c: ["a"]
     },
     {
         id: 43,
         q: "43. Jeżeli nieupoważnione osoby mogły mieć dostęp do stref zastrzeżonych lotniska:",
-        o: { 
-            "a": "zwołuje się Zespół Ochrony lotniska", 
-            "b": "niezwłocznie dokonuje się przeszukania całego lotniska, aby upewnić się, na ile to możliwe, że nie zostały wniesione przedmioty zabronione", 
-            "c": "niezwłocznie dokonuje się przeszukania części, do których mogły mieć dostęp te osoby, aby upewnić się, na ile to możliwe, że nie znajdują się w nich przedmioty zabronione", 
-            "d": "wstrzymuje się odloty statków powietrznych do czasu odnalezienia tych osób" 
-        },
+        o: { "a": "zwołuje się Zespół Ochrony lotniska", "b": "niezwłocznie dokonuje się przeszukania całego lotniska, aby upewnić się, na ile to możliwe, że nie zostały wniesione przedmioty zabronione", "c": "niezwłocznie dokonuje się przeszukania części, do których mogły mieć dostęp te osoby, aby upewnić się, na ile to możliwe, że nie znajdują się w nich przedmioty zabronione", "d": "wstrzymuje się odloty statków powietrznych do czasu odnalezienia tych osób" },
         c: ["c"]
     },
     {
         id: 44,
         q: "44. W celu uzyskania pozwolenia na dostęp do stref zastrzeżonych lotniska odlatujący podróżny przedstawia:",
-        o: { 
-            "a": "dokument potwierdzający dokonanie odprawy celnej", 
-            "b": "dokument potwierdzający zakup biletu lotniczego", 
-            "c": "ważną kartę pokładową lub jej odpowiednik", 
-            "d": "zaświadczenie od biura podróży, które organizuje podróż drogą lotniczą" 
-        },
+        o: { "a": "dokument potwierdzający dokonanie odprawy celnej", "b": "dokument potwierdzający zakup biletu lotniczego", "c": "ważną kartę pokładową lub jej odpowiednik", "d": "zaświadczenie od biura podróży, które organizuje podróż drogą lotniczą" },
         c: ["c"]
     },
     {
         id: 45,
         q: "45. Kartę pokładową lub jej odpowiednik, przedstawianą przez odlatującego podróżnego, sprawdza się przed udzieleniem mu pozwolenia na dostęp do stref zastrzeżonych w celu:",
-        o: { 
-            "a": "prowadzenia statystyki natężenia ruchu lotniczego", 
-            "b": "upewnienia się co do jej ważności", 
-            "c": "zastosowania odpowiedniej metody kontroli bezpieczeństwa w zależności od portu lotniczego, do którego odlatuje" 
-        },
+        o: { "a": "prowadzenia statystyki natężenia ruchu lotniczego", "b": "upewnienia się co do jej ważności", "c": "zastosowania odpowiedniej metody kontroli bezpieczeństwa w zależności od portu lotniczego, do którego odlatuje" },
         c: ["b"]
     },
     {
         id: 46,
         q: "46. Karty identyfikacyjne członka załogi i portu lotniczego wydaje się na okres nie dłuższy niż:",
-        o: { 
-            "a": "10 lat", 
-            "b": "2 lat", 
-            "c": "3 lat", 
-            "d": "5 lat" 
-        },
+        o: { "a": "10 lat", "b": "2 lat", "c": "3 lat", "d": "5 lat" },
         c: ["d"]
     },
     {
         id: 47,
         q: "47. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
-        o: { 
-            "a": "na żądanie podmiotu wydającego", 
-            "b": "w momencie rozpoczęcia urlopu trwającego dłużej niż 30 dni kalendarzowych", 
-            "c": "w momencie rozwiązania stosunku pracy", 
-            "d": "w momencie unieważnienia karty", 
-            "e": "w momencie wygaśnięcia ważności karty" 
-        },
+        o: { "a": "na żądanie podmiotu wydającego", "b": "w momencie rozpoczęcia urlopu trwającego dłużej niż 30 dni kalendarzowych", "c": "w momencie rozwiązania stosunku pracy", "d": "w momencie unieważnienia karty", "e": "w momencie wygaśnięcia ważności karty" },
         c: ["a", "c", "d", "e"]
     },
     {
         id: 48,
         q: "48. Kartę identyfikacyjną portu lotniczego zwraca się niezwłocznie podmiotowi wydającemu:",
-        o: { 
-            "a": "w momencie zmiany pracodawcy", 
-            "b": "w momencie opuszczania terytorium kraju na okres dłuższy niż 2 tygodnie", 
-            "c": "w momencie unieważnienia karty", 
-            "d": "w momencie wygaśnięcia ważności karty", 
-            "e": "w razie zmiany potrzeby dostępu do stref, w odniesieniu do których udzielono upoważnienia" 
-        },
+        o: { "a": "w momencie zmiany pracodawcy", "b": "w momencie opuszczania terytorium kraju na okres dłuższy niż 2 tygodnie", "c": "w momencie unieważnienia karty", "d": "w momencie wygaśnięcia ważności karty", "e": "w razie zmiany potrzeby dostępu do stref, w odniesieniu do których udzielono upoważnienia" },
         c: ["a", "c", "d", "e"]
     },
     {
         id: 49,
         q: "49. Na karcie identyfikacyjnej portu lotniczego znajdują się:",
-        o: { 
-            "a": "nazwa podmiotu wydającego lub portu lotniczego", 
-            "b": "data urodzenia posiadacza", 
-            "c": "nazwisko i zdjęcie posiadacza", 
-            "d": "data ważności, o ile nie jest zaprogramowana elektronicznie" 
-        },
+        o: { "a": "nazwa podmiotu wydającego lub portu lotniczego", "b": "data urodzenia posiadacza", "c": "nazwisko i zdjęcie posiadacza", "d": "data ważności, o ile nie jest zaprogramowana elektronicznie" },
         c: ["a", "c", "d"]
     },
     {
         id: 50,
         q: "50. Na karcie identyfikacyjnej portu lotniczego znajdują się:",
-        o: { 
-            "a": "funkcja, jaką posiadacz karty pełni w porcie lotniczym", 
-            "b": "nazwa pracodawcy posiadacza, o ile nie jest zaprogramowana elektronicznie", 
-            "c": "nazwisko posiadacza", 
-            "d": "strefy, do których posiadacz karty ma dostęp" 
-        },
+        o: { "a": "funkcja, jaką posiadacz karty pełni w porcie lotniczym", "b": "nazwa pracodawcy posiadacza, o ile nie jest zaprogramowana elektronicznie", "c": "nazwisko posiadacza", "d": "strefy, do których posiadacz karty ma dostęp" },
         c: ["a", "b", "c", "d"]
     }
 ];
- const p6 = [
+
+const p6 = [
     {
         id: 51,
         q: "51. Czasowa karta identyfikacyjna portu lotniczego zawiera:",
-        o: { 
-            "a": "datę wydania", 
-            "b": "funkcję, jaką posiadacz karty pełni w porcie lotniczym", 
-            "c": "zabezpieczenie przed jej podrobieniem lub przerobieniem", 
-            "d": "zdjęcie posiadacza" 
-        },
+        o: { "a": "datę wydania", "b": "funkcję, jaką posiadacz karty pełni w porcie lotniczym", "c": "zabezpieczenie przed jej podrobieniem lub przerobieniem", "d": "zdjęcie posiadacza" },
         c: ["c"]
     },
     {
         id: 52,
         q: "52. Na jednorazowej karcie identyfikacyjnej portu lotniczego znajdują się:",
-        o: { 
-            "a": "data wydania", 
-            "b": "napisy: „GOŚĆ” i „VISITOR”", 
-            "c": "nazwa pracodawcy posiadacza", 
-            "d": "nazwisko posiadacza" 
-        },
+        o: { "a": "data wydania", "b": "napisy: „GOŚĆ” i „VISITOR”", "c": "nazwa pracodawcy posiadacza", "d": "nazwisko posiadacza" },
         c: ["b"]
     },
     {
         id: 53,
         q: "53. Czasowa karta identyfikacyjna portu lotniczego dla funkcjonariuszy Straży Granicznej, Policji, Służby Celnej oraz innych służb państwowych zawiera:",
-        o: { 
-            "a": "imię i nazwisko", 
-            "b": "numer służbowy funkcjonariusza", 
-            "c": "oznaczenia stref, do których funkcjonariusz ma dostęp", 
-            "d": "zabezpieczenie przed jej podrobieniem lub przerobieniem", 
-            "e": "zdjęcie posiadacza" 
-        },
+        o: { "a": "imię i nazwisko", "b": "numer służbowy funkcjonariusza", "c": "oznaczenia stref, do których funkcjonariusz ma dostęp", "d": "zabezpieczenie przed jej podrobieniem lub przerobieniem", "e": "zdjęcie posiadacza" },
         c: ["d"]
     },
     {
         id: 54,
         q: "54. Ładunek i poczta, którym nadano oznaczenie „KC” oznacza przesyłkę otrzymaną od:",
-        o: { 
-            "a": "uznanego dostawcy", 
-            "b": "zarejestrowanego agenta", 
-            "c": "zarejestrowanego dostawcy", 
-            "d": "znanego nadawcy" 
-        },
+        o: { "a": "uznanego dostawcy", "b": "zarejestrowanego agenta", "c": "zarejestrowanego dostawcy", "d": "znanego nadawcy" },
         c: ["d"]
     },
     {
         id: 55,
         q: "55. Czasowa karta identyfikacyjna portu lotniczego dla funkcjonariuszy Straży Granicznej, Policji, Służby Celnej oraz innych służb państwowych zawiera:",
-        o: { 
-            "a": "datę ważności", 
-            "b": "nazwisko funkcjonariusza", 
-            "c": "numer służbowy funkcjonariusza", 
-            "d": "oznaczenia stref, do których funkcjonariusz ma dostęp" 
-        },
+        o: { "a": "datę ważności", "b": "nazwisko funkcjonariusza", "c": "numer służbowy funkcjonariusza", "d": "oznaczenia stref, do których funkcjonariusz ma dostęp" },
         c: ["a"]
     },
     {
         id: 56,
         q: "56. Funkcjonariusze Straży Granicznej, Służby Celnej i Służby Ochrony Państwa mogą wejść do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej, jeżeli są eskortowani przez osoby posiadające:",
-        o: { 
-            "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa Urzędu Lotnictwa Cywilnego", 
-            "b": "czasową kartę identyfikacyjną danego portu lotniczego", 
-            "c": "nie ma wymogu eskortowania funkcjonariuszy służb państwowych udających się do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej", 
-            "d": "odpowiednik karty pokładowej", 
-            "e": "ważną kartę identyfikacyjną członka załogi" 
-        },
+        o: { "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa Urzędu Lotnictwa Cywilnego", "b": "czasową kartę identyfikacyjną danego portu lotniczego", "c": "nie ma wymogu eskortowania funkcjonariuszy służb państwowych udających się do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej", "d": "odpowiednik karty pokładowej", "e": "ważną kartę identyfikacyjną członka załogi" },
         c: ["c"]
     },
     {
         id: 57,
         q: "57. Funkcjonariusze i żołnierze Agencji Bezpieczeństwa Wewnętrznego, Żandarmerii Wojskowej i Policji mogą wejść do strefy zastrzeżonej lotniska na podstawie legitymacji służbowej w asyście osoby posiadającej:",
-        o: { 
-            "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa ULC", 
-            "b": "czasową kartę identyfikacyjną danego portu lotniczego", 
-            "c": "ważną kartę identyfikacyjną członka załogi", 
-            "d": "ważną legitymację inspektora ULC" 
-        },
+        o: { "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa ULC", "b": "czasową kartę identyfikacyjną danego portu lotniczego", "c": "ważną kartę identyfikacyjną członka załogi", "d": "ważną legitymację inspektora ULC" },
         c: ["b"]
     },
     {
         id: 58,
         q: "58. Dokumentem uprawniającym do eskortowania osób w strefach zastrzeżonych lotniska jest:",
-        o: { 
-            "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa ULC", 
-            "b": "ważna karta identyfikacyjna członka załogi", 
-            "c": "ważna karta identyfikacyjna portu lotniczego", 
-            "d": "ważna karta pokładowa" 
-        },
+        o: { "a": "certyfikat inspektora lotnictwa cywilnego wydany przez Prezesa ULC", "b": "ważna karta identyfikacyjna członka załogi", "c": "ważna karta identyfikacyjna portu lotniczego", "d": "ważna karta pokładowa" },
         c: ["c"]
     },
     {
         id: 59,
         q: "59. Ładunek i poczta, którym nadano oznaczenie „RA” oznacza przesyłkę otrzymaną od:",
-        o: { 
-            "a": "uznanego dostawcy", 
-            "b": "zarejestrowanego agenta", 
-            "c": "zarejestrowanego dostawcy", 
-            "d": "znanego dostawcy" 
-        },
+        o: { "a": "uznanego dostawcy", "b": "zarejestrowanego agenta", "c": "zarejestrowanego dostawcy", "d": "znanego dostawcy" },
         c: ["b"]
     },
     {
         id: 60,
         q: "60. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą następujących środków:",
-        o: { 
-            "a": "bramki do wykrywania metali", 
-            "b": "kontrola manualna", 
-            "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych", 
-            "d": "urządzenia rentgenowskie" 
-        },
+        o: { "a": "bramki do wykrywania metali", "b": "kontrola manualna", "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych", "d": "urządzenia rentgenowskie" },
         c: ["b"]
     }
 ];
-   
+
 let baza = p1;
 
 function zmienZestaw(nr) {
@@ -752,19 +652,15 @@ function zmienZestaw(nr) {
     document.getElementById('m3').classList.toggle('active', nr === 3);
     document.getElementById('m4').classList.toggle('active', nr === 4);
     document.getElementById('m5').classList.toggle('active', nr === 5);
-    document.getElementById('m6').classList.toggle('active', nr === 6); // DOPISZ TO
-
+    document.getElementById('m6').classList.toggle('active', nr === 6);
+    
     if (nr === 1) baza = p1;
     else if (nr === 2) baza = p2;
     else if (nr === 3) baza = p3;
     else if (nr === 4) baza = p4;
     else if (nr === 5) baza = p5;
-    else if (nr === 6) baza = p6; // DOPISZ TO
-
-    rysujTest();
-}
-
-
+    else if (nr === 6) baza = p6;
+    
     rysujTest();
 }
 
@@ -802,6 +698,8 @@ function sprawdzTest() {
             statDiv.innerHTML = '⚠️ Brak odpowiedzi!';
             return;
         }
+        
+
         
         let ok = p.c.length === odp.length && p.c.every(v => odp.includes(v));
         if (ok) {
