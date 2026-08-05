@@ -630,48 +630,56 @@ const bazaPytan = [
 },
     {
         id: 66,
-        q: "66. Do strefy zastrzeżonej portu lotniczego, bez poddawania kontroli bezpieczeństwa, mogą wjechać pojazdy używane w celu:",
+        q: "66. Przedmioty przenoszone przez osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą jednego z następujących środków:",
         o: { 
-            "a": "dostarczania zaopatrzenia pokładowego", 
-            "b": "dostawy towarów do sklepów wolnocłowych", 
-            "c": "prowadzenia działań ratowniczych i gaśniczych", 
-            "d": "utrzymania nawierzchni lotniskowych w stanie sprawności eksploatacyjnej" 
-        },
-        c: ["c"]
-    },
-    {
-        id: 67,
-        q: "67. Podczas kontroli bezpieczeństwa bagażu kabinowego, laptopy i inne duże urządzenia elektryczne:",
-        o: { 
-            "a": "mogą pozostać w bagażu pod warunkiem, że torba jest otwarta", 
-            "b": "muszą być wyjmowane z bagażu przed kontrolą w celu prześwietlenia ich oddzielnie (chyba że urządzenie rentgenowskie pozwala na badanie wewnątrz)", 
-            "c": "są zwolnione z prześwietlenia promieniowaniem rentgenowskim", 
-            "d": "wymagają każdorazowo przeprowadzenia kontroli manualnej" 
-        },
-        c: ["b"]
-    },
-    {
-        id: 68,
-        q: "68. Płyny, aerozole i żele (LAG) wnoszone przez pasażerów mogą być zwolnione z kontroli bezpieczeństwa odpowiednimi urządzeniami, jeżeli:",
-        o: { 
-            "a": "są zapakowane w torbę STEB zabezpieczoną przed otwarciem i pochodzą z lotniskowego sklepu wolnocłowego", 
-            "b": "są przeznaczone do użycia w trakcie podróży do celów leczniczych lub ze względów dietetycznych (w tym żywność dla niemowląt)", 
-            "c": "ich pojemność pojedyncza nie przekracza 100 ml i mieszczą się w jednej zamykanej przezroczystej torbie plastikowej o pojemności do 1 litra", 
-            "d": "pasażer zadeklaruje ustnie, że substancje te nie są niebezpieczne" 
+            "a": "kontrola manualna", 
+            "b": "psy do wykrywania materiałów wybuchowych", 
+            "c": "ręczne wykrywacze metali" 
         },
         c: ["a", "b", "c"]
     },
     {
-        id: 69,
-        q: "69. Płyny, aerozole i żele (LAG) zakupione w porcie lotniczym lub na pokładzie statku powietrznego są zwolnione z kontroli bezpieczeństwa pod warunkiem, że są zapakowane w torbę STEB, w której znajduje się widoczny:",
+        id: 67,
+        q: "67. Przedmioty przenoszone przez osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą jednego z następujących środków:",
         o: { 
-            "a": "bilet lotniczy pasażera", 
-            "b": "dowód zakupu w danym porcie lotniczym lub na pokładzie statku powietrznego w ciągu ostatnich 48 godzin", 
-            "c": "certyfikat bezpieczeństwa produktu wydany przez producenta", 
-            "d": "dowód tożsamości osoby sprzedającej" 
+            "a": "bramki do wykrywania metali", 
+            "b": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych", 
+            "c": "urządzenia rentgenowskie" 
+        },
+        c: ["b", "c"]
+    },
+    {
+        id: 68,
+        q: "68. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części lotniska niż część krytyczna strefy zastrzeżonej, uważa się za zabezpieczone przed bezprawną ingerencją, jeśli:",
+        o: { 
+            "a": "nie są pozostawione bez nadzoru, a dostęp do nich mają wyłącznie osoby zaangażowane", 
+            "b": "pozostają tam nie dłużej niż jedną godzinę", 
+            "c": "tak przewiduje program ochrony przewoźnika lotniczego", 
+            "d": "w zabezpieczanie i ładowanie ładunku oraz poczty na pokład statku powietrznego" 
+        },
+        c: ["a", "d"]
+    },
+    {
+        id: 69,
+        q: "69. Podczas kontroli bezpieczeństwa ładunku lub poczty:",
+        o: { 
+            "a": "bezpłatnie musi zostać użyte urządzenie rentgenowskie", 
+            "b": "stosuje się środki lub metody najbardziej skuteczne w wykrywaniu przedmiotów zabronionych, biorąc pod uwagę rodzaj przesyłki", 
+            "c": "zawsze należy zastosować co najmniej dwie metody kontroli bezpieczeństwa" 
         },
         c: ["b"]
     },
+    {
+        id: 70,
+        q: "70. Osoby niebędące pasażerami poddane kontroli bezpieczeństwa, które tymczasowo opuszczają części krytyczne stref zastrzeżonych lotniska, mogą zostać zwolnione z ponownej kontroli bezpieczeństwa po powrocie do tych stref:",
+        o: { 
+            "a": "nie mogą zostać zwolnione z kontroli bezpieczeństwa", 
+            "b": "pod warunkiem, że przebywały poza częścią krytyczną strefy zastrzeżonej tylko przez chwilę", 
+            "c": "pod warunkiem, że znajdowały się pod ciągłą obserwacją upoważnionych osob, pozwalającą upewnić się, na ile to możliwe, że nie wprowadziły przedmiotów zabronionych do tych części krytycznych" 
+        },
+        c: ["c"]
+    },
+
     {
         id: 70,
         q: "70. Wskaż, które z poniższych substancji zalicza się do płynów, aerozoli i żeli (LAG) podlegających ograniczeniom przy kontroli bezpieczeństwa bagażu kabinowego:",
