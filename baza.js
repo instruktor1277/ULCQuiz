@@ -1718,124 +1718,200 @@ const bazaPytan = [
 ,
 {
     id: 161,
-    q: "161. Status znanego nadawcy wyznaczony przez właściwy organ zachowuje ważność przez okres nieprzekraczający:",
+    q: "161. Zadania ochrony są realizowane zgodnie z:",
     o: { 
-        "a": "1 roku", 
-        "b": "2 lat", 
-        "c": "3 lat", 
-        "d": "5 lat" 
+        "a": "programami ochrony poszczególnych lotnisk oraz innych podmiotów prowadzących działalność lotniczą", 
+        "b": "zapisami ustawy o Policji", 
+        "c": "zapisami ustawy o Straży Granicznej", 
+        "d": "zarządzeniami Rady Ochrony i Ułatwień Lotnictwa Cywilnego" 
+    },
+    c: ["a"]
+},
+{
+    id: 162,
+    q: "162. Strefy zastrzeżone lotniska, części krytyczne tych stref oraz przejścia do tych stref wyznacza:",
+    o: { 
+        "a": "komendant komisariatu Policji", 
+        "b": "komendant placówki Straży Granicznej", 
+        "c": "Prezes Urzędu Lotnictwa Cywilnego", 
+        "d": "zarządzający lotniskiem" 
     },
     c: ["d"]
 },
 {
-    id: 162,
-    q: "162. Zobowiązania znanego nadawcy ładunku i poczty obejmują:",
-    o: { 
-        "a": "powołanie osoby odpowiedzialnej za ochronę lotnictwa w danej lokalizacji", 
-        "b": "zapewnienie, że personel mający dostęp do ładunku i poczty przeszedł odpowiednie szkolenie w zakresie ochrony", 
-        "c": "zabezpieczenie ładunku i poczty przed nieupoważnionym dostępem w trakcie produkcji, pakowania, przechowywania i transportu", 
-        "d": "poddanie każdej przesyłki kontroli manualnej przed przekazaniem jej zarejestrowanemu agentowi" 
-    },
-    c: ["a", "b", "c"]
-},
-{
     id: 163,
-    q: "163. Wskaźnik wizualny bramkowego wykrywacza metali (WTMD) sygnalizujący, że urządzenie funkcjonuje prawidłowo:",
+    q: "163. Służbami ochrony na lotnisku są:",
     o: { 
-        "a": "musi być stale włączony i widoczny dla operatora kontroli bezpieczeństwa", 
-        "b": "włącza się tylko w momencie przejścia pasażera przez bramkę", 
-        "c": "jest opcjonalny i zależy od konfiguracji systemu przez administratora", 
-        "d": "służy wyłącznie do kalibracji fabrycznej urządzenia" 
+        "a": "Policja, Agencja Bezpieczeństwa Wewnętrznego, Służba Ochrony Lotniska, Żandarmerii Wojskowa", 
+        "b": "Policja, Służba Celna, Służba Ochrony Lotniska, realizujące zadania na terenie lotniska", 
+        "c": "Policja, Straż Graniczna, Agencja Bezpieczeństwa Wewnętrznego, służba ochrony lotniska, realizujące zadania na terenie lotniska", 
+        "d": "wyłącznie Służba Ochrony Lotniska" 
     },
-    c: ["a"]
+    c: ["c"]
 },
 {
     id: 164,
-    q: "164. Urządzenia EDS wykorzystywane do automatycznego wykrywania materiałów wybuchowych w bagażu rejestrowanym wysyłają sygnał alarmowy, gdy wykryją:",
+    q: "164. Służbami ochrony na lotnisku są:",
     o: { 
-        "a": "jakikolwiek materiał organiczny o dużej gęstości", 
-        "b": "substancję wybuchową lub przedmioty/substancje uniemożliwiające automatyczną analizę obrazu", 
-        "c": "metalowe elementy konstrukcyjne stelaża walizki", 
-        "d": "urządzenia elektroniczne z własnym zasilaniem bateryjnym" 
+        "a": "Służba Ochrony Państwa realizująca zadania na terenie lotniska", 
+        "b": "Służba Celna realizująca zadania na terenie lotniska", 
+        "c": "Służba Wywiadu Wojskowego realizująca zadania na terenie lotniska", 
+        "d": "specjalistyczna uzbrojona formacja ochronna realizująca zadania na terenie lotniska", 
+        "e": "Straż Graniczna realizująca zadania na terenie lotniska", 
+        "f": "Żandarmeria Wojskowa realizująca zadania na terenie lotniska" 
     },
-    c: ["b"]
+    c: ["d", "e", "f"]
 },
 {
     id: 165,
-    q: "165. Ponowna certyfikacja operatora kontroli bezpieczeństwa (OKB) przeprowadzana przynajmniej co 3 lata przez Prezesa ULC ma na celu:",
+    q: "165. Na lotniskach, na których funkcjonują lotnicze przejścia graniczne, formalności związane z przewozem broni i amunicji statkiem powietrznym dokonuje:",
     o: { 
-        "a": "sprawdzenie stanu zdrowia i ostrości wzroku operatora", 
-        "b": "weryfikację i potwierdzenie posiadania aktualnej wiedzy oraz umiejętności praktycznych niezbędnych do obsługi urządzeń i prowadzenia kontroli", 
-        "c": "automatyczne przedłużenie ważności karty identyfikacyjnej portu lotniczego", 
-        "d": "nadanie uprawnień instruktora ochrony lotnictwa cywilnego" 
+        "a": "Policja", 
+        "b": "przewoźnik lotniczy", 
+        "c": "Służba Celna", 
+        "d": "specjalistyczna uzbrojona formacja ochronna" 
     },
-    c: ["b"]
+    c: ["a", "c"]
 },
 {
     id: 166,
-    q: "166. Jeżeli pracownik służby ochrony lotniska podczas kontroli bezpieczeństwa przedmiotów wnoszonych przez personel lotniska ujawni przedmiot zabroniony bez upoważnienia:",
+    q: "166. Na lotniskach, na których nie funkcjonują lotnicze przejścia graniczne, formalności związane z przewozem broni i amunicji statkiem powietrznym dokonuje:",
     o: { 
-        "a": "musi bezwzględnie zatrzymać przedmiot, uniemożliwić osobie wejście do strefy zastrzeżonej i powiadomić przełożonego lub odpowiednie służby", 
-        "b": "może pozwolić na wniesienie przedmiotu, jeśli pracownik złoży pisemne oświadczenie", 
-        "c": "nakazuje pracownikowi schowanie przedmiotu do szafki w strefie ogólnodostępnej bez wyciągania konsekwencji", 
-        "d": "przekazuje sprawę do rozpatrzenia przez linię lotniczą" 
+        "a": "Policja", 
+        "b": "specjalistyczna uzbrojona formacja ochronna", 
+        "c": "Straż Graniczna", 
+        "d": "wewnętrzna służba ochrony lotniska" 
     },
-    c: ["a"]
-},
+    c: ["a", "d"]
+}
+,
 {
     id: 167,
-    q: "167. Zaopatrzenie pokładowe, które pochodzi od zarejestrowanego dostawcy, przed wprowadzeniem do strefy zastrzeżonej lotniska uważa się za chronione i zabezpieczone, jeżeli:",
+    q: "167. Ładunek i poczta poddawane są kontroli bezpieczeństwa z zastosowaniem co najmniej jednej z poniższych metod:",
     o: { 
-        "a": "zostało poddane procedurom weryfikacyjnym i zabezpieczone przed nieupoważnioną ingerencją na całej trasie od dostawcy do portu lotniczego", 
-        "b": "znajduje się w nienaruszonych, fabrycznych kartonach zbiorczych", 
-        "c": "tak stanowi umowa handlowa między dostawcą a portem lotniczym", 
-        "d": "dostawca posiada ważną licencję transportową państwa trzeciego" 
+        "a": "kontrola wzrokowa", 
+        "b": "sprawdzenie przeszłości nadawcy przesyłki", 
+        "c": "systemy do wykrywania urządzeń wybuchowych", 
+        "d": "urządzenia do wykrywania materiałów wybuchowych", 
+        "e": "urządzenia rentgenowskie" 
     },
-    c: ["a"]
+    c: ["a", "d", "e"]
 },
 {
     id: 168,
-    q: "168. Status uznanego nadawcy ładunku i poczty wyznaczonego przez właściwy organ:",
+    q: "168. Następujące przedmioty uznaje się za przedmioty zabronione w przesyłkach zawierających ładunek i pocztę:",
     o: { 
-        "a": "może zostać zawieszony lub cofnięty w przypadku stwierdzenia poważnych uchybień podczas audytu ochrony", 
-        "b": "jest przyznawany bezterminowo i nie podlega ponownej weryfikacji", 
-        "c": "uprawnia do całkowitego ominięcia procedur dokumentacyjnych przy przekazywaniu przesyłek", 
-        "d": "jest ważny wyłącznie na jednym, wskazanym lotnisku krajowym" 
+        "a": "broń palna przewożona zgodnie z mającymi zastosowanie zasadami bezpieczeństwa w lotnictwie cywilnym", 
+        "b": "wiertarki i wiertła, w tym bezprzewodowe przenośne wiertarki elektryczne", 
+        "c": "zabawki w kształcie broni, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", 
+        "d": "zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z mającymi zastosowanie zasadami bezpieczeństwa w lotnictwie cywilnym" 
     },
-    c: ["a"]
+    c: ["d"]
 },
 {
     id: 169,
-    q: "169. Do strefy zastrzeżonej portu lotniczego zabrania się wjazdu pojazdów, z wyjątkiem pojazdów:",
+    q: "169. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
     o: { 
-        "a": "posiadających ważną przepustkę samochodową i poddanych kontroli bezpieczeństwa pojazdów, a także gdy osoby w nich przebywające posiadają uprawnienia do wstępu", 
-        "b": "należących do pasażerów klasy biznes", 
-        "c": "których kierowcy oświadczą, że wjeżdżają jedynie na chwilę w celu rozładunku prywatnych rzeczy", 
-        "d": "kurierskich firm międzynarodowych posiadających logo na karoserii" 
+        "a": "aerozole odstraszające zwierzęta", 
+        "b": "farby drogowe w pojemnikach o pojemności powyżej 10 litrów", 
+        "c": "masy bitumiczne uszczelniające w pojemnikach o pojemności powyżej 20 litrów", 
+        "d": "pałki paraliżujące", 
+        "e": "pistolety startowe", 
+        "f": "spirytus salicylowy" 
     },
-    c: ["a"]
+    c: ["a", "d", "e"]
 },
 {
     id: 170,
-    q: "170. Podczas kontroli bezpieczeństwa płynów, aerozoli i żeli (LAG) przy użyciu dedykowanych urządzeń LEDS, system ma za zadanie zweryfikować:",
+    q: "170. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu pokładowym:",
     o: { 
-        "a": "czy płyn nie stanowi zagrożenia chemicznego lub nie jest płynnym materiałem wybuchowym/prekursorem materiałów wybuchowych", 
-        "b": "dokładną zawartość cukru i alkoholu w płynie", 
-        "c": "czy opakowanie zostało wyprodukowane na terenie Unii Europejskiej", 
-        "d": "wartość kaloryczną przewożonych napojów" 
+        "a": "latarki akumulatorowe", 
+        "b": "metalowe pojemniki na lód", 
+        "c": "pistolety sygnałowe", 
+        "d": "tasery" 
+    },
+    c: ["c", "d"]
+},
+{
+    id: 171,
+    q: "171. Osoby niebędące pasażerami poddaje się kontroli bezpieczeństwa za pomocą:",
+    o: { 
+        "a": "kontrole wzrokowej", 
+        "b": "ręcznego wykrywacza metali", 
+        "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali", 
+        "d": "urządzeń do wykrywania śladowych ilości materiałów wybuchowych" 
+    },
+    c: ["c"]
+},
+{
+    id: 172,
+    q: "172. Czasowa karta identyfikacyjna portu lotniczego dla funkcjonariuszy Straży Granicznej, Policji, Służby Celno-Skarbowej oraz innych służb państwowych zawiera:",
+    o: { 
+        "a": "datę wydania", 
+        "b": "nazwisko funkcjonariusza", 
+        "c": "numer służbowy funkcjonariusza", 
+        "d": "oznaczenia stref, do których funkcjonariusz ma dostęp", 
+        "e": "zdjęcie posiadacza" 
+    },
+    c: ["b", "c", "d"]
+},
+{
+    id: 173,
+    q: "173. Następujące przedmioty uznaje się za przedmioty zabronione w zaopatrzeniu portu lotniczego:",
+    o: { 
+        "a": "aerozole odstraszające zwierzęta", 
+        "b": "farby drogowe w pojemnikach o pojemności powyżej 5 litrów", 
+        "c": "masy bitumiczne uszczelniające w pojemnikach o pojemności powyżej 20 litrów", 
+        "d": "olej silnikowy", 
+        "e": "pałki paraliżujące", 
+        "f": "pistolety startowe" 
+    },
+    c: ["a", "e", "f"]
+},
+{
+    id: 174,
+    q: "174. Następujące przedmioty uznaje się za przedmioty zabronione w poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy:",
+    o: { 
+        "a": "broń pneumatyczna", 
+        "b": "gazy pieprzowe", 
+        "c": "kastety", 
+        "d": "latarki sygnalizacyjne", 
+        "e": "noże o długości ostrza 6 cm", 
+        "f": "nożyczki o długości 7 cm" 
+    },
+    c: ["a", "b", "c", "e", "f"]
+},
+{
+    id: 175,
+    q: "175. Następujące przedmioty uznaje się za przedmioty zabronione w poczcie przewoźnika lotniczego i materiałach przewoźnika lotniczego, które mają zostać załadowane do jakiejkolwiek części statku powietrznego innej niż luk bagażowy:",
+    o: { 
+        "a": "broń pneumatyczna", 
+        "b": "gazy pieprzowe", 
+        "c": "kastety", 
+        "d": "noże o długości ostrza poniżej 6 cm", 
+        "e": "nożyczki o długości 6 cm", 
+        "f": "piłki tenisowe" 
+    },
+    c: ["a", "b", "c", "d", "e"]
+},
+{
+    id: 176,
+    q: "176. Po przeprowadzonej kontroli bezpieczeństwa, przesyłki zawierające ładunek lub pocztę, które znajdują się w innej części lotniska niż część krytyczna strefy zastrzeżonej, uważa się za zabezpieczone przed bezprawną ingerencją, jeśli:",
+    o: { 
+        "a": "nie są pozostawione bez nadzoru, a dostęp do nich mają wyłącznie osoby zaangażowane w zabezpieczanie i ładowanie ładunku oraz poczty na pokład statku powietrznego", 
+        "b": "pozostają tam nie dłużej niż jedną godzinę", 
+        "c": "tak przewiduje program ochrony przewoźnika lotniczego" 
     },
     c: ["a"]
 },
 {
-    id: 171,
-    q: "171. Kontrolę bezpieczeństwa ładunku i poczty uznaje się za kompletną i skuteczną, gdy zastosowane środki lub metody pozwalają upewnić się, że:",
+    id: 177,
+    q: "177. Jeżeli operator kontroli bezpieczeństwa nie może uzyskać wystarczającej pewności pozwalającej na potwierdzenie, że dany artykuł zaopatrzenia portu lotniczego nie zawiera żadnych przedmiotów zabronionych:",
     o: { 
-        "a": "w przesyłce nie ukryto żadnych przedmiotów zabronionych, substancji niebezpiecznych ani improwizowanych urządzeń wybuchowych", 
-        "b": "waga przesyłki zgadza się z deklaracją w liście przewozowym", 
-        "c": "opłata lotniskowa za kontrolę została pomyślnie zaksięgowana", 
-        "d": "przesyłka została ułożona na palecie transportowej zgodnie z przepisami BHP" 
+        "a": "artykuł odrzuca się lub poddaje ponownej kontroli bezpieczeństwa, dopóki operator kontroli bezpieczeństwa nie uzna, że wymogi kontroli zostały spełnione", 
+        "b": "decyzję o dopuszczeniu tego artykułu do strefy zastrzeżonej lotniska, zamiast operatora kontroli bezpieczeństwa podejmuje zarządzający lotniskiem", 
+        "c": "oznacza to, że najprawdopodobniej nie ma w nim żadnych przedmiotów zabronionych i może zostać dopuszczony do strefy zastrzeżonej lotniska" 
     },
     c: ["a"]
 }
-   
 ]
