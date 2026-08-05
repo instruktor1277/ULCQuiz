@@ -628,50 +628,62 @@ const bazaPytan = [
     },
     c: ["d", "e"]
 },
-{
-    id: 66,
-    q: "66. Do strefy zastrzeżonej portu lotniczego, bez poddawania kontroli bezpieczeństwa, mogą wjechać pojazdy używane w celu:",
-    o: { 
-        "a": "dostarczania zaopatrzenia pokładowego", 
-        "b": "dostawy towarów do sklepów wolnocłowych", 
-        "c": "prowadzenia działań ratowniczych i gaśniczych", 
-        "d": "utrzymania nawierzchni lotniskowych w stanie sprawności eksploatacyjnej" 
+    {
+        id: 66,
+        q: "66. Do strefy zastrzeżonej portu lotniczego, bez poddawania kontroli bezpieczeństwa, mogą wjechać pojazdy używane w celu:",
+        o: { 
+            "a": "dostarczania zaopatrzenia pokładowego", 
+            "b": "dostawy towarów do sklepów wolnocłowych", 
+            "c": "prowadzenia działań ratowniczych i gaśniczych", 
+            "d": "utrzymania nawierzchni lotniskowych w stanie sprawności eksploatacyjnej" 
+        },
+        c: ["c"]
     },
-    c: ["d", "e"]
-},
-{
-    id: 67,
-    q: "67. Podczas kontroli bezpieczeństwa bagażu kabinowego, laptopy i inne duże urządzenia elektryczne:",
-    o: { 
-        "a": "mogą pozostać w bagażu pod warunkiem, że torba jest otwarta", 
-        "b": "muszą być wyjmowane z bagażu przed kontrolą w celu prześwietlenia ich oddzielnie (chyba że urządzenie rentgenowskie pozwala na badanie wewnątrz)", 
-        "c": "są zwolnione z prześwietlenia promieniowaniem rentgenowskim", 
-        "d": "wymagają każdorazowo przeprowadzenia kontroli manualnej" 
+    {
+        id: 67,
+        q: "67. Podczas kontroli bezpieczeństwa bagażu kabinowego, laptopy i inne duże urządzenia elektryczne:",
+        o: { 
+            "a": "mogą pozostać w bagażu pod warunkiem, że torba jest otwarta", 
+            "b": "muszą być wyjmowane z bagażu przed kontrolą w celu prześwietlenia ich oddzielnie (chyba że urządzenie rentgenowskie pozwala na badanie wewnątrz)", 
+            "c": "są zwolnione z prześwietlenia promieniowaniem rentgenowskim", 
+            "d": "wymagają każdorazowo przeprowadzenia kontroli manualnej" 
+        },
+        c: ["b"]
     },
-    c: ["b"]
-},
-{
-    id: 68,
-    q: "68. Płyny, aerozole i żele (LAG) wnoszone przez pasażerów mogą być zwolnione z kontroli bezpieczeństwa odpowiednimi urządzeniami, jeżeli:",
-    o: { 
-        "a": "są zapakowane w torbę STEB zabezpieczoną przed otwarciem i pochodzą z lotniskowego sklepu wolnocłowego", 
-        "b": "są przeznaczone do użycia w trakcie podróży do celów leczniczych lub ze względów dietetycznych (w tym żywność dla niemowląt)", 
-        "c": "ich pojemność pojedyncza nie przekracza 100 ml i mieszczą się w jednej zamykanej przezroczystej torbie plastikowej o pojemności do 1 litra", 
-        "d": "pasażer zadeklaruje ustnie, że substancje te nie są niebezpieczne" 
+    {
+        id: 68,
+        q: "68. Płyny, aerozole i żele (LAG) wnoszone przez pasażerów mogą być zwolnione z kontroli bezpieczeństwa odpowiednimi urządzeniami, jeżeli:",
+        o: { 
+            "a": "są zapakowane w torbę STEB zabezpieczoną przed otwarciem i pochodzą z lotniskowego sklepu wolnocłowego", 
+            "b": "są przeznaczone do użycia w trakcie podróży do celów leczniczych lub ze względów dietetycznych (w tym żywność dla niemowląt)", 
+            "c": "ich pojemność pojedyncza nie przekracza 100 ml i mieszczą się w jednej zamykanej przezroczystej torbie plastikowej o pojemności do 1 litra", 
+            "d": "pasażer zadeklaruje ustnie, że substancje te nie są niebezpieczne" 
+        },
+        c: ["a", "b", "c"]
     },
-    c: ["a", "b", "c"]
-},
-{
-    id: 69,
-    q: "69. Płyny, aerozole i żele (LAG) zakupione w porcie lotniczym lub na pokładzie statku powietrznego są zwolnione z kontroli bezpieczeństwa pod warunkiem, że są zapakowane w torbę STEB, w której znajduje się widoczny:",
-    o: { 
-        "a": "bilet lotniczy pasażera", 
-        "b": "dowód zakupu w danym porcie lotniczym lub na pokładzie statku powietrznego w ciągu ostatnich 48 godzin", 
-        "c": "certyfikat bezpieczeństwa produktu wydany przez producenta", 
-        "d": "dowód tożsamości osoby sprzedającej" 
+    {
+        id: 69,
+        q: "69. Płyny, aerozole i żele (LAG) zakupione w porcie lotniczym lub na pokładzie statku powietrznego są zwolnione z kontroli bezpieczeństwa pod warunkiem, że są zapakowane w torbę STEB, w której znajduje się widoczny:",
+        o: { 
+            "a": "bilet lotniczy pasażera", 
+            "b": "dowód zakupu w danym porcie lotniczym lub na pokładzie statku powietrznego w ciągu ostatnich 48 godzin", 
+            "c": "certyfikat bezpieczeństwa produktu wydany przez producenta", 
+            "d": "dowód tożsamości osoby sprzedającej" 
+        },
+        c: ["b"]
     },
-    c: ["b"]
-},
+    {
+        id: 70,
+        q: "70. Wskaż, które z poniższych substancji zalicza się do płynów, aerozoli i żeli (LAG) podlegających ograniczeniom przy kontroli bezpieczeństwa bagażu kabinowego:",
+        o: { 
+            "a": "pasty (np. pasta do zębów)", 
+            "b": "mieszaniny substancji płynnych i stałych (np. dżemy, zupy)", 
+            "c": "zawartość pojemników pod ciśnieniem (np. pianka do golenia, dezodoranty)", 
+            "d": "produkty o konsystencji żelu (np. żele do włosów, żele pod prysznic)" 
+        },
+        c: ["a", "b", "c", "d"]
+    },
+
 {
     id: 70,
     q: "70. Wskaż, które z poniższych substancji zalicza się do płynów, aerozoli i żeli (LAG) podlegających ograniczeniom przy kontroli bezpieczeństwa bagażu kabinowego:",
