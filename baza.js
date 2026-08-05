@@ -250,7 +250,7 @@ const bazaPytan = [
         "c": "urządzenia do wykrywania niemetali", 
         "d": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych" 
     },
-    c: ["b", "d"]
+    c: ["d"]
 },
 {
     id: 33,
@@ -308,7 +308,7 @@ const bazaPytan = [
         "c": "zabawki w kształcie broni, repliki i imitacje broni palnej, które można pomylić z prawdziwą bronią", 
         "d": "zmontowane urządzenia wybuchowe i zapalające, które nie są przewożone zgodnie z mającymi zastosowanie zasadami bezpieczeństwa w lotnictwie cywilnym" 
     },
-    c: ["b", "c", "d"]
+    c: ["d"]
 },
 {
     id: 38,
@@ -342,7 +342,7 @@ const bazaPytan = [
         "e": "nożyczki o długości 6 cm", 
         "f": "piłki tenisowe" 
     },
-    c: ["a", "b", "c", "d", "e"]
+    c: ["a", "b", "c"]
 } 
 ,
 {
@@ -453,7 +453,7 @@ const bazaPytan = [
         "c": "nazwisko posiadacza", 
         "d": "strefy, do których posiadacz karty ma dostęp" 
     },
-    c: ["a", "b", "c", "d"]
+    c: ["b", "c", "d"]
 }
 ,
 {
@@ -465,7 +465,7 @@ const bazaPytan = [
         "c": "zabezpieczenie przed jej podrobieniem lub przerobieniem", 
         "d": "zdjęcie posiadacza" 
     },
-    c: ["c"]
+    c: ["c", "d"]
 },
 {
     id: 52,
@@ -488,7 +488,7 @@ const bazaPytan = [
         "d": "zabezpieczenie przed jej podrobieniem lub przerobieniem", 
         "e": "zdjęcie posiadacza" 
     },
-    c: ["d"]
+    c: ["b", "c", "d", "e"]
 },
 {
     id: 54,
@@ -510,7 +510,7 @@ const bazaPytan = [
         "c": "numer służbowy funkcjonariusza", 
         "d": "oznaczenia stref, do których funkcjonariusz ma dostęp" 
     },
-    c: ["a"]
+    c: ["a", "c", "d"]
 },
 {
     id: 56,
@@ -522,7 +522,7 @@ const bazaPytan = [
         "d": "odpowiednik karty pokładowej", 
         "e": "ważną kartę identyfikacyjną członka załogi" 
     },
-    c: ["c"]
+    c: ["a", "b"]
 },
 {
     id: 57,
@@ -533,7 +533,7 @@ const bazaPytan = [
         "c": "ważną kartę identyfikacyjną członka załogi", 
         "d": "ważną legitymację inspektora ULC" 
     },
-    c: ["b"]
+    c: ["a", "b"]
 },
 {
     id: 58,
@@ -544,7 +544,7 @@ const bazaPytan = [
         "c": "ważna karta identyfikacyjna portu lotniczego", 
         "d": "ważna karta pokładowa" 
     },
-    c: ["c"]
+    c: ["a", "c"]
 },
 {
     id: 59,
@@ -566,7 +566,7 @@ const bazaPytan = [
         "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych", 
         "d": "urządzenia rentgenowskie" 
     },
-    c: ["b"]
+    c: ["a", "b", "c"]
 }
 ,
 {
@@ -578,7 +578,7 @@ const bazaPytan = [
         "c": "urządzenia do prześwietlania osób niewykorzystujące promieniowania jonizującego", 
         "d": "urządzenia do wykrywania śladowych ilości narkotyków i środków odurzających" 
     },
-    c: ["a"]
+    c: ["a", "b", "c"]
 },
 {
     id: 62,
@@ -589,7 +589,7 @@ const bazaPytan = [
         "c": "urządzenia do prześwietlania osób niewykorzystujących promieniowania jonizującego", 
         "d": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali" 
     },
-    c: ["d"]
+    c: ["c", "d"]
 },
 {
     id: 63,
@@ -601,7 +601,7 @@ const bazaPytan = [
         "d": "urządzenia do wykrywania metali (MDE)", 
         "e": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali" 
     },
-    c: ["a", "d", "e"]
+    c: ["a", "b", "e"]
 },
 {
     id: 64,
@@ -637,7 +637,7 @@ const bazaPytan = [
         "c": "prowadzenia działań ratowniczych i gaśniczych", 
         "d": "utrzymania nawierzchni lotniskowych w stanie sprawności eksploatacyjnej" 
     },
-    c: ["c"]
+    c: ["d", "e"]
 },
 {
     id: 67,
@@ -704,7 +704,7 @@ const bazaPytan = [
         "d": "urządzeń do prześwietlania osób niewykorzystujących promieniowania jonizującego", 
         "e": "urządzeń rentgenowskich" 
     },
-    c: ["a", "b", "c", "d", "e"]
+    c: ["a", "b", "c", "d"]
 },
 {
     id: 73,
@@ -740,7 +740,7 @@ const bazaPytan = [
         "d": "osoba posiadająca legitymację służbową wydaną przez Urząd Lotnictwa Cywilnego podczas wykonywania zadań i obowiązków służbowych na lotnisku", 
         "e": "pracownicy i funkcjonariusze Służby Ochrony Państwa i żołnierze wyznaczeni na stanowisko służbowe w Służbie Kontrwywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku" 
     },
-    c: ["b", "d", "e"]
+    c: ["b"]
 },
 {
     id: 76,
@@ -860,7 +860,7 @@ const bazaPytan = [
         "c": "Prezesa Urzędu Lotnictwa Cywilnego", 
         "d": "żołnierzy Żandarmerii Wojskowej zapewniających ochronę ministrowi obrony narodowej" 
     },
-    c: ["b"]
+    c: ["a", "b", "d"]
 },
 {
     id: 87,
@@ -894,7 +894,7 @@ const bazaPytan = [
         "e": "wyposażenie wykorzystywane do sztuk walki z ostrym zakończeniem lub ostrą krawędzią", 
         "f": "zabawki w kształcie broni" 
     },
-    c: ["a", "d", "e"]
+    c: ["a", "d", "e", "f"]
 },
 {
     id: 90,
@@ -1081,7 +1081,7 @@ const bazaPytan = [
         "c": "urządzenia do prześwietlania osób niewykorzystujące promieniowania jonizującego", 
         "d": "urządzenia rentgenowskie" 
     },
-    c: ["d"]
+    c: ["b", "d"]
 },
 {
     id: 106,
@@ -1093,7 +1093,7 @@ const bazaPytan = [
         "d": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą wzrokową", 
         "e": "systemy do wykrywania urządzeń wybuchowych" 
     },
-    c: ["c"]
+    c: ["c", "d"]
 },
 {
     id: 107,
@@ -1116,7 +1116,7 @@ const bazaPytan = [
         "d": "systemy wykrywania materiałów wybuchowych", 
         "e": "urządzenia rentgenowskie" 
     },
-    c: ["b", "d", "e"]
+    c: ["b", "e"]
 },
 {
     id: 109,
@@ -1190,7 +1190,7 @@ const bazaPytan = [
         "c": "ręczne wykrywacze metali", 
         "d": "systemy wykrywania materiałów wybuchowych" 
     },
-    c: ["a", "b", "d"]
+    c: ["a", "d"]
 },
 {
     id: 116,
@@ -1236,7 +1236,7 @@ const bazaPytan = [
         "d": "spłonki", 
         "e": "wyrzutnie rac sygnalizacyjnych" 
     },
-    c: ["b", "d"]
+    c: ["b", "d", "e"]
 },
 {
     id: 120,
@@ -1357,7 +1357,7 @@ const bazaPytan = [
         "d": "psów do wykrywania materiałów wybuchowych", 
         "e": "urządzeń do wykrywania substancji narkotycznych" 
     },
-    c: ["a", "c"]
+    c: ["a", "c", "d"]
 },
 {
     id: 130,
@@ -1369,7 +1369,7 @@ const bazaPytan = [
         "d": "pracownicy i funkcjonariusze Agencji Bezpieczeństwa Wewnętrznego i Służby Wywiadu Wojskowego posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku", 
         "e": "strażacy Państwowej Straży Pożarnej upoważnieni do przeprowadzania czynności kontrolno-rozpoznawczych na lotnisku posiadający ważną kartę identyfikacyjną portu lotniczego podczas wykonywania zadań i obowiązków służbowych na lotnisku" 
     },
-    c: ["d", "e"]
+    c: ["e"]
 }
 ,
 {
@@ -1395,7 +1395,7 @@ const bazaPytan = [
         "d": "psy do wykrywania materiałów wybuchowych w połączeniu z kontrolą wzrokową", 
         "e": "systemy do wykrywania urządzeń wybuchowych" 
     },
-    c: ["c"]
+    c: ["c", "d"]
 },
 {
     id: 133,
@@ -1408,7 +1408,7 @@ const bazaPytan = [
         "e": "spinacze biurowe", 
         "f": "wiertarki" 
     },
-    c: ["a", "b", "d", "f"]
+    c: ["a", "b", "d"]
 },
 {
     id: 134,
@@ -1479,7 +1479,7 @@ const bazaPytan = [
         "d": "ręczne detektory metali", 
         "e": "systemy wykrywania materiałów wybuchowych" 
     },
-    c: ["b", "c", "e"]
+    c: ["b", "c"]
 },
 {
     id: 140,
@@ -1504,7 +1504,7 @@ const bazaPytan = [
         "d": "systemy do wykrywania urządzeń wybuchowych", 
         "e": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych" 
     },
-    c: ["a", "b", "d", "e"]
+    c: ["a", "b", "e"]
 },
 {
     id: 142,
@@ -1549,7 +1549,7 @@ const bazaPytan = [
         "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali", 
         "d": "urządzeń do wykrywania śladowych ilości materiałów wybuchowych" 
     },
-    c: ["c"]
+    c: ["c", "d"]
 },
 {
     id: 146,
@@ -1569,7 +1569,7 @@ const bazaPytan = [
         "b": "która ukończyła szkolenie świadomości ochrony lotnictwa cywilnego", 
         "c": "potrafiąca nawiązać kontakt z osobami kontrolowanymi w co najmniej jednym języku obcym w podstawowym zakresie" 
     },
-    c: ["a", "b", "c"]
+    c: ["a"]
 },
 {
     id: 148,
@@ -1634,7 +1634,7 @@ const bazaPytan = [
         "c": "jest w stanie wykryć metalowe przedmioty żelazne i nieżelazne", 
         "d": "w przypadku wykrycia przedmiotów metalowych wysyła sygnał dźwiękowy, który jest odbierany w promieniu 1 metra" 
     },
-    c: ["c"]
+    c: ["c", "d"]
 },
 {
     id: 154,
@@ -1666,7 +1666,7 @@ const bazaPytan = [
         "c": "pozytywne ukończenie szkolenia specjalistycznego zawodowego osób wykonujących badania pojazdów", 
         "d": "uzyskanie certyfikatu operatora kontroli bezpieczeństwa" 
     },
-    c: ["a", "d"]
+    c: ["d"]
 },
 {
     id: 157,
@@ -1689,7 +1689,7 @@ const bazaPytan = [
         "d": "sprawdzania przedmiotów wprowadzanych do strefy zastrzeżonej lotniska", 
         "e": "zwolnienia z kontroli bezpieczeństwa dzieci poniżej 5 roku życia" 
     },
-    c: ["a", "b", "c", "d"]
+    c: ["b", "c", "d"]
 },
 {
     id: 159,
@@ -1760,7 +1760,7 @@ const bazaPytan = [
         "e": "Straż Graniczna realizująca zadania na terenie lotniska", 
         "f": "Żandarmeria Wojskowa realizująca zadania na terenie lotniska" 
     },
-    c: ["d", "e", "f"]
+    c: ["e"]
 },
 {
     id: 165,
@@ -1771,7 +1771,7 @@ const bazaPytan = [
         "c": "Służba Celna", 
         "d": "specjalistyczna uzbrojona formacja ochronna" 
     },
-    c: ["a", "c"]
+    c: ["c"]
 },
 {
     id: 166,
@@ -1782,7 +1782,7 @@ const bazaPytan = [
         "c": "Straż Graniczna", 
         "d": "wewnętrzna służba ochrony lotniska" 
     },
-    c: ["a", "d"]
+    c: ["d"]
 }
 ,
 {
@@ -1841,7 +1841,7 @@ const bazaPytan = [
         "c": "urządzenia do wykrywania śladowych ilości materiałów wybuchowych w połączeniu z ręcznymi wykrywaczami metali", 
         "d": "urządzeń do wykrywania śladowych ilości materiałów wybuchowych" 
     },
-    c: ["c"]
+    c: ["c", "d"]
 },
 {
     id: 172,
@@ -1853,7 +1853,7 @@ const bazaPytan = [
         "d": "oznaczenia stref, do których funkcjonariusz ma dostęp", 
         "e": "zdjęcie posiadacza" 
     },
-    c: ["b", "c", "d"]
+    c: ["c", "d", "e"]
 },
 {
     id: 173,
@@ -1879,7 +1879,7 @@ const bazaPytan = [
         "e": "noże o długości ostrza 6 cm", 
         "f": "nożyczki o długości 7 cm" 
     },
-    c: ["a", "b", "c", "e", "f"]
+    c: ["a", "b", "c", "f"]
 },
 {
     id: 175,
@@ -1892,7 +1892,7 @@ const bazaPytan = [
         "e": "nożyczki o długości 6 cm", 
         "f": "piłki tenisowe" 
     },
-    c: ["a", "b", "c", "d", "e"]
+    c: ["a", "b", "c"]
 },
 {
     id: 176,
