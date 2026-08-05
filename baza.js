@@ -636,7 +636,7 @@ const bazaPytan = [
             "b": "psy do wykrywania materiałów wybuchowych", 
             "c": "ręczne wykrywacze metali" 
         },
-        c: ["a", "b", "c"]
+        c: ["a", "b"]
     },
     {
         id: 67,
@@ -657,7 +657,7 @@ const bazaPytan = [
             "c": "tak przewiduje program ochrony przewoźnika lotniczego", 
             "d": "w zabezpieczanie i ładowanie ładunku oraz poczty na pokład statku powietrznego" 
         },
-        c: ["a", "d"]
+        c: ["a"]
     },
     {
         id: 69,
@@ -679,31 +679,6 @@ const bazaPytan = [
         },
         c: ["c"]
     },
-
-    {
-        id: 70,
-        q: "70. Wskaż, które z poniższych substancji zalicza się do płynów, aerozoli i żeli (LAG) podlegających ograniczeniom przy kontroli bezpieczeństwa bagażu kabinowego:",
-        o: { 
-            "a": "pasty (np. pasta do zębów)", 
-            "b": "mieszaniny substancji płynnych i stałych (np. dżemy, zupy)", 
-            "c": "zawartość pojemników pod ciśnieniem (np. pianka do golenia, dezodoranty)", 
-            "d": "produkty o konsystencji żelu (np. żele do włosów, żele pod prysznic)" 
-        },
-        c: ["a", "b", "c", "d"]
-    },
-
-{
-    id: 70,
-    q: "70. Wskaż, które z poniższych substancji zalicza się do płynów, aerozoli i żeli (LAG) podlegających ograniczeniom przy kontroli bezpieczeństwa bagażu kabinowego:",
-    o: { 
-        "a": "pasty (np. pasta do zębów)", 
-        "b": "mieszaniny substancji płynnych i stałych (np. dżemy, zupy)", 
-        "c": "zawartość pojemników pod ciśnieniem (np. pianka do golenia, dezodoranty)", 
-        "d": "produkty o konsystencji żelu (np. żele do włosów, żele pod prysznic)" 
-    },
-    c: ["a", "b", "c", "d"]
-}
-,
 {
     id: 71,
     q: "71. Przed kontrolą bezpieczeństwa pasażerów:",
