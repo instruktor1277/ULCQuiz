@@ -169,7 +169,7 @@ const bazaPytan = [
         "c": "potrafiąca nawiązać kontakt z osobami kontrolowanymi w co najmniej jednym języku obcym w podstawowym zakresie", 
         "d": "zamieszkująca na terenie Polski co najmniej 3 lata" 
     },
-    c: ["a", "b", "c"]
+    c: ["a"]
 },
 {
     id: 26,
@@ -215,7 +215,7 @@ const bazaPytan = [
         "c": "systemy wykrywania urządzeń wybuchowych", 
         "d": "urządzenia do wykrywania metali" 
     },
-    c: ["b", "c"]
+    c: ["b"]
 },
 {
     id: 30,
